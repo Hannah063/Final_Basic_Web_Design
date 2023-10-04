@@ -402,7 +402,7 @@ form{
   }
 
 
-/* HOVER */
+/* HOVER PAGE*/
 .content-booking-page .button-booking:hover, .content-booking-page .button-review:hover{
     background-color: var(--button-2);
 }
