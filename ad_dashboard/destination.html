@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo"></div>
+        <ul class="menu">
+            <li>
+                <a href="dashboard.html">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a href="users.html">
+                    <i class="fas fa-users-rectangle"></i>
+                    <span>Users</span>
+                </a>
+            </li>
+            <li>
+                <a href="details.html">
+                    <i class="fas fa-rectangle-list"></i>
+                    <span>Details</span>
+                </a>
+            </li>
+            <li  class="active">
+                <a href="destination.html">
+                    <i class="fas fa-map-location-dot"></i>
+                    <span>Destinations</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-ticket"></i>
+                    <span>Booking</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-clock-rotate-left"></i>
+                    <span>History</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-cog"></i>
+                    <span>Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main--content">
+        <div class="header--wrapper">
+            <div class="header--title">
+                <span>Primary</span>
+                <h2>Users</h2>
+            </div>
+            <div class="user--info">
+                <div class="search--box">
+                    <i class="fa-solid fa-search"></i>
+                    <input type="text" placeholder="Search">
+                </div>
+                <img src="https://img.freepik.com/free-vector/cute-rich-boy-businessman-cartoon-vector-icon-illustration-people-business-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3974.jpg?w=740&t=st=1696910116~exp=1696910716~hmac=3ba1c4ca393c4ee0007a81c80ffe08708a97ed4b5d76aee33471e8f428813001" alt="">
+            </div>
+        </div>
+        
+        <div class="tabular--wrapper">
+            <h3 class="main--title">Finance data</h3>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Image</th>
+                            <th>Booked</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                    <tbody class="" id="tbody"></tbody>
+                        
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="7">Total: <span id="total--destination">20</span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
