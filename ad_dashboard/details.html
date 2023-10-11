@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin dashboard</title>
+    <title>Document</title>
     <link rel="stylesheet" href="dashboard.css">
     <link 
     rel="stylesheet" 
@@ -13,7 +13,7 @@
     <div class="sidebar">
         <div class="logo"></div>
         <ul class="menu">
-            <li  class="active">
+            <li>
                 <a href="dashboard.html">
                     <i class="fas fa-tachometer-alt"></i>
                     <span>Dashboard</span>
@@ -25,8 +25,8 @@
                     <span>Users</span>
                 </a>
             </li>
-            <li>
-                <a href="users.html">
+            <li  class="active">
+                <a href="details.html">
                     <i class="fas fa-rectangle-list"></i>
                     <span>Details</span>
                 </a>
@@ -68,7 +68,7 @@
         <div class="header--wrapper">
             <div class="header--title">
                 <span>Primary</span>
-                <h2>Dashboard</h2>
+                <h2>Users</h2>
             </div>
             <div class="user--info">
                 <div class="search--box">
@@ -78,61 +78,32 @@
                 <img src="https://img.freepik.com/free-vector/cute-rich-boy-businessman-cartoon-vector-icon-illustration-people-business-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3974.jpg?w=740&t=st=1696910116~exp=1696910716~hmac=3ba1c4ca393c4ee0007a81c80ffe08708a97ed4b5d76aee33471e8f428813001" alt="">
             </div>
         </div>
-        <div class="card--container">
-            <h3 class="main--title">Today's data</h3>
-            <div class="card-wrapper">
-                <div class="tours-booked--card light-purple">
-                    <div class="card--header">
-                        <div class="amount">
-                            <h1 class="title">54</h1>
-                            <span class="amount--value">Customers</span>
-                        </div>
-                        <i class="fas fa-user-alt icon"></i>
-                    </div>
-                </div>
-                <div class="tours-booked--card light-purple">
-                    <div class="card--header">
-                        <div class="amount">
-                            <h1 class="title">124</h1>
-                            <span class="amount--value">Tour booked</span>
-                        </div>
-                        <i class="fas fa-list-squares icon"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <div class="tabular--wrapper">
             <h3 class="main--title">Finance data</h3>
             <div class="table-container">
                 <table>
                     <thead>
                         <tr>
-                            <th>Date</th>
-                            <th>Destination ID</th>
-                            <th>User ID</th>
-                            <th>Amount</th>
-                            <th>Duration</th>
-                            <th>People</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>2023-10-03</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>500.00$</td>
-                            <td>5</td>
-                            <td>2</td>
-                            <td>
-                                <button>Edit</button>
-                                <button>Remove</button>
-                            </td>
-                        </tr>
+                            <th>ID</th>
+                            <th>ID destination</th>
+                            <th>Name destination</th>
+                            <th>Main name destination</th>
+                            <th>Sub name destination</th>
+                            <th>Main image</th>
+                            <th>Sub images</th>
+                            <th>Description</th>
+                            <th>Hightlight</th>
+                            <th>Adult Price</th>
+                            <th>Child Price</th>
+                          </tr>
+                        </thead>
+                    <tbody class="" id="tbody"></tbody>
+                        
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td colspan="7">Total: 500.00$</td>
+                            <td colspan="12">Total: <span id="total--details">20</span></td>
                         </tr>
                     </tfoot>
                 </table>
