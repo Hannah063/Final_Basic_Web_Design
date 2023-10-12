@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="inp">
+            <button class="btn btn-primary my-2 my-sm-0" type="button" onclick="searchInJSON()">Search</button>
+        </form>
+    </nav>
+
+    <table id="productTable">
+        <tr>
+            <th id="datePro" scope="col">createAt</th>
+            <th id="namePro" scope="col">name</th>
+            <th id="avatarPro" scope="col">avatar</th>
+            <th id="pricePro" scope="col">price</th>
+            <th id="quantityPro" scope="col">quantity</th>
+            <th id="idPro" scope="col">id</th>
+        </tr>
+    </table>
+
+    <script src="product.js"></script>
+</body>
+</html>

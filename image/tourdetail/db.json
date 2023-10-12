@@ -1,0 +1,17 @@
+{
+    "product": {
+        "name": "Ha Long",
+        "location": "Quang Ninh",
+        "rating": "5/5",
+        "price": "2.000",
+        "mainImage": "https://media.istockphoto.com/id/119379231/vi/anh/b%C3%A3i-bi%E1%BB%83n-v%E1%BB%8Bnh-h%E1%BA%A1-long-vi%E1%BB%87t-nam.webp?b=1&s=612x612&w=0&k=20&c=VPTSt-iDYftQfq7FE1IUY4EXaSkjdwTjbX3lQVRSjp8=",
+        "thumbnailImages": [
+            "https://media.istockphoto.com/id/1201281530/vi/anh/phong-c%E1%BA%A3nh-v%E1%BB%8Bnh-h%E1%BA%A1-long.webp?b=1&s=612x612&w=0&k=20&c=aovYQrdp813G5qsLaAYYGL9wmxTLfmXdwx_lMQIIhdY=",
+            "https://media.istockphoto.com/id/1407004318/vi/anh/halong-bay-1.webp?b=1&s=612x612&w=0&k=20&c=DD-OpMw63Y_rP8Pq_HXfhwOM5jbrM5SsY7woZGdKzHI=",
+            "https://media.istockphoto.com/id/1407004318/vi/anh/halong-bay-1.webp?b=1&s=612x612&w=0&k=20&c=DD-OpMw63Y_rP8Pq_HXfhwOM5jbrM5SsY7woZGdKzHI=",
+            "https://media.istockphoto.com/id/1407004318/vi/anh/halong-bay-1.webp?b=1&s=612x612&w=0&k=20&c=DD-OpMw63Y_rP8Pq_HXfhwOM5jbrM5SsY7woZGdKzHI="
+        ]
+    }
+}
+
+

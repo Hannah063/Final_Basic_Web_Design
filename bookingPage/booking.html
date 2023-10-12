@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="booking.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Volkhov:ital,wght@0,400;0,700;1,700&family=Yesteryear&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+</head>
+<body>
+    <header>
+        <!-- nav -->
+        <div class="overlay-header">
+            <div class="header-booking-title">
+                <p class="title-booking-page1">Our destination is not a land, <br>but a new way of looking.</p>
+                <p class="title-booking-page2">Start your unforgettable journey with us.</p>
+            </div>
+        </div>
+    </header>
+    <div class="content-booking-page">
+        <section class="platform-nav">
+            <ul>
+                <li class="booking">
+                    <div id="circle-1">
+                        <span id="so1">1</span>
+                    </div>
+                    <span class="sub-nav-text">Booking</span>
+                </li>
+                <hr class="shape-1">
+                <li>
+                    <div id="circle-2">
+                        <span>2</span>
+                    </div>
+                    <span class="sub-nav-text">Review</span>
+                </li>
+                <hr class="shape-2">
+                <li>
+                    <div id="circle-3">
+                        <span>3</span>
+                    </div>
+                    <span class="sub-nav-text">Complete</span>
+                </li>
+            </ul>
+        </section>
+        <section id="form">
+            <form action="">
+                <div class="booking-form" id="booking-form">
+                    <div class="booking-info-tour">
+                        <span id="info-tour-title">Trekking in Sapa</span>
+                        <div class="row row-info">
+                            <div class="adults col-6">
+                                <span class="adults-title">Total Adults</span>
+                                <div class="adults-input">
+                                    <input type="number" placeholder="0" id="adults-input">
+                                    <span class="people-unit">People</span>
+                                </div>
+                            </div>
+                            <div class="start-date col-6">
+                                <span>Start Date</span>
+                                <input type="date" placeholder="DD/MM/YYYY" id="start-date-input">
+                            </div>
+                        </div>
+                        <div class="row row-info">
+                            <div class="children col-6">
+                                <span class="children-title">Total Children</span>
+                                <div class="children-input">
+                                    <input type="number" placeholder="0" id="children-input">
+                                    <span class="people-unit">People</span>
+                                </div>
+                            </div>
+                            <div class="duration col-6">
+                                <span>Duration</span>
+                                <input type="number" placeholder="0" id="duration-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="customer-info">
+                        <div class="customer-info-title">Please enter your infomation</div>
+                        <div class="row row-customer-info">
+                            <div class="name col-6">
+                                <span>Full Name</span>
+                                <input type="text" placeholder="example" id="fullname-input">
+                            </div>
+                            <div class="phone-number col-6">
+                                <span>Phone number</span>
+                                <input type="tel" name="tel" id="tel-input" placeholder="0000000000">
+                            </div>
+                        </div>
+                        <div class="row row-email">
+                            <div class="email col-12">
+                                <span>Email</span>
+                                <input type="email" placeholder="example@example.com" id="email-input">
+                            </div>
+                        </div>
+                        <div class="row row-request">
+                            <div class="request col-12">
+                                <span>Request</span>
+                                <textarea name="" id="request-input"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="button" class="button-booking" value="BOOKING" onclick="checkout_review()"></input>
+                </div>
+                <div class="review-form" id="review-form">
+                    <div class="review-tour">
+                        <span class="review-tour-title">Trekking in Sapa</span>
+                        <div class="review-info-tour">
+                            <div class="review-image " id="review-image">
+                                <img src="image/example-image.jpg" alt="">
+                            </div>
+                            <div class="review-info ">
+                                <div class="row row-review-info1">
+                                    <div class="review-adults">
+                                        <span class="review-adults-title">Total Adults</span>
+                                        <div class="review-adults-input">
+                                            <input type="number" placeholder="0" id="review-adults-input"  disabled>
+                                            <span class="review-people-unit">People</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-start-date">
+                                        <span>Start Date</span>
+                                        <input type="date" placeholder="DD/MM/YYYY" id="review-start-date"  disabled>
+                                    </div>
+                                </div>
+                                <div class="row row-review-info2">
+                                    <div class="review-children">
+                                        <span class="review-children-title">Total Children</span>
+                                        <div class="review-children-input">
+                                            <input type="number" placeholder="0" id="review-children-input"  disabled>
+                                            <span class="review-people-unit">People</span>
+                                        </div>
+                                    </div>
+                                    <div class="review-duration">
+                                        <span>Duration</span>
+                                        <input type="number" placeholder="0" id="review-duration"  disabled>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review-customer-info">
+                        <div class="row row-review-customer">
+                            <div class="review-infomation">
+                                <span class="review-customer-info-title">Your infomation</span>
+                                <input type="text" id="review-customer-info"  disabled>
+                            </div>
+                            <div class="review-request">
+                                <span class="review-customer-request-title">Your request</span>
+                                <input type="text" id="review-customer-request"  disabled>
+                            </div>
+                        </div>
+                        <div class="row row-review-customer">
+                            <span class="review-price">Price details</span>
+                            <div class="review-price2">
+                                <span class="price-title">Into money</span>
+                                <input type="text" id="review-price" style="text-align: end;" disabled>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="button" class="button-review" id="button-review" value="CHECKOUT"></input>
+                </div>
+            </form>
+        </section>
+        <div id="complete">
+            <div class="notice-board">
+                <div class="board">
+                    <div class="board-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="119" height="119" viewBox="0 0 119 119" fill="none">
+                            <g clip-path="url(#clip0_2633_45)">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.412231 59.2805C0.412231 43.6322 6.62852 28.6247 17.6936 17.5597C28.7586 6.49461 43.7661 0.27832 59.4144 0.27832C75.0628 0.27832 90.0702 6.49461 101.135 17.5597C112.2 28.6247 118.417 43.6322 118.417 59.2805C118.417 74.9289 112.2 89.9363 101.135 101.001C90.0702 112.066 75.0628 118.283 59.4144 118.283C43.7661 118.283 28.7586 112.066 17.6936 101.001C6.62852 89.9363 0.412231 74.9289 0.412231 59.2805ZM56.0474 84.5335L90.0169 42.0676L83.8807 37.1586L54.9145 73.3545L34.3975 56.2596L29.3626 62.3014L56.0474 84.5413V84.5335Z" fill="#38C54F"/>
+                            </g>
+                            <defs>
+                              <clipPath id="clip0_2633_45">
+                                <rect width="118.004" height="118.004" fill="white" transform="translate(0.412231 0.27832)"/>
+                              </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="complete-title1"><b>Successful tour booking request</b></div>
+                    <div class="complete-title2">Notification email will be sent after successful booking</div>
+                </div>
+            </div>
+        </div>
+        <div id="model"></div>
+    </div>
+    <footer>
+        
+    </footer>
+</body>
+<script src="booking.js"></script>
+<script src="../Account/login.js"></script>
+</html>

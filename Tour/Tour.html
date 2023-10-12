@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Volkhov:ital,wght@0,400;0,700;1,700&family=Yesteryear&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Tours</title>
+    <link rel="stylesheet" href="./Tour.css">
+    <!-- <link rel="stylesheet" href="../Database/db.json"> -->
+</head>
+
+<body>
+
+    <div class="container">
+        <section class="header-navbar">
+            <div class="navbar">
+                <div class="logo"><a href="#"><img src="./logo (1).png" alt="Ảnh logo"></a></div>
+
+                <ul class="links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">Tours</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+
+                <img src="./user1.png" alt="" class="user-pic" onclick="toggleProfile()">
+
+                <div class="sub-menu-wrap" id="subProfile">
+                    <div class="sub-menu">
+                        <div class="user-info">
+                            <img src="./user1.png" alt="">
+                            <h2>beautiful</h2>
+                        </div>
+                        <hr>
+
+                        <a href="" class="sub-menu-links">
+                            <i class="fa fa-user"></i>
+                            <p>Edit profile</p>
+                            <span> > </span>
+                        </a>
+
+                        <a href="" class="sub-menu-links">
+                            <i class="fa fa-cog"></i>
+
+                            <p>Setting & Privacy</p>
+                            <span> > </span>
+                        </a>
+
+                        <a href="" class="sub-menu-links">
+                            <i class="fa fa-question-circle"></i>
+                            <p>Help & Support</p>
+                            <span> > </span>
+                        </a>
+
+
+                        <a href="" class="sub-menu-links">
+                            <i class="fa fa-sign-out"></i>
+                            <p>Log out</p>
+                            <span> > </span>
+                        </a>
+
+
+                    </div>
+                </div>
+
+
+                <div class="toggle_btn">
+                    <i class="fa fa-bars"></i>
+
+                </div>
+            </div>
+
+            <div class="dropdown_menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Tours</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+            </div>
+            <header class="flex">
+                <div class="small-container">
+                    <div class="header-title">
+                        <h1>Tours</h1>
+                    </div>
+
+                    <div class="header-form">
+                        <h3>Choose your Travel location:</h3>
+                        <form class="flex">
+                            <input type="text" class="form-control" placeholder="Destination Name">
+                            <input type="date" class="form-control" placeholder="Date">
+                            <input type="number" class="form-control" placeholder="Price($)">
+                            <input type="submit" class="search" value="Search">
+                        </form>
+                    </div>
+                </div>
+            </header>
+        </section>
+
+        <div class="destination">
+            <br>
+            <h2 class="title01">POPULAR DESTINATIONS</h2>
+            <br>
+            <div class="row-destination">
+                <div class="item-destination" data-destination-id="1">
+                    <img class="img-destination" src="" width="100%">
+                    <div>
+                        <h3 class="name-destination"></h3>
+                        <p class="title-destination"></p>
+                        <div class="booked">
+                            <i class="fa fa-bookmark" aria-hidden="true"> Booked <span class="booked-count"></span></i>
+                        </div>
+                        <div class="read-more">
+                            <a href="#" data-destination-link="true">Tour Details</a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="item-destination" data-destination-id="2">
+                    <img class="img-destination" src="" width="100%">
+                    <div>
+                        <h3 class="name-destination"></h3>
+                        <p class="title-destination"></p>
+                        <div class="booked">
+                            <i class="fa fa-bookmark" aria-hidden="true"> Booked <span class="booked-count"></span></i>
+                        </div>
+                        <div class="read-more">
+                            <a href="#" data-destination-link="true">Tour Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-destination" data-destination-id="3">
+                    <img class="img-destination" src="" width="100%">
+                    <div>
+                        <h3 class="name-destination"></h3>
+                        <p class="title-destination"></p>
+                        <div class="booked">
+                            <i class="fa fa-bookmark" aria-hidden="true"> Booked <span class="booked-count"></span></i>
+                        </div>
+                        <div class="read-more">
+                            <a href="#" data-destination-link="true">Tour Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-destination" data-destination-id="4">
+                    <img class="img-destination" src="" width="100%">
+                    <div>
+                        <h3 class="name-destination"></h3>
+                        <p class="title-destination"></p>
+                        <div class="booked">
+                            <i class="fa fa-bookmark" aria-hidden="true"> Booked <span class="booked-count"></span></i>
+                        </div>
+                        <div class="read-more">
+                            <a href="#" data-destination-link="true">Tour Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-destination" data-destination-id="5">
+                    <img class="img-destination" src="" width="100%">
+                    <div>
+                        <h3 class="name-destination"></h3>
+                        <p class="title-destination"></p>
+                        <div class="booked">
+                            <i class="fa fa-bookmark" aria-hidden="true"> Booked <span class="booked-count"></span></i>
+                        </div>
+                        <div class="read-more">
+                            <a href="#" data-destination-link="true">Tour Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-destination" data-destination-id="6">
+                    <img class="img-destination" src="" width="100%">
+
+                    <div>
+                        <h3 class="name-destination"></h3>
+                        <p class="title-destination"></p>
+                        <div class="booked">
+                            <i class="fa fa-bookmark" aria-hidden="true"> Booked <span class="booked-count"></span></i>
+                        </div>
+                        <div class="read-more">
+                            <a href="#" data-destination-link="true">Tour Details</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="page-btn">
+            <ul class="list-inline list-unstyled ">
+                
+                <li><a href="#" >1</a></li>
+                <li class="active"><a href="#"  >2</a></li>
+                <li><a href="#"  >3</a></li>
+                <li><a href="#" >4</a></li>
+                
+            </ul>
+        </div>
+        
+
+        <div class="footer">
+
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and IOS on mobile phone</p>
+                    <div class="app-logo">
+                        <img src="https://freeiconshop.com/wp-content/uploads/edd/app-store-badge-128x128.png">
+                        <img src="https://freeiconshop.com/wp-content/uploads/edd/google-play-badge-128x128.png">
+                        <img src="https://d35fo82fjcw0y8.cloudfront.net/2018/12/10121639/QR_Code_Example.png">
+                    </div>
+                </div>
+
+                <div class="footer-col-2">
+
+                    <h3>Subscrible for NewSletter</h3>
+                    <input type="text" placeholder="Enter email">
+                    <input type="submit" value="Subscrible">
+
+                </div>
+
+                <div class="footer-col-3">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li>Help Centre</li>
+                        <li>Return & Refund</li>
+                        <li>Warranty Policy</li>
+                        <li>Shipping</li>
+                        <li>Payment</li>
+
+                    </ul>
+                </div>
+
+                <div class="footer-col-4">
+                    <h3>Follow Us On</h3>
+                    <ul>
+                        <li> <i class="fa fa-facebook-official"></i>FaceBook</li>
+                        <li> <i class="fa fa-instagram"></i>Instagram</li>
+                        <li> <i class="fa fa-linkedin-square"></i>Linked In</li>
+                        <li> <i class="fa fa-youtube-play"></i>Youtube</li>
+                    </ul>
+                </div>
+
+
+
+            </div>
+            <hr>
+            <p class="copyright"> Create by <i class="fa fa-heart"></i> Team 1: Âm - Huyền - Luân - Ngân</p>
+
+        </div>
+
+    </div>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+
+            const isOpen = dropDownMenu.classList.contains('open')
+            toggleBtnIcon.classList = isOpen
+                ? 'fa fa-times'
+                : 'fa fa-bars'
+        }
+    </script>
+
+    <script>
+        let subProfile = document.getElementById("subProfile");
+        function toggleProfile() {
+            subProfile.classList.toggle("open-profile");
+
+        }
+    </script>
+    <script src="./Tour.js"></script>
+</body>
+
+</html>

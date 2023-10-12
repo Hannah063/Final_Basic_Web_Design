@@ -1,0 +1,50 @@
+/* Bố cục sản phẩm với hai cột */
+.product {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* Cột ảnh */
+.image-column {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Cột thông tin */
+.info-column {
+    flex: 2;
+}
+
+/* Ảnh sản phẩm lớn */
+#mainImage {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Định dạng thông tin sản phẩm */
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Ảnh nhỏ */
+.thumbnail-images {
+    display: flex;
+    flex-direction: row; /* Hiển thị ảnh nhỏ trong một hàng ngang */
+}
+
+.thumbnail {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin-right: 10px; /* Tạo khoảng cách giữa các ảnh nhỏ */
+}

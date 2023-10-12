@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Document</title>
+    <style>
+        
+
+    </style>
+    <link rel="stylesheet" href="./profile.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="topbar">
+                <a href="">Log Out</a>
+                <a href="">Support</a>
+                <a href="">Home</a>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mt-1">
+                    <div class="card text-center sidebar">
+                        <div class="card-body">
+                            <img src="../image/use2.png" alt="user" class="rounded-circle" width="150">
+                            <div class="mt-3">
+                                <h3>LUAN TRAN</h3>
+                                <a href="">Home</a>
+                                <a href="">Setting</a>
+                                <a href="">Sign Out</a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-8 mt-1">
+                    <div class="card mb-3 content">
+                        <h1 class="m-3 pt-3">About</h1>
+                        <div class="card-body">
+
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Full name</h5>
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                    <span id="fullName"></span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Email</h5>
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                    <span id="email"></span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Phone</h5>
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                    <span id="phone"></span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Address</h5>
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                    <span id="address"></span>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Password</h5>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="password" id="password" value="" readonly>
+                                    <i class="far fa-eye" id="showPassword" onclick="PasswordVisibility()"></i>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <div class="card mb-3 content">
+                        <h1 class="m-3">Recent Booking</h1>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Project Name</h5>
+                                </div>
+                                <div class="col-md-9 text-secondary">
+                                    Project Description
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="col-md-9 text-right">
+                        <button id="editButton" onclick="openEditModal()">Edit</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditModal()">&times;</span>
+            <h2>Edit Profile</h2>
+            <form id="editForm">
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="editFullName">Full Name</label>
+                        <input type="text" id="editFullName" name="editFullName" required>
+                    </div>
+                    <div class="form-column">
+                        <label for="editEmail">Email</label>
+                        <input type="text" id="editEmail" name="editEmail" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="editAddress">Address</label>
+                        <input type="text" id="editAddress" name="editAddress" required>
+                    </div>
+                    <div class="form-column">
+                        <label for="editPhone">Phone</label>
+                        <input type="text" id="editPhone" name="editPhone" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="oldPassword">Old Password</label>
+                        <div class="password-input">
+                            <input type="password" id="oldPassword" name="oldPassword" required>
+                            <i class="fas fa-eye-slash" id="showOldPassword" onclick="togglePasswordVisibility('oldPassword')"></i>
+                        </div>
+                    </div>
+                    <div class="form-column">
+                        <label for="newPassword">New Password</label>
+                        <div class="password-input">
+                            <input type="password" id="newPassword" name="newPassword" required>
+                            <i class="fas fa-eye-slash" id="showNewPassword" onclick="togglePasswordVisibility('newPassword')"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-column">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <div class="password-input">
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                            <i class="fas fa-eye-slash" id="showConfirmPassword" onclick="togglePasswordVisibility('confirmPassword')"></i>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" onclick="saveChanges()">Save</button>
+            </form>
+        </div>
+    </div>
+    
+
+
+
+
+    <script>
+        let isEditMode = false;
+        document.addEventListener("DOMContentLoaded", function () {
+            fetch("data.json")
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    // Hiển thị dữ liệu từ tệp JSON
+                    document.getElementById("fullName").textContent = data.fullName;
+                    document.getElementById("email").textContent = data.email;
+                    document.getElementById("phone").textContent = data.phone;
+                    document.getElementById("address").textContent = data.address;
+                    document.getElementById("password").value = data.password;
+                })
+                .catch(function (error) {
+                    console.error("Lỗi khi tải dữ liệu từ tệp JSON: " + error);
+                });
+        });
+
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            var showPasswordIcon = document.getElementById("showPassword");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                showPasswordIcon.classList.remove("far", "fa-eye");
+                showPasswordIcon.classList.add("far", "fa-eye-slash");
+            } else {
+                passwordInput.type = "password";
+                showPasswordIcon.classList.remove("far", "fa-eye-slash");
+                showPasswordIcon.classList.add("far", "fa-eye");
+            }
+        }
+
+
+
+
+
+
+
+    </script>
+
+
+    
+
+    <script>
+    
+        const oldPasswordField = document.getElementById("oldPassword");
+        const newPasswordField = document.getElementById("newPassword");
+        const confirmPasswordField = document.getElementById("confirmPassword");
+
+        const fullNameElement = document.getElementById("fullName");
+        const emailElement = document.getElementById("email");
+        const phoneElement = document.getElementById("phone");
+        const addressElement = document.getElementById("address");
+        const passwordElement = document.getElementById("password");
+
+        const editModal = document.getElementById("editModal");
+        const editForm = document.getElementById("editForm");
+        const editFullNameInput = document.getElementById("editFullName");
+        const editEmailInput = document.getElementById("editEmail");
+        const editPhoneInput = document.getElementById("editPhone");
+        const editAddressInput = document.getElementById("editAddress");
+
+        function openEditModal() {
+            editFullNameInput.value = fullNameElement.textContent;
+            editEmailInput.value = emailElement.textContent;
+            editPhoneInput.value = phoneElement.textContent;
+            editAddressInput.value = addressElement.textContent;
+
+         
+            oldPasswordField.value = passwordElement.value;
+
+            
+            oldPasswordField.style.display = "block";
+            newPasswordField.style.display = "block";
+            confirmPasswordField.style.display = "block";
+
+            editModal.style.display = "block";
+        }
+
+        function closeEditModal() {
+            editModal.style.display = "none";
+        }
+
+        function saveChanges() {
+            const editedFullName = editFullNameInput.value;
+            const editedEmail = editEmailInput.value;
+            const editedPhone = editPhoneInput.value;
+            const editedAddress = editAddressInput.value;
+            const editedPassword = newPasswordField.value; 
+            const confirmPassword = confirmPasswordField.value;
+            if (editedPassword !== confirmPassword) {
+                alert("Mật khẩu mới và xác nhận mật khẩu mới không khớp.");
+                return;
+            }
+
+            fullNameElement.textContent = editedFullName;
+            emailElement.textContent = editedEmail;
+            phoneElement.textContent = editedPhone;
+            addressElement.textContent = editedAddress;
+            passwordElement.value = editedPassword; 
+
+            closeEditModal();
+        }
+
+
+        function togglePasswordVisibility(fieldId) {
+            const passwordField = document.getElementById(fieldId);
+            const showPasswordIcon = document.getElementById(`show${fieldId}`);
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+                showPasswordIcon.classList.remove("fa-eye-slash");
+                showPasswordIcon.classList.add("fa-eye");
+            } else {
+                passwordField.type = "password";
+                showPasswordIcon.classList.remove("fa-eye");
+                showPasswordIcon.classList.add("fa-eye-slash");
+            }
+        }
+        function PasswordVisibility() {
+    var passwordInput = document.getElementById("password");
+    var showPasswordIcon = document.getElementById("showPassword");
+    
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        showPasswordIcon.classList.remove("far", "fa-eye");
+        showPasswordIcon.classList.add("far", "fa-eye-slash");
+    } else {
+        passwordInput.type = "password";
+        showPasswordIcon.classList.remove("far", "fa-eye-slash");
+        showPasswordIcon.classList.add("far", "fa-eye");
+    }
+}
+
+        const editButton = document.getElementById("editButton");
+        editButton.addEventListener("click", openEditModal);
+
+    </script>
+</body>
+
+</html>

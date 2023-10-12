@@ -1,0 +1,121 @@
+{
+    "destinations": [
+        {
+            "id": " 1",
+            "name": "Hạ Long Bay",
+            "description": "Hạ Long Bay is a UNESCO World Heritage Site located in Quang Ninh Province, Vietnam.",
+            "image": "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+            "booked": 100
+        },
+        {
+            "id":"2",
+            "name": "Angkor Wat",
+            "description": "Angkor Wat is a temple complex in Cambodia and the largest religious monument in the world.",
+            "image": "angkor.jpg",
+            "booked": 50
+        },
+        {
+            "id":"3",
+            "name": "Machu Picchu",
+            "description": "Machu Picchu is an Inca citadel located in the Andes Mountains in Peru.",
+            "image": "machu.jpg",
+            "booked": 75
+        }
+
+        
+    ],
+
+    
+    "details_destination": [
+        {
+            "id_detail":"1",
+            "id_destination":"1",
+
+            "name_destination": "Ha Long Bay",
+            "main_name_destination": "Panoramic scene in Ha Long Bay  ",
+            "sub_name_destination":"Beaches, caves and boating surroundings",
+
+            "mainImage":"https://a.cdn-hotels.com/gdcs/production77/d1902/21336448-81d8-4643-a1b9-1545d08172de.jpg",
+            "sub_images": [
+                "https://a.cdn-hotels.com/gdcs/production77/d1902/21336448-81d8-4643-a1b9-1545d08172de.jpg",
+                "https://a.cdn-hotels.com/gdcs/production77/d1902/21336448-81d8-4643-a1b9-1545d08172de.jpg",
+                "https://a.cdn-hotels.com/gdcs/production77/d1902/21336448-81d8-4643-a1b9-1545d08172de.jpg",
+                "https://a.cdn-hotels.com/gdcs/production77/d1902/21336448-81d8-4643-a1b9-1545d08172de.jpg"
+            ],
+
+            "descriptions_destination": [
+                "Ha Long Bay in northeast Vietnam, is known for its emerald waters and thousands of towering limestone islands topped by rainforests",
+                "Ha Long Bay is suitable for enjoying a vacation with family, friends or colleagues. You will discover the majestic and mysterious scenes of Vietnam ",
+                "Activity: rock climbing and hiking, particularly in mountainous Cat Ba National Park",
+                "Vehicle: Kayak"
+            ],
+            "highlight_destination": "op places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
+
+            "adultPrice": 500,
+            "childPrice": 250
+        },
+
+        {
+            "id_detail":"2",
+            "id_destination":"2",
+
+            "name_destination": "Phú Yên",
+            "main_name_destination": "Panoramic scene in Ha Long Bay  ",
+            "sub_name_destination":"Beaches, caves and boating surroundings",
+
+            "mainImage":"https://cdn-icons-png.flaticon.com/512/149/149071.png",
+            "sub_images": [
+                "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+                "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+                "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+                "https://cdn-icons-png.flaticon.com/512/149/149071.pngg"
+            ],
+
+            "descriptions_destination": [
+                "Ha Long Bay in northeast Vietnam, is known for its emerald waters and thousands of towering limestone islands topped by rainforests",
+                "Ha Long Bay is suitable for enjoying a vacation with family, friends or colleagues. You will discover the majestic and mysterious scenes of Vietnam ",
+                "Activity: rock climbing and hiking, particularly in mountainous Cat Ba National Park",
+                "Vehicle: Kayak"
+            ],
+            "highlight_destination": "op places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
+
+            "adultPrice": 500,
+            "childPrice": 250
+        },
+
+
+        {
+            "id_detail":"3",
+            "id_destination":"3",
+
+            "name_destination": "Quang Trị",
+            "main_name_destination": "Panoramic scene in Ha Long Bay  ",
+            "sub_name_destination":"Beaches, caves and boating surroundings",
+
+            "mainImage":"https://cdn-icons-png.flaticon.com/512/149/149071.png",
+            "sub_images": [
+                "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+                "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+                "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+                "https://cdn-icons-png.flaticon.com/512/149/149071.pngg"
+            ],
+
+            "descriptions_destination": [
+                "Ha Long Bay in northeast Vietnam, is known for its emerald waters and thousands of towering limestone islands topped by rainforests",
+                "Ha Long Bay is suitable for enjoying a vacation with family, friends or colleagues. You will discover the majestic and mysterious scenes of Vietnam ",
+                "Activity: rock climbing and hiking, particularly in mountainous Cat Ba National Park",
+                "Vehicle: Kayak"
+            ],
+            "highlight_destination": "op places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
+
+            "adultPrice": 500,
+            "childPrice": 250
+        }
+
+
+
+    ]
+    
+
+    
+}

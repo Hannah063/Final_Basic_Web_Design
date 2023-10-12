@@ -1,0 +1,610 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    font-family: "Volkhov", serif;
+    padding: 0 24px 24px 24px;
+  }
+  
+  .header-navbar {
+    background-color: #e7f4f6;
+    position: relative;
+  }
+  
+  .navbar {
+    width: 100%;
+    min-height: 10vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+  }
+  
+  .header-navbar .navbar .links li {
+    list-style: none;
+  }
+  
+  .header-navbar .navbar .links li a {
+    /* Chổ chỉnh */
+    font-size: 19px;
+    text-decoration: none;
+    color: black;
+  }
+  .header-navbar .navbar .links li a:hover {
+    color: orangered;
+  }
+  
+  .user-pic {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 2px;
+    background-color: #fff;
+  }
+  
+  .sub-menu-wrap {
+    position: absolute;
+    top: 100%;
+    right: -4%;
+    width: 320px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  
+  .sub-menu-wrap.open-profile {
+    max-height: 400px;
+  }
+  
+  .sub-menu {
+    background-color: #e7f4f6;
+    padding: 10px;
+    margin: 10px 50px;
+    border-radius: 10px;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-info h3 {
+    font-weight: 500;
+  }
+  
+  .user-info img {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 2px;
+    background-color: #fff;
+  }
+  
+  .sub-menu hr {
+    border: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #ccc;
+    margin: 15px 0 10px;
+  }
+  
+  .sub-menu-links {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    margin: 18px 0;
+  }
+  
+  .sub-menu-links p {
+    width: 100%;
+  }
+  
+  .sub-menu-links .fa {
+    background-color: #e5e5e5;
+    border-radius: 50%;
+    padding: 8px 10px;
+    margin-right: 15px;
+  }
+  
+  .sub-menu-links span {
+    font-size: 22px;
+    transition: transform 0.5s;
+  }
+  
+  .sub-menu-links:hover span {
+    transform: translateX(5px);
+  }
+  
+  .sub-menu-links:hover p {
+    font-weight: 600;
+  }
+  
+  .sub-menu-links:hover {
+    color: orangered;
+  }
+  
+  .navbar .links {
+    display: flex;
+    gap: 2rem;
+  }
+  .navbar .toggle_btn {
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 0rem;
+    top: 70px;
+    width: 180px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+    border-radius: 10px;
+    height: 0;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .dropdown_menu.open {
+    height: 206px;
+  }
+  
+  .dropdown_menu li {
+    padding: 0.6rem 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dropdown_menu > li > a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+  }
+  
+  .dropdown_menu li a:hover {
+    color: orangered;
+  }
+  
+  /* responsive menu */
+
+  /* container */
+
+  .main1 {
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  
+  
+  }
+  .title {
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  .title iconify-icon {
+    font-size: 40px;
+  }
+  .title h3 {
+    margin-left: 30px;
+    font-size: 30px;
+    text-shadow: bold;
+  }
+  .col-6{
+    margin-right: 30px;
+  }
+  #product-img{
+    border: 1px ;
+    border-radius: 4%;
+  }
+
+  .small-img-row{
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 5px;
+  }
+
+  .especialy {
+    margin-right: 20px;
+    padding-left: 50px;
+    padding-top: 50px;
+    border-radius: 12px;
+    background-color: rgba(231, 244, 246, 1);
+    height: 512px;
+    width: 611px;
+  }
+  .locat {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+  }
+  .locat iconify-icon {
+    justify-content: center;
+    padding-top: 3px;
+    font-size: 25px;
+    height: 30px;
+    margin-right: 20px;
+    background-color: rgba(252, 70, 13, 1);
+    color: white;
+  }
+  .locat p {
+    font-size: 18px;
+  }
+  .adult,
+  .children {
+    margin-left: 10px;
+    display: flex;
+  }
+  .adult p {
+    margin-right: 85px;
+    font-size: 18px;
+  }
+  .children p {
+    margin-right: 63px;
+    font-size: 18px;
+  }
+  #pr1,
+  #pr2 {
+    color: rgba(252, 70, 13, 1);
+  }
+  
+  .bookNow {
+    width: 180px;
+    height: 40px;
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: rgba(252, 70, 13, 1);
+    margin-top: 20px;
+    margin-left: 130px;
+  }
+  .bookNow p {
+    margin-left: 50px;
+    font-size: 19px;
+    margin-top: 3px;
+    color: white;
+  } 
+
+  .mainText {
+    margin-top:50px;
+    font-size: 20px;
+  } 
+  
+  .card-img-top {
+    height: 230px;
+  }
+  #card-cmt{
+    border-radius: 12%;
+  }
+  .card-body {
+    background-color: rgba(231, 244, 246, 1);
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+
+  
+  
+  .star {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  .star iconify-icon {
+    color: rgba(252, 70, 13, 1);
+  }
+ 
+  
+  #but{
+    margin-left: 1px;
+  }
+  .card-title {
+    font-weight: bold;
+    font-size: 23px;
+  }
+  .card-text {
+    font-size: 18px;
+  }
+  .card-body a {
+    font-size: 18px;
+  }
+  .num {
+    text-align: center;
+  }
+  .num button {
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  .num > button > a {
+    color: orange;
+    text-decoration: none;
+  }
+  .cmt {
+    margin-top: 20px;
+    background-color: rgba(217, 217, 217, 1);
+    height: 500px;
+  }
+  .cmt h1,
+  .cmt h3 {
+    text-align: center;
+    padding-top: 20px;
+  }
+  .itemCmt {
+    display: flex;
+  }
+  .cardComt {
+    margin: 26px;
+  }
+  .card-bodyComt {
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 15px 15px 15px 15px;
+    background-color: white;
+  }
+  .user img {
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 160px;
+    width: 65px;
+    height: 70px;
+  }
+  .sugestionTour{
+    margin-top: 50px;
+  }
+  .container {
+    margin-bottom: 30px;
+  }
+  
+  .bookNow{
+    font-size: 20px;
+    color:#fff;
+    outline: none;
+    border: none;
+    padding:5px 10px;
+    font-weight: 540;
+    margin-bottom: 20px;
+  }
+
+   /* foootttteeeer */
+  
+   .footer {
+    background: #2e487a;
+    color: #f5f5f5;
+    font-size: 14px;
+    padding: 60px 0 20px;
+  }
+  
+ 
+
+  .footer p {
+    color: #f5f5f5;
+    margin-left: 0px;
+  }
+  
+  .footer h3 {
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .footer-col-1,
+  .footer-col-2,
+  .footer-col-3,
+  .footer-col-4 {
+    min-width: 250px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-col-1 {
+    flex-basis: 30%;
+    padding-left: 5%;
+  }
+  
+  .footer-col-1 img {
+    margin-right: 20px;
+  }
+  
+  .footer-col-2 {
+    flex: 1;
+    text-align: center;
+    padding-right: 10px;
+  }
+  
+  .footer-col-2 img {
+    width: 180px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-col-2 input {
+    color: black;
+    width: 90%;
+    outline: none;
+    padding: 15px 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    
+  }
+  .footer-col-2 input[type="submit"] {
+    background-color: #226fb7;
+    color: #fff;
+    font-weight: 500;
+  
+  }
+  
+  .footer-col-3,
+  .footer-col-4 {
+    flex-basis: 12%;
+    margin-left: auto;
+  }
+  
+  .footer h3 {
+    font-size: 20px;
+  }
+  .footer-col-4 i {
+    margin-right: 15px;
+  }
+  .footer-col-3 ul,
+  .footer-col-4 ul {
+    list-style-type: none;
+  }
+  .footer-col-3 ul li,
+  .footer-col-4 ul li {
+    margin-top: 5px;
+  }
+  
+  .app-logo {
+    margin-top: 20px;
+  }
+  
+  .app-logo img {
+    width: 130px;
+  }
+  
+  .footer hr {
+    border: none;
+    background: #ffffff;
+    height: 1px;
+    margin: 20px 0;
+  }
+  
+  
+  @media only screen and (min-width:580px) and (max-width: 992px) {
+    .navbar .links,
+    .navbar .action-btn {
+      display: none;
+    }
+  
+    .navbar .toggle_btn {
+      display: block;
+    }
+  
+    .dropdown_menu {
+      display: block;
+      font-weight: bold;
+    }
+    .title iconify-icon, .title h3{
+      font-size: 18px;
+    }
+    
+    .bookNow{
+      margin-left: 40px;
+    }
+    .cmt{
+      height:890px ;
+    }
+    #idCard{
+      padding-top: 60px;
+    }
+    .cmt .user img {
+      margin-left: 130px;
+    }
+    .adult p {
+      margin-right: 70px;
+      font-size: 16px;
+    }
+    .children p {
+      margin-right: 48px;
+      font-size: 16px;
+    }
+    .row_img{
+      display: block;
+    }
+    
+  }
+  
+  
+  @media only screen and (max-width: 576px) {
+    .navbar .links,
+    .navbar .action-btn {
+      display: none;
+    }
+  
+    .navbar .toggle_btn {
+      display: block;
+    }
+  
+    .dropdown_menu {
+      display: block;
+      font-weight: bold;
+    }
+    .title iconify-icon, .title h3{
+      font-size: 18px;
+    }
+    .especialy{
+      width: 100%;
+      height: 470px;
+      padding-left: 10px;
+      margin-top: 20px;
+    }
+
+    .especialy h1{
+      font-size: 15px;
+    }
+
+    .especialy h2{
+      font-size: 13px;
+    }
+    .especialy p{
+      font-size: 13px;
+    }
+    .adult p{
+      font-size: 13px;
+      margin-right: 70px;
+    }
+   .children p{
+      font-size: 13px;
+      margin-right: 55px;
+
+    }
+    .bookNow{
+      margin-left: 70px;
+      font-size: 15px;
+      width: 100px;
+    }
+    .mainText h1{
+      font-size: 15px;
+    }
+      .mainText p{
+      font-size: 13px;
+        
+    }
+    .sugestionTour h1{
+      font-size: 15px;
+    }
+    .cmt{
+      height:1000px ;
+    }
+    .cmt h1{
+      font-size: 15px;
+    }
+    .cmt h3{
+      font-size: 13px;
+    }
+    .card-text{
+      font-size: 13px;
+    }
+
+    #idCard{
+      padding-top:50px;
+    }
+    .cmt .user img {
+      margin-left: 130px;
+    }
+    .row_img{
+      display: block;
+    }
+  }
+  
