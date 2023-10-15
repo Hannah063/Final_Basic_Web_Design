@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family-Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 * {
     margin: 0;
@@ -11,6 +11,7 @@
 
 body {
     display: flex;
+    /* overflow-x: hidden; */
 }
 
 .sidebar {
@@ -28,7 +29,7 @@ body {
 }
 
 .sidebar:hover {
-    width: 240px;
+    width: 250px;
     transition: 0.5s;
 }
 
@@ -86,6 +87,8 @@ body {
     background: #ebe9e9;
     width: 100%;
     padding: 1rem;
+    box-sizing: border-box;
+    word-wrap: break-word;
 }
 
 .header--wrapper img {
@@ -255,7 +258,19 @@ tfoot td{
 }
 
 .table-container button{
-    color: green;
+    color: rgb(230, 55, 11);
     background: none;
     cursor: pointer;
+}
+
+.settings--admin{
+    width: 100%;
+    padding: 1rem;
+}
+
+#total--users, #total--destination, #total--details{
+    padding-left: 10px;
+    padding-right: 5px;
+    font-size: 18px;
+    font: bold;
 }
