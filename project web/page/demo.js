@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 // });
 
                 document.querySelector(".highlight_destination").textContent = detail.highlight_destination;
-                document.querySelector("#pr1").textContent = detail.adultPrice;
-                document.querySelector("#pr2").textContent = detail.childPrice;
+                document.querySelector("#pr1").textContent = detail.adultPrice +"$";
+                document.querySelector("#pr2").textContent = detail.childPrice +"$";
 
                 const descriptionElements = document.querySelectorAll(".descriptions_destination");
                 descriptionElements.forEach((element, index) => {

@@ -6,7 +6,7 @@
   
   html,
   body {
-    font-family: "Volkhov", serif;
+    font-family: 'Volkhov', serif;
     padding: 0 24px 24px 24px;
   }
   
@@ -50,6 +50,7 @@
   
   .sub-menu-wrap {
     position: absolute;
+    z-index: 1;
     top: 100%;
     right: -4%;
     width: 320px;
@@ -63,6 +64,7 @@
   }
   
   .sub-menu {
+    
     background-color: #e7f4f6;
     padding: 10px;
     margin: 10px 50px;
@@ -136,7 +138,7 @@
     gap: 2rem;
   }
   .navbar .toggle_btn {
-    color: #fff;
+    color: black;
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
@@ -145,6 +147,8 @@
   .dropdown_menu {
     display: none;
     position: absolute;
+    z-index: 1;
+
     right: 0rem;
     top: 70px;
     width: 180px;
@@ -212,15 +216,18 @@
   }
 
   .small-img-row{
-    margin-top: 5px;
+    margin-top: 10px;
     display: grid;
     grid-template-columns: auto auto auto auto;
     column-gap: 5px;
   }
-
+  .small-img{
+    border-radius: 6px;
+  }
   .especialy {
     margin-right: 20px;
     padding-left: 50px;
+    padding-right: 50px;
     padding-top: 50px;
     border-radius: 12px;
     background-color: rgba(231, 244, 246, 1);
@@ -263,6 +270,7 @@
   }
   
   .bookNow {
+    box-shadow: 3px 3px 3px black;
     width: 180px;
     height: 40px;
     border: 2px solid black;
@@ -279,6 +287,8 @@
   } 
 
   .mainText {
+    text-align: justify;
+  text-justify: inter-word;
     margin-top: 590px;
     font-size: 20px;
   } 
@@ -311,7 +321,7 @@
  
   
   #but{
-    margin-left: 1px;
+    margin-left: 130px;
   }
   .card-title {
     font-weight: bold;
@@ -378,6 +388,12 @@
     padding:5px 10px;
     font-weight: 540;
     margin-bottom: 20px;
+  }
+
+  
+  .row div img{
+    border: 1px;
+    border-radius: 15px;
   }
 
    /* foootttteeeer */
@@ -534,6 +550,9 @@
     }
     .row_img{
       display: block;
+    }
+    .especialy{
+      margin-top: 15px;
     }
     
   }
