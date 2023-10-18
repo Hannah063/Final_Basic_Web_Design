@@ -1,11 +1,9 @@
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
   
     const urlParams = new URLSearchParams(window.location.search);
-    const destinationId = urlParams.get('id');
-
+   
+  const destinationId = parseInt(urlParams.get("id"));
    
     fetch("../../Database/db.json")
         .then(response => response.json())
@@ -16,9 +14,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (detail) {
          
-                document.querySelector(".name_destination").textContent = detail.name_destination;
-            
-          
+            document.querySelector(".name_destination").textContent = detail.name_destination;
+    
             const mainImageElement = document.querySelector("#product-img");
             mainImageElement.src = detail.mainImage;
 
@@ -30,8 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 document.querySelector(".main_name_destination").textContent = detail.main_name_destination;
                 document.querySelector(".sub_name_destination").textContent = detail.sub_name_destination;
-
-                
 
                 document.querySelector(".highlight_destination").textContent = detail.highlight_destination;
                 document.querySelector("#pr1").textContent = detail.adultPrice;
@@ -46,6 +41,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Xử lý khi không tìm thấy chi tiết
                 console.error("Không tìm thấy chi tiết cho địa điểm có ID: " + destinationId);
             }
+
+            // const detail = details.details.find(detail => detail.id === destinationId);
+            // Lắng nghe sự kiện khi người dùng nhấn nút "Book Now"
+            const bookNowButton = document.querySelector("#book-now-button");
+            bookNowButton.addEventListener("click", function () {
+                localStorage.setItem("book",JSON.stringify(detail )) ;
+                window.location.href = `../../bookingPage/booking.html?id=${destinationId}`;
+            });
         })
         .catch(error => console.error("Lỗi khi tải dữ liệu: " + error));
 });

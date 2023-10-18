@@ -57,7 +57,7 @@
         },
         {
             "id_destination": 3,
-            "name": "Phu Quy beach - Binh Thuan",
+            "name": "Phu Quy Beach",
             "description": "Phu Quy Island is a new tourist destination in Binh Thuan, so the information related to ...",
             "image": "https://tse3.mm.bing.net/th?id=OIP.SwyU0GAN14KpgpYt19qaYgHaE6&pid=Api&P=0&h=180",
             "booked": 75
@@ -83,7 +83,7 @@
             "id_destination": 6,
             "name": "Thien Duong Cave",
             "description": "The One Pillar Pagoda formally belongs to an architecture complex called Dien Huu Tu which means ...",
-            "image": "https://vietnamdiscovery.com/wp-content/uploads/2020/11/Paradise-Cave-Discovery.jpg",
+            "image": "https://img.freepik.com/free-photo/phrayanakorn-cave-prachuap-khiri-khan-province-thailand_335224-912.jpg?w=900&t=st=1697611556~exp=1697612156~hmac=d3d54fcc89ed656eb8b06564cf5a562a7d4930f10d9b2ac97aee6740cc4c7d73",
             "booked": 34
         },
 
@@ -229,7 +229,7 @@
             "highlight_destination": "Top places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
 
             "adultPrice": 500,
-            "childPrice": 250
+            "childPrice": 400
         },
 
         {
@@ -366,8 +366,8 @@
         
        
         {
-            "id": "7",
-            "id_destination":"7",
+            "id": 7,
+            "id_destination":7,
             "name": "Pho Co-Ha Noi",
             "mainImage": "./img/pho-co-ha-noi1.jpeg",
             "images": [
@@ -385,8 +385,8 @@
         
         },
         {
-            "id": "8",
-            "id_destination":"8",
+            "id": 8,
+            "id_destination":8,
             "name": "Fansipan - Sapa",
             "mainImage":"./img/fansipan1_LaoCai.jpg",
             "images": [
@@ -404,8 +404,8 @@
         
         },
         {
-            "id": "9",
-            "id_destination":"9",
+            "id": 9,
+            "id_destination":9,
             "name": "Tam Coc-Ninh Binh",
             "mainImage":"./img/tamcoc1_NinhBinh.jpg",
             "images": [
@@ -427,8 +427,8 @@
        
         
         {
-            "id": "10",
-            "id_destination":"10",
+            "id": 10,
+            "id_destination":10,
             "name": "Mang Den- Kon Tum ",
             "mainImage":"./img/mangden1_KonTum.jpg",
             "images": [
@@ -446,8 +446,8 @@
         
         },
         {
-            "id": "11",
-            "id_destination":"11",
+            "id": 11,
+            "id_destination":11,
             "name": "Thien vien Truc Lam Bach Ma Hue ",
             "mainImage":"./img/bachMa.jpg",
             "images": [
@@ -465,8 +465,8 @@
         
         },
         {
-            "id": "12",
-            "id_destination":"12",
+            "id": 12,
+            "id_destination":12,
             "name": "Ngu Hanh Son-Da Nang",
             "mainImage":"./img/nguhanhson1.jpg",
             "images": [
@@ -485,7 +485,7 @@
         
         },
         {
-            "id": "13",
+            "id": 13,
             "id_destination":"13",
             "name": "Na Tang-Phan Dung",
             "mainImage":"./img/naTang1.jpg",
@@ -671,6 +671,9 @@
 
 
 
-    ]
+    ], 
+
+    "bookings":[],
+    "historyBooking": []
 
 }

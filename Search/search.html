@@ -1,43 +1,255 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product List</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Destination Search</title>
     <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        /* Hiển thị 1 sản phẩm trên hàng khi màn hình có độ rộng < 600px */
+        @media (max-width: 600px) {
+            .destination-container {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                grid-gap: 10px;
+            }
         }
 
-        th,
-        td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
+        /* Hiển thị 2 sản phẩm trên hàng khi màn hình có độ rộng từ 600px đến 900px */
+        @media (min-width: 601px) and (max-width: 900px) {
+            .destination-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-gap: 10px;
+            }
+        }
+
+        /* Hiển thị 3 sản phẩm trên hàng khi màn hình có độ rộng từ 901px đến 1200px */
+        @media (min-width: 901px) and (max-width: 1200px) {
+            .destination-container {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 10px;
+            }
+        }
+
+        /* Hiển thị 4 sản phẩm trên hàng khi màn hình có độ rộng >= 1200px */
+        @media (min-width: 1201px) {
+            .destination-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 10px;
+            }
+        }
+
+
+        .item-destination {
+            flex-basis: 20%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+
+        .item-destination {
+            /* flex-basis: calc(20%); */
+            background-color: #E7F4F6;
+            margin: 20px 4px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            transition: transform 0.5s;
+        }
+
+        .item-destination:hover {
+            transform: translateY(-10px);
+        }
+
+        .item-destination01 {
+            flex-basis: calc(25%);
+            margin-bottom: 30px;
+        }
+
+        .img-destination {
+            border-radius: 15px;
+        }
+
+        @media only screen and (max-width: 769px) {
+            .row-destination {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+
+            .item-destination {
+                flex-basis: calc(40%);
+                margin-bottom: 30px;
+            }
+        }
+
+        @media only screen and (max-width:439px) {
+            .row-destination {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+
+            .item-destination {
+                flex-basis: 100%;
+                margin-bottom: 30px;
+            }
         }
     </style>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="inp">
-            <button class="btn btn-primary my-2 my-sm-0" type="button" onclick="searchInJSON()">Search</button>
-        </form>
-    </nav>
+    <!-- <a href="./project web/page/demo.html"></a> -->
+    <h1>Destination Search</h1>
 
-    <table id="productTable">
-        <tr>
-            <th id="datePro" scope="col">createAt</th>
-            <th id="namePro" scope="col">name</th>
-            <th id="avatarPro" scope="col">avatar</th>
-            <th id="pricePro" scope="col">price</th>
-            <th id="quantityPro" scope="col">quantity</th>
-            <th id="idPro" scope="col">id</th>
-        </tr>
-    </table>
+    <input type="text" id="searchInput" placeholder="Nhập tên địa điểm">
+    <button onclick="searchDestinations()">Search</button>
 
-    <script src="product.js"></script>
+    <div id="searchResults">
+        <!-- Kết quả tìm kiếm sẽ được hiển thị ở đây -->
+    </div>
+
+    <script>
+        function searchDestinations() {
+            // Lấy giá trị từ ô input
+            const searchInput = document.getElementById("searchInput").value;
+
+            // Gọi hàm Timkiem() để tải dữ liệu
+            Timkiem()
+                .then(data => {
+                    // Tạo một biến để lưu trữ kết quả tìm kiếm
+                    const searchResults = [];
+
+                    // Lặp qua danh sách địa điểm và tìm kiếm
+                    for (const destination of data) {
+                        if (destination.name.toLowerCase().includes(searchInput.toLowerCase())) {
+                            searchResults.push(destination);
+                        }
+                    }
+
+                    // Hiển thị kết quả tìm kiếm
+                    displaySearchResults(searchResults);
+                })
+                .catch(error => {
+                    console.error('Lỗi khi tải dữ liệu: ' + error);
+                });
+        }
+
+        function displaySearchResults(results) {
+            const searchResultsContainer = document.getElementById("searchResults");
+
+            // Xóa kết quả tìm kiếm trước đó
+            searchResultsContainer.innerHTML = "";
+
+            // Hiển thị kết quả mới
+            if (results.length > 0) {
+                // Tạo một div container cho mỗi hàng (4 địa điểm trên một hàng)
+                let rowContainer = document.createElement("div");
+                rowContainer.classList.add("destination-container");
+
+                for (let i = 0; i < results.length; i++) {
+                    const result = results[i];
+                    const resultElement = document.createElement("div");
+                    resultElement.classList.add("item-destination");
+
+                    // Tạo nội dung cho mỗi địa điểm tương tự như bạn đã làm
+                    resultElement.innerHTML = `
+                <img class="img-destination" src="${result.image}" alt="${result.name}" width="100%">
+                <h3 class="name-destination">${result.name}</h3>
+                <p class="title-destination">${result.description}</p>
+                <div class="booked">
+                    <i class="fa fa-bookmark" aria-hidden="true"> Booked <span class="booked-count">${result.booked}</span></i>
+                </div>
+                <div class="read-more" data-destination-id="${result.id_destination}">
+                    <a href="#" data-destination-link="true">Tour Details</a>
+                    <i class='fas fa-long-arrow-alt-right'></i>
+                </div>
+
+                
+            `;
+
+
+
+                    // Thêm resultElement vào rowContainer
+                    rowContainer.appendChild(resultElement);
+                    // Nếu đã thêm 4 địa điểm vào rowContainer hoặc đã lặp hết danh sách kết quả, thêm rowContainer vào searchResultsContainer và tạo một rowContainer mới
+                    if ((i + 1) % 4 === 0 || i === results.length - 1) {
+                        searchResultsContainer.appendChild(rowContainer);
+                        rowContainer = document.createElement("div");
+                        rowContainer.classList.add("destination-container");
+                    }
+                }
+            } else {
+                searchResultsContainer.innerHTML = "<p>Không tìm thấy kết quả phù hợp.</p>";
+            }
+
+        }
+
+        function Timkiem() {
+            return fetch('https://touring.glitch.me/destinations')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Không thể tải dữ liệu.');
+                    }
+                    return response.json();
+                });
+        };
+
+        const destinationLinks = document.querySelectorAll('[data-destination-link]');
+
+        destinationLinks.forEach((link) => {
+            if (link.getAttribute('data-destination-link') === 'true') {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const destinationId = this.closest('.item-destination').getAttribute('data-destination-id');
+
+
+                    console.log(destinationId);
+                    // Sử dụng fetch để lấy dữ liệu từ trang chi tiết
+                    fetch(`https://touring.glitch.me/details?id=${destinationId}`)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Không thể tải dữ liệu chi tiết.');
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+
+                            
+                            // Xử lý dữ liệu chi tiết ở đây và hiển thị lên trang
+                            console.log(data);
+                        })
+                        .catch(error => {
+                            console.error('Lỗi khi tải dữ liệu chi tiết: ' + error);
+                        });
+                });
+            }
+        });
+
+
+
+
+        // Thêm sự kiện click cho các phần tử "Tour Details"
+        // const tourDetailsButtons = document.querySelectorAll(".read-more");
+
+        // tourDetailsButtons.forEach(button => {
+        //     button.addEventListener("click", event => {
+        //         event.preventDefault(); // Ngăn chuyển đổi ngữ cảnh mặc định của liên kết
+
+        //         // Trích xuất id_destination từ thuộc tính data-destination-id
+        //         const idDestination = button.getAttribute("data-destination-id");
+        //         console.log(idDestination);
+
+        //         // Chuyển hướng người dùng đến trang chi tiết với id_destination
+        //         window.location.href = `./project web/page/demo.html?id=` +  idDestination ;
+        //     });
+        // });
+
+
+
+    </script>
+
 </body>
+
 </html>
