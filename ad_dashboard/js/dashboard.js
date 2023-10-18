@@ -21,9 +21,8 @@ function td_fun({ date, id_destination, id_user, amount, duration, total_people 
     <td>${duration}</td>
     <td>${total_people}</td>
     <td>
-      <button class="color-dark ti-pencil-alt cursor" id="updateBtn" onclick="handleGetDetail(${id})"><i class="fa-solid fa-trash-can"></button>
-      <button class="ti-trash color-danger cursor" id="deleteBtn" onclick="handleOpenModalDelete(${id})"><i class="fa-solid fa-pen-to-square"></i></button>
-    </td>
+    <button class="color-dark ti-pencil-alt cursor" id="updateBtn" onclick="handleGetDetail(${id})"><i class="fa-solid fa-pen-to-square icons"></i></button>
+    <button class="ti-trash color-danger cursor" id="deleteBtn" onclick="handleDeleteUser(${id})"><i class="fa-solid fa-trash-can icons"></i></button>
       `;
     return td;
 }
