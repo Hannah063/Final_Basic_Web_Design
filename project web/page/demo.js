@@ -51,6 +51,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Xử lý khi không tìm thấy chi tiết
                 console.error("Không tìm thấy chi tiết cho địa điểm có ID: " + destinationId);
             }
+
+            const bookNowButton = document.querySelector("#book-now-button");
+            bookNowButton.addEventListener("click", function () {
+                localStorage.setItem("book",JSON.stringify(detail )) ;
+                window.location.href = `../../bookingPage/booking.html?id=${destinationId}`;
+            });
         })
         .catch(error => console.error("Lỗi khi tải dữ liệu: " + error));
 });
+
