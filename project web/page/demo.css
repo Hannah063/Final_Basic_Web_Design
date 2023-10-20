@@ -188,6 +188,9 @@
   
   
   }
+  /* p */
+
+  
   .title {
     display: flex;
     margin-left: 10px;
@@ -228,12 +231,28 @@
   padding-top: 50px;
   border-radius: 12px;
   background-color: rgba(231, 244, 246, 1);
-  height: 512px;
+  height: 650px;
   width: 100%;
+}
+.especialy h1 {
+  font-size: 30px;
+  font-weight: 2px;
+}
+.mainText h1, .sugestionTour h1{
+  text-align: center;
+  font-size: 30px;
+}
+
+.sub_name_destination{
+  font-size: 22px;
+}
+.name_destination{
+  font-size: 35px;
+  font-style: italic;
 }
 .locat {
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   display: flex;
 }
 .locat iconify-icon {
@@ -246,7 +265,10 @@
   color: white;
 }
 .locat p {
-  font-size: 18px;
+  font-size: 23px;
+}
+.children{
+  margin-bottom: 20px;
 }
 .adult,
 .children {
@@ -255,11 +277,11 @@
 }
 .adult p {
   margin-right: 85px;
-  font-size: 18px;
+  font-size: 22px;
 }
 .children p {
   margin-right: 63px;
-  font-size: 18px;
+  font-size: 22px;
 }
 #pr1,
 #pr2 {
@@ -277,6 +299,7 @@
   font-weight: 540;
   margin-bottom: 20px;
   margin-left: 250px;
+  margin-top: 10px;
 }
 
 #book-now-button p {
@@ -287,8 +310,8 @@
 } 
 
   .mainText {
-    margin-top:650px;
-    font-size: 20px;
+    margin-top:730px;
+    font-size: 22px;
   } 
   
   .col-lg-3 {
@@ -319,8 +342,8 @@ div.desc {
 
 
 .star {
-  margin-bottom: 20px;
-  font-size: 20px;
+  margin-bottom: 35px;
+  font-size: 30px;
 }
 .star iconify-icon {
   color: rgba(252, 70, 13, 1);
@@ -336,7 +359,7 @@ div.desc {
     font-size: 23px;
   }
   .card-text {
-    font-size: 16px;
+    font-size: 20px;
     padding: 6px;
 
   }
