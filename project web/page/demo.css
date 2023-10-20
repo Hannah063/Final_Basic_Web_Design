@@ -6,7 +6,7 @@
   
   html,
   body {
-    font-family: "Volkhov", serif;
+    font-family: 'Volkhov', serif;
     padding: 0 24px 24px 24px;
   }
   
@@ -266,6 +266,18 @@
   color: rgba(252, 70, 13, 1);
 }
 
+#book-now-button{
+  font-size: 20px;
+  background-color: orangered;
+  border-radius: 10px;
+  color:#fff;
+  outline: none;
+  border: none;
+  padding:5px 10px;
+  font-weight: 540;
+  margin-bottom: 20px;
+  margin-left: 250px;
+}
 
 #book-now-button p {
   margin-left: 50px;
@@ -379,15 +391,6 @@ div.desc {
   }
   
 
-  #book-now-button{
-    font-size: 20px;
-    color:#fff;
-    outline: none;
-    border: none;
-    padding:5px 10px;
-    font-weight: 540;
-    margin-bottom: 20px;
-  }
   
 .row div img{
   border: 1px;
