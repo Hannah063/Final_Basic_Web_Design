@@ -18,6 +18,14 @@
 <body>
 
     <div class="container">
+        <!-- <h1>Destination Search</h1>
+
+        <input type="text" id="searchInput" placeholder="Nhập tên địa điểm">
+        <button onclick="searchDestinations()">Search</button>
+
+        <div id="searchResults">
+        Kết quả tìm kiếm sẽ được hiển thị ở đây
+        </div> -->
 
 
 <div id="header"></div>
@@ -33,9 +41,13 @@
                 <div class="header-form">
                     <h3>Choose your Travel location:</h3>
                     <form >
+
                         <input type="text" class="form-control" placeholder="Destination Name" >
                         <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
+                    <div id="searchResults">
+                        <!-- Kết quả tìm kiếm sẽ được hiển thị ở đây -->
+                    </div>
                 </div>
             </div>
         </header>
@@ -166,29 +178,46 @@
                     </div>
                 </div>
             </div>
-
+            <div class="destination-page" data-page="1">
+                <!-- Trang 1 -->
+                <!-- Đặt dữ liệu của trang 1 ở đây -->
+              </div>
+              
+              <div class="destination-page" data-page="2" style="display: none;">
+                <!-- Trang 2 -->
+                <!-- Đặt dữ liệu của trang 2 ở đây -->
+              </div>
+              
+              <div class="destination-page" data-page="3" style="display: none;">
+                <!-- Trang 3 -->
+                <!-- Đặt dữ liệu của trang 3 ở đây -->
+              </div>
+              
+              <!-- Thêm nhiều trang dữ liệu khác tương tự -->                  
 
         </div>
-
+          
         <div class="page-btn">
             <ul class="list-inline list-unstyled">
-                <li class="prev"><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                <li><a href="#">1</a></li>
-                <li class="active"><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li class="next"><a href="#"><i class="fa fa-angle-right"></i></a></li>
+              <li class="prev"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+              <li class="page-number" data-page="1"><a href="#">1</a></li>
+              <li class="page-number" data-page="2"><a href="#">2</a></li>
+              <li class="page-number" data-page="3"><a href="#">3</a></li>
+              <!-- Thêm nhiều nút số trang khác tương tự -->
+              <li class="next"><a href="#"><i class="fa fa-angle-right"></i></a></li>
             </ul>
         </div>
 
+
 <div id="footer"></div>
+
     </div>
-
-
 
     <script src="./Tour.js"></script>
 
     <script src="/Final_Basic_Web_Design/HeaderFooter/loadHeaderFooter.js"></script>
+
+<!--     <script src="./search.js"></script> -->
 </body>
 
 </html>
