@@ -6,7 +6,7 @@
   
   html,
   body {
-    font-family: 'Volkhov', serif;
+    font-family: "Volkhov", serif;
     padding: 0 24px 24px 24px;
   }
   
@@ -181,35 +181,36 @@
 
 /* container */
 
-.main1 {
-  width: 100%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-.title {
-  display: flex;
-  margin-left: 10px;
-  margin-bottom: 20px;
-}
-.title iconify-icon {
-  font-size: 40px;
-}
-.title h3 {
-  margin-left: 30px;
-  font-size: 30px;
-  text-shadow: bold;
-}
-#row_img{
-  margin-bottom: 20px;
-}
-.col-6{
-  margin-right: 30px;
-}
-#product-img{
-  height: 382px;
-  border: 1px ;
-  border-radius: 4%;
-}
+  .main1 {
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  
+  
+  }
+  .title {
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+  .title iconify-icon {
+    font-size: 40px;
+  }
+  .title h3 {
+    margin-left: 30px;
+    font-size: 30px;
+    text-shadow: bold;
+  }
+  .col-6{
+    margin-right: 30px;
+  }
+  #product-img{
+    border: 1px ;
+    border-radius: 4%;
+  }
+  .small-img{
+    border-radius: 6px;
+  }
 
 .small-img-row{
   margin-top: 10px;
@@ -274,7 +275,7 @@
 } 
 
   .mainText {
-    margin-top:50px;
+    margin-top:650px;
     font-size: 20px;
   } 
   
