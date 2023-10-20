@@ -1,9 +1,9 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   
-    const urlParams = new URLSearchParams(window.location.search);
+const urlParams = new URLSearchParams(window.location.search);
    
-  const destinationId = parseInt(urlParams.get("id"));
+const destinationId = parseInt(urlParams.get("id"));
    
     fetch("../../Database/db.json")
         .then(response => response.json())
@@ -38,12 +38,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
             } else {
-                // Xử lý khi không tìm thấy chi tiết
+                
                 console.error("Không tìm thấy chi tiết cho địa điểm có ID: " + destinationId);
             }
 
-            // const detail = details.details.find(detail => detail.id === destinationId);
-            // Lắng nghe sự kiện khi người dùng nhấn nút "Book Now"
+            
             const bookNowButton = document.querySelector("#book-now-button");
             bookNowButton.addEventListener("click", function () {
                 localStorage.setItem("book",JSON.stringify(detail )) ;
