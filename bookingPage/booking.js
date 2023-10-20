@@ -65,8 +65,6 @@ function checkout_review() {
   handleGetDetail();
 }
 
-
-
 //SHOW INFOMATION
 async function handleGetDetail() {
   let id = id_des;

@@ -162,3 +162,13 @@ button[type="button"] {
 button[type="button"]:hover {
     background-color: #0056b3;
 }
+
+
+
+
+/* table show data  */
+table {
+    width: 80%; /* Đặt chiều rộng tối đa là 90% */
+    max-width: 80%; /* Đặt chiều rộng tối đa là 90% */
+    border: 1px solid gray;
+}

@@ -19,79 +19,7 @@
 
 <body>
     <div class="container">
-        <section class="header-navbar">
-            <div class="navbar">
-                <div class="logo"><a href="#"><img src="../Final_Basic_Web_Design/HeaderFooter/logo (1).png"
-                            alt="Ảnh logo"></a></div>
-
-                <ul class="links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Destinations</a></li>
-                    <li><a href="#">Tours</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Contact us</a></li>
-                </ul>
-
-                <img src="../Final_Basic_Web_Design/HeaderFooter/user1.png" alt="" class="user-pic"
-                    onclick="toggleProfile()">
-
-                <div class="sub-menu-wrap" id="subProfile">
-                    <div class="sub-menu">
-                        <div class="user-info">
-                            <img src="" alt="">
-                            <h2>beautiful</h2>
-                        </div>
-                        <hr>
-
-                        <a href="../Final_Basic_Web_Design/HeaderFooter/user1.png" class="sub-menu-links">
-                            <i class="fa fa-user"></i>
-                            <p>Edit profile</p>
-                            <span> > </span>
-                        </a>
-
-                        <a href="" class="sub-menu-links">
-                            <i class="fa fa-cog"></i>
-
-                            <p>Setting & Privacy</p>
-                            <span> > </span>
-                        </a>
-
-                        <a href="" class="sub-menu-links">
-                            <i class="fa fa-question-circle"></i>
-                            <p>Help & Support</p>
-                            <span> > </span>
-                        </a>
-
-
-                        <a href="" class="sub-menu-links">
-                            <i class="fa fa-sign-out"></i>
-                            <p>Log out</p>
-                            <span> > </span>
-                        </a>
-
-
-                    </div>
-                </div>
-
-
-                <div class="toggle_btn">
-                    <i class="fa fa-bars"></i>
-
-                </div>
-            </div>
-
-            <div class="dropdown_menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Destinations</a></li>
-                <li><a href="#">Tours</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact us</a></li>
-            </div>
-
-
-            <h1 style="padding: 50px 0; font-size: 42px; text-align: center;letter-spacing: 2px; color: white;">About Us
-            </h1>
-        </section>
+        <div id="header"></div>
 
 
 
@@ -221,7 +149,7 @@
                 <button id="btn-send" type="submit" onclick="sendEmail()" style="cursor: pointer">SEND</button>
             </form >
         </section>
-
+<div id="footer"></div>
     </div>
 
 
@@ -286,6 +214,7 @@ function sendEmail() {
 
 document.getElementById("btn-send").addEventListener("click", sendEmail);
 </script>
+<script src="/Final_Basic_Web_Design/HeaderFooter/loadHeaderFooter.js"></script>
 
 </body>
 
