@@ -28,24 +28,8 @@
         </div> -->
 
 
-
-        <!-- <header class="flex">
-            <div class="small-container">
-                <div class="header-title">
-                    <h1>Tours</h1>
-                </div>
-
-                <div class="header-form">
-                    <h3>Choose your Travel location:</h3>
-                    <form class="flex">
-                        <input type="text" class="form-control" placeholder="Destination Name">
-                        <input type="date" class="form-control" placeholder="Date">
-                        <input type="number" class="form-control" placeholder="Price($)">
-                        <input type="submit" class="search" value="Search">
-                    </form>
-                </div>
-            </div>
-        </header> -->
+<div id="header"></div>
+        
 
 
         <header class="flex">
@@ -57,9 +41,9 @@
                 <div class="header-form">
                     <h3>Choose your Travel location:</h3>
                     <form >
-                        <input type="text" id="searchInput" class="form-control" placeholder="Destination Name" >
-                        <button type="submit" onclick="searchDestinations()"><i class="fa fa-search">Search</i>
-                        </button>
+
+                        <input type="text" class="form-control" placeholder="Destination Name" >
+                        <button type="submit"><i class="fa fa-search"></i></button>
                     </form>
                     <div id="searchResults">
                         <!-- Kết quả tìm kiếm sẽ được hiển thị ở đây -->
@@ -223,10 +207,17 @@
               <li class="next"><a href="#"><i class="fa fa-angle-right"></i></a></li>
             </ul>
         </div>
+
+
+<div id="footer"></div>
+
     </div>
 
     <script src="./Tour.js"></script>
-    <script src="./search.js"></script>
+
+    <script src="/Final_Basic_Web_Design/HeaderFooter/loadHeaderFooter.js"></script>
+
+<!--     <script src="./search.js"></script> -->
 </body>
 
 </html>
