@@ -31,7 +31,6 @@ function td_fun({ id, name, description, image, booked }) {
 var idUserUpdate;
 
 async function handleGetDetail(id) {
-  console.log(id);
   event.preventDefault();
   await axios
   .get(`https://touring.glitch.me/destinations/${id}`)
