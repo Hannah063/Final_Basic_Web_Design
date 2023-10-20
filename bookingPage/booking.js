@@ -12,8 +12,7 @@ async function Booking() {
   var telephone      = document.getElementById('tel-input').value;
   var request        = document.getElementById('request-input').value;
 
-  await axios.post("https://touring.glitch.me/booking", {
-   
+  await axios.post("https://touring.glitch.me/bookings", {  
             role: "user",
             status: "Active",
             name: fullName,
@@ -54,8 +53,6 @@ button.addEventListener('click', booking_review);
 function checkout_review() {
   let review                = document.getElementById('review-form');
   let booking               = document.getElementById('booking-form');
-  let backgroundColor_nav1  = document.getElementById('circle-1');
-  let backgroundColor_nav2  = document.getElementById('circle-2');
   let color_nav1            = document.getElementById('so1');
 
   setTimeout(() => {
@@ -116,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-//sự kiện bắt click vào button CHECKOUT
+// sự kiện bắt click vào button CHECKOUT
 // document.getElementById('button-review').addEventListener('click', function(e) {
 //   let overlay = document.getElementById('complete');
 //   let backgroundColor_nav1 = document.getElementById('circle-2');
