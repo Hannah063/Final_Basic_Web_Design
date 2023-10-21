@@ -9,7 +9,7 @@ fetch("https://touring.glitch.me/bookings")
         });
     });
 
-function td_fun({ id, id_destination, id_user, booking_fullname, booking_phone_number, booking_email, total_adults, total_children, total_price, start_date, duration, request }) {
+function td_fun({ id, id_destination, id_user, booking_fullname, booking_phone_number, booking_email, total_adults, total_children, total_price, start_date, duration, request, payment, status }) {
     let td = document.createElement("tr");
     td.setAttribute("id", `child-${id}`);
     td.innerHTML = `
@@ -22,6 +22,8 @@ function td_fun({ id, id_destination, id_user, booking_fullname, booking_phone_n
     <td>${duration}</td>
     <td>${booking_fullname}<br>${booking_phone_number}<br>${booking_email}</td>
     <td>${request}</td>
+    <td>${payment}</td>
+    <td>${status}</td>
     <td>
         <button class="color-dark ti-pencil-alt cursor" id="updateBtn" onclick="handleGetDetail(${id})"><i class="fa-solid fa-pen-to-square icons"></i></button>
         <button class="ti-trash color-danger cursor" id="deleteBtn" onclick="handleDeleteBooking(${id})"><i class="fa-solid fa-trash-can icons"></i></button>
