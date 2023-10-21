@@ -265,7 +265,7 @@
   color: white;
 }
 .locat p {
-  font-size: 23px;
+  font-size: 20px;
 }
 .children{
   margin-bottom: 20px;
@@ -277,11 +277,11 @@
 }
 .adult p {
   margin-right: 85px;
-  font-size: 22px;
+  font-size: 20px;
 }
 .children p {
   margin-right: 63px;
-  font-size: 22px;
+  font-size: 20px;
 }
 #pr1,
 #pr2 {
