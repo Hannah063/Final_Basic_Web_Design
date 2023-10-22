@@ -53,12 +53,12 @@
             <form action="">
                 <div class="booking-form" id="booking-form">
                     <div class="booking-info-tour">
-                        <span id="info-tour-title">Trekking in Sapa</span>
+                        <span id="info-tour-title"></span>
                         <div class="row row-info">
                             <div class="adults col-6">
                                 <span class="adults-title">Total Adults</span>
                                 <div class="adults-input">
-                                    <input type="number" min="0"  id="adults-input">
+                                    <input type="number" placeholder="0" id="adults-input">
                                     <span class="people-unit">People</span>
                                 </div>
                             </div>
@@ -71,7 +71,7 @@
                             <div class="children col-6">
                                 <span class="children-title">Total Children</span>
                                 <div class="children-input">
-                                    <input type="number" min="0"  id="children-input">
+                                    <input type="number" placeholder="0" id="children-input">
                                     <span class="people-unit">People</span>
                                 </div>
                             </div>
@@ -80,27 +80,7 @@
                                 <input type="number" placeholder="0" id="duration-input">
                             </div>
                         </div>
-
-                        <div class="row row-info">
-                            <div class="children col-6">
-                                <span class="children-title">Total Price</span>
-                                <div class="children-input">
-                                    <input type="number" name="totalPrice" id="totalPrice" disabled>
-                                   
-                                </div>
-                            </div>
-                          
-                        </div>
-
-                        
-                     
-
                     </div>
-
-                    
-                  
-
-
                     <div class="customer-info">
                         <div class="customer-info-title">Please enter your infomation</div>
                         <div class="row row-customer-info">
@@ -122,78 +102,59 @@
                         <div class="row row-request">
                             <div class="request col-12">
                                 <span>Request</span>
-                                <textarea name="" id="request-input"></textarea>
+                                <textarea name="request-input" id="request-input"></textarea>
                             </div>
                         </div>
                     </div>
-                    <input type="button" onclick="checkout_review()" class="button-booking" value="BOOKING" ></input>
+                    <input type="button" class="button-booking" value="BOOKING" onclick="checkout_review()"></input>
                 </div>
-
 
                 <div class="review-form" id="review-form">
                     <div class="review-tour">
-                        <span class="review-tour-title" >Trekking in Sapa</span>
+                        <span id="review-tour-title" class="review-tour-title"></span>
                         <div class="review-info-tour">
-
                             <div class="review-image " id="review-image">
                                 <img src="image/example-image.jpg" alt="">
                             </div>
-
-                            <div class="review-info ">
+                            <div class="review-info">
                                 <div class="row row-review-info1">
                                     <div class="review-adults">
                                         <span class="review-adults-title">Total Adults</span>
                                         <div class="review-adults-input">
-                                            <input type="number" placeholder="0" id="review-adults-input" disabled>
+                                            <input type="number" placeholder="0" id="review-adults-input"  disabled>
                                             <span class="review-people-unit">People</span>
                                         </div>
                                     </div>
                                     <div class="review-start-date">
                                         <span>Start Date</span>
-                                        <input type="date" placeholder="DD/MM/YYYY" id="review-start-date" disabled>
+                                        <input type="date" placeholder="DD/MM/YYYY" id="review-start-date-input"  disabled>
                                     </div>
                                 </div>
                                 <div class="row row-review-info2">
                                     <div class="review-children">
                                         <span class="review-children-title">Total Children</span>
                                         <div class="review-children-input">
-                                            <input type="number" placeholder="0" id="review-children-input" disabled>
+                                            <input type="number" placeholder="0" id="review-children-input"  disabled>
                                             <span class="review-people-unit">People</span>
                                         </div>
                                     </div>
                                     <div class="review-duration">
                                         <span>Duration</span>
-                                        <input type="number" placeholder="0" id="review-duration" disabled>
+                                        <input type="number" placeholder="0" id="review-duration-input"  disabled>
                                     </div>
-                                </div>
-
-
-                                <div class="row row-review-info2">
-                                    <div class="review-children">
-                                        <span class="review-children-title">Total Price</span>
-                                        <div class="review-children-input">
-                                            <input type="number" name="totalPrice" id="totalPrice" disabled>
-                                            
-                                        </div>
-                                    </div>
-                                   
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    
-
-
                     <div class="review-customer-info">
                         <div class="row row-review-customer">
                             <div class="review-infomation">
                                 <span class="review-customer-info-title">Your infomation</span>
-                                <input type="text" id="review-customer-info" disabled>
+                                <textarea name="review-customer-info" id="review-customer-info" disabled></textarea>
                             </div>
                             <div class="review-request">
                                 <span class="review-customer-request-title">Your request</span>
-                                <input type="text" id="review-customer-request" disabled>
+                                <textarea name="review-customer-request" id="review-customer-request" disabled></textarea>
                             </div>
                         </div>
                         <div class="row row-review-customer">
@@ -204,28 +165,22 @@
                             </div>
                         </div>
                     </div>
-                    <input type="button" class="button-review" id="button-review" value="CHECKOUT"></input>
+                    <input type="button" class="button-review" id="button-review" onclick="handleSubmit(event)" value="CHECKOUT"></input>
                 </div>
             </form>
         </section>
-
-
         <div id="complete">
             <div class="notice-board">
                 <div class="board">
                     <div class="board-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="119" height="119" viewBox="0 0 119 119"
-                            fill="none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="119" height="119" viewBox="0 0 119 119" fill="none">
                             <g clip-path="url(#clip0_2633_45)">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M0.412231 59.2805C0.412231 43.6322 6.62852 28.6247 17.6936 17.5597C28.7586 6.49461 43.7661 0.27832 59.4144 0.27832C75.0628 0.27832 90.0702 6.49461 101.135 17.5597C112.2 28.6247 118.417 43.6322 118.417 59.2805C118.417 74.9289 112.2 89.9363 101.135 101.001C90.0702 112.066 75.0628 118.283 59.4144 118.283C43.7661 118.283 28.7586 112.066 17.6936 101.001C6.62852 89.9363 0.412231 74.9289 0.412231 59.2805ZM56.0474 84.5335L90.0169 42.0676L83.8807 37.1586L54.9145 73.3545L34.3975 56.2596L29.3626 62.3014L56.0474 84.5413V84.5335Z"
-                                    fill="#38C54F" />
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M0.412231 59.2805C0.412231 43.6322 6.62852 28.6247 17.6936 17.5597C28.7586 6.49461 43.7661 0.27832 59.4144 0.27832C75.0628 0.27832 90.0702 6.49461 101.135 17.5597C112.2 28.6247 118.417 43.6322 118.417 59.2805C118.417 74.9289 112.2 89.9363 101.135 101.001C90.0702 112.066 75.0628 118.283 59.4144 118.283C43.7661 118.283 28.7586 112.066 17.6936 101.001C6.62852 89.9363 0.412231 74.9289 0.412231 59.2805ZM56.0474 84.5335L90.0169 42.0676L83.8807 37.1586L54.9145 73.3545L34.3975 56.2596L29.3626 62.3014L56.0474 84.5413V84.5335Z" fill="#38C54F"/>
                             </g>
                             <defs>
-                                <clipPath id="clip0_2633_45">
-                                    <rect width="118.004" height="118.004" fill="white"
-                                        transform="translate(0.412231 0.27832)" />
-                                </clipPath>
+                              <clipPath id="clip0_2633_45">
+                                <rect width="118.004" height="118.004" fill="white" transform="translate(0.412231 0.27832)"/>
+                              </clipPath>
                             </defs>
                         </svg>
                     </div>
@@ -234,12 +189,9 @@
                 </div>
             </div>
         </div>
-        <div id="model"></div>
     </div>
-
-
     <footer>
-
+        
     </footer>
 </body>
 <script src="booking.js"></script>

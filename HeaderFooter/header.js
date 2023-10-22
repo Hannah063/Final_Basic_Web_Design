@@ -165,7 +165,7 @@
 
 var isLogin = JSON.parse(localStorage.getItem("isLogin"));
 
-// Hàm mở modal Login
+// Hàm mở modal Loginá
 function openLoginModal() {
     var loginModal = document.getElementById("loginModal");
     var signUpModal = document.getElementById("signupModal");
