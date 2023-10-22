@@ -150,15 +150,6 @@ form button{
   border-radius: 8px;;
 }
 
-
-
-
-
-
-
-
-
-
 .form-control {
   width: 100%;
   margin: 0.6rem 0;
@@ -170,12 +161,10 @@ form button{
   color: #fff;
   background-color: transparent;
 }
-
-/* ----------------------------------------------------- */
-
-
-
-
+#searchResults{
+  width: 100%;
+  height: 300px;
+}
 /* destination */
 
 /* .destination{
@@ -215,8 +204,8 @@ form button{
 }
 .img-destination{
     border-radius: 12px;
-    height:174px ;
-    width: 276px ;
+    height:230px ;
+    width: 100% ;
 }
 
 

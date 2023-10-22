@@ -6,11 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
-  
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Volkhov:ital,wght@0,400;0,700;1,700&family=Yesteryear&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Volkhov:ital,wght@0,400;0,700;1,700&family=Yesteryear&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="demo.css">
@@ -21,19 +17,86 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-    
+
 </head>
 
-<body >
-    <div class="container-fluid" >
-       
-        
+<body>
+    <div class="container-fluid">
+        <!-- menu -->
+        <section class="header-navbar">
+            <div class="navbar">
+                <div class="logo"><a href="#"><img src="img/logo (1).png" alt="Ảnh logo"></a></div>
+
+                <ul class="links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">Tours</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                </ul>
+
+                <img src="img/user1.png" alt="" class="user-pic" onclick="toggleProfile()">
+
+                <div class="sub-menu-wrap" id="subProfile">
+                    <div class="sub-menu">
+                        <div class="user-info">
+                            <img src="img/user1.png" alt="">
+                            <h2>beautiful</h2>
+                        </div>
+                        <hr>
+
+                        <a href="" class="sub-menu-links">
+                            <i class="fa fa-user"></i>
+                            <p>Edit profile</p>
+                            <span> > </span>
+                        </a>
+
+                        <a href="" class="sub-menu-links">
+                            <i class="fa fa-cog"></i>
+
+                            <p>Setting & Privacy</p>
+                            <span> > </span>
+                        </a>
+
+                        <a href="" class="sub-menu-links">
+                            <i class="fa fa-question-circle"></i>
+                            <p>Help & Support</p>
+                            <span> > </span>
+                        </a>
+
+
+                        <a href="" class="sub-menu-links">
+                            <i class="fa fa-sign-out"></i>
+                            <p>Log out</p>
+                            <span> > </span>
+                        </a>
+
+
+                    </div>
+                </div>
+
+
+                <div class="toggle_btn">
+                    <i class="fa fa-bars" ></i>
+
+                </div>
+            </div>
+
+            <div class="dropdown_menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Tours</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+            </div>
+
+
+
+        </section>
 
 
         <!-- main -->
         <div class="main1">
-           
-
             <div>
                 <div class="title">
                     <iconify-icon icon="entypo:location"></iconify-icon>
@@ -42,26 +105,26 @@
                 <div class="row_img">
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <img src="" width="100%" id="product-img">
-        
+
                         <div class="small-img-row">
                             <div class="small-img-col">
-                                <img src="" width="100%" class="small-img">
+                                <img src="" width="100%" height="130px" class="small-img">
                             </div>
                             <div class="small-img-col">
-                                <img src="" width="100%" class="small-img">
+                                <img src="" width="100%" height="130px" class="small-img">
                             </div>
                             <div class="small-img-col">
-                                <img src="" width="100%" class="small-img">
+                                <img src="" width="100%" height="130px" class="small-img">
                             </div>
                             <div class="small-img-col">
-                                <img src="" width="100%" class="small-img">
+                                <img src="" width="100%" height="130px" class="small-img">
                             </div>
                         </div>
                     </div>
-        
+
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="especialy">
-                            <h1 class="main_name_destination"></h1>
+                            <strong><h1 class="main_name_destination"></h1></strong>
                             <h2 class="sub_name_destination"></h2>
 
                             <div class="star">
@@ -78,31 +141,30 @@
                                 <p class="highlight_destination"></p>
                             </div>
                             <h1><strong>Price</strong></h1>
-        
+
                             <div class="adult">
                                 <p>Adult</p>
                                 <p id="pr1"><strong></strong></p>
                             </div>
-        
+
                             <div class="children">
                                 <p>Children</p>
                                 <p id="pr2"><strong></strong></p>
                             </div>
-                            <input id="book-now-button" type="submit" class="bookNow" value="BOOK NOW">
-                            
+                            <input type="submit" id="book-now-button" value="BOOK NOW">
                         </div>
                     </div>
-                </div>
-        
-            
 
-                <div class="mainText">
-                    <h1><strong>Description</strong></h1>
-                    <p class="descriptions_destination"></p>
-                    <p class="descriptions_destination"></p>
-                    <p class="descriptions_destination"></p>
-                    <p class="descriptions_destination"></p>
                 </div>
+            </div>
+
+           
+            <div class="mainText">
+                <h1><strong>Description</strong></h1>
+                <p class="descriptions_destination"></p>
+                <p class="descriptions_destination"></p>
+                <p class="descriptions_destination"></p>
+                <p class="descriptions_destination"></p>
             </div>
 
 
@@ -111,8 +173,8 @@
                 <h1><Strong>Sugestion Tour</Strong></h1>
                 <div class="container mt-5">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-12" >
-                            <img class="card-img-top" src="img/halong1.jpg" alt="Card image cap">
+                        <div class="col-lg-3 col-md-6 col-sm-12">
+                            <img class="card-img-top" src="img/bangiocCaobang.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk
@@ -123,7 +185,7 @@
                         </div>
 
                         <div class="col-lg-3 col-md-6 col-sm-12">
-                            <img class="card-img-top" src="img/halong2.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="img/bienBinhThuan1.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk
@@ -135,7 +197,7 @@
 
 
                         <div class="col-lg-3 col-md-6 col-sm-12">
-                            <img class="card-img-top" src="img/halong3.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="img/hoiAn3.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk
@@ -145,7 +207,7 @@
 
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-12">
-                            <img class="card-img-top" src="img/halong4.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="img/bienBinhThuan2.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <p class="card-text">Some quick example text to build on the card title and make up the
                                     bulk
@@ -157,16 +219,20 @@
                     </div>
                 </div>
 
+                <!-- Buttons -->
 
                 <div class="num">
-                    <button type="button" class="btn btn-outline-success"><a href="#">1</a></button>
-                    <button type="button" class="btn btn-outline-success"><a href="#">2</a></button>
-                    <button type="button" class="btn btn-outline-success"><a href="#">3</a></button>
-                    <button type="button" class="btn btn-outline-success"><a href="#"><iconify-icon
+                    <button type="button" class="btn btn-outline-primary"><a href="#">1</a></button>
+                    <button type="button" class="btn btn-outline-primary"><a href="#">2</a></button>
+                    <button type="button" class="btn btn-outline-primary"><a href="#">3</a></button>
+                    <button type="button" class="btn btn-outline-primary"><a href="#"><iconify-icon
                                 icon="ooui:next-ltr"></iconify-icon></a></button>
 
                 </div>
             </div>
+
+
+            
 
             <!-- Comment -->
             <div class="cmt">
@@ -241,7 +307,81 @@
                 </div>
             </div>
 
-            
+            <!-- FT -->
+            <div class="footer">
+                <div class="row">
+                    <div class="footer-col-1">
+                        <h3>Download Our App</h3>
+                        <p>Download App for Android and IOS on mobile phone</p>
+                        <div class="app-logo">
+                            <img src="https://freeiconshop.com/wp-content/uploads/edd/app-store-badge-128x128.png">
+                            <img src="https://freeiconshop.com/wp-content/uploads/edd/google-play-badge-128x128.png">
+                            <img src="https://d35fo82fjcw0y8.cloudfront.net/2018/12/10121639/QR_Code_Example.png">
+                        </div>
+                    </div>
+
+                    <div class="footer-col-2">
+
+                        <h3>Subscrible for NewSletter</h3>
+                        <input type="text" placeholder="Enter email">
+                        <input type="submit" value="Subscrible">
+
+                    </div>
+
+
+
+                    <div class="footer-col-3">
+                        <h3>Customer Service</h3>
+                        <ul>
+                            <li>Help Centre</li>
+                            <li>Return & Refund</li>
+                            <li>Warranty Policy</li>
+                            <li>Shipping</li>
+                            <li>Payment</li>
+
+                        </ul>
+                    </div>
+
+                    <div class="footer-col-4">
+                        <h3>Follow Us On</h3>
+                        <ul>
+                            <li> <i class="fa fa-facebook-official"></i>FaceBook</li>
+                            <li> <i class="fa fa-instagram"></i>Instagram</li>
+                            <li> <i class="fa fa-linkedin-square"></i>Linked In</li>
+                            <li> <i class="fa fa-youtube-play"></i>Youtube</li>
+                        </ul>
+                    </div>
+
+                    <p class="copyright"> Create by <i class="fa fa-heart"></i> Team 1: Âm - Huyền - Luân - Ngân</p>
+                </div>
+
+            </div>
+
+
+
+            <script>
+                const toggleBtn = document.querySelector('.toggle_btn')
+                const toggleBtnIcon = document.querySelector('.toggle_btn i')
+                const dropDownMenu = document.querySelector('.dropdown_menu')
+
+                toggleBtn.onclick = function () {
+                    dropDownMenu.classList.toggle('open')
+
+                    const isOpen = dropDownMenu.classList.contains('open')
+                    toggleBtnIcon.classList = isOpen
+                        ? 'fa fa-times'
+                        : 'fa fa-bars'
+                }
+            </script>
+
+            <script>
+                let subProfile = document.getElementById("subProfile");
+                function toggleProfile() {
+                    subProfile.classList.toggle("open-profile");
+
+                }
+            </script>
+
             <script>
                 var ProductImg = document.getElementById("product-img");
                 var SmallImg = document.getElementsByClassName("small-img");
