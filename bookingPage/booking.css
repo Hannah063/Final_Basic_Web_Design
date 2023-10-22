@@ -372,7 +372,8 @@ form{
 
 .review-customer-info-title, 
 .review-customer-request-title,
-.review-price{
+.review-price,
+.review-payment{
     color: var(--main-white);
     font: var(--volkholregular-25-px);
 }
@@ -394,13 +395,14 @@ form{
 }
 
 #review-price{
-    width: 697px;
+    width: 332px;
     height: 46.01px;
     border-radius: 15px;
     border: none;
     padding-right: 15px;
     font-size: 19px;
     font-weight: 500;
+    margin-left: 4px;
 }
 
 .review-price2{
@@ -415,11 +417,20 @@ form{
     height: 23px;
     position: absolute;
     top: calc(50% - 7px);
-    right: calc(84%);
+    right: calc(70%);
 }
 
 .review-price2 input{
     background-color: white;
+}
+
+.review-payment1{
+    width: 332px;
+    height: 46.01px;
+    border-radius: 15px;
+    border: none;
+    padding-left: 10px;
+    margin-top: 17px;
 }
 
 #complete {
