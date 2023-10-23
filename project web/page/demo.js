@@ -1,3 +1,8 @@
+// Thay đổi star trên 
+const voteButton = document.getElementById('voteButton');
+voteButton.addEventListener('click', function() {
+  voteButton.classList.add('voted');
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   
