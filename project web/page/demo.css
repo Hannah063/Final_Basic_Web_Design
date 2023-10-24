@@ -6,7 +6,7 @@
   
   html,
   body {
-    font-family: 'Volkhov', serif;
+    font-family: 'Volkhov';
     padding: 0 24px 24px 24px;
   }
   
@@ -210,6 +210,7 @@
   #product-img{
     border: 1px ;
     border-radius: 4%;
+    height: 410px;
   }
   .small-img{
     border-radius: 6px;
@@ -234,9 +235,22 @@
   height: 550px;
   width: 100%;
 }
-.especialy h1 {
+.main_name_destination{
   font-size: 30px;
-  font-weight: 2px;
+}
+.sub_name_destination{
+  font-size: 20px;
+}
+.highlight, .priceTitle{
+  font-size: 22px;
+  font-weight: 700;
+}
+.highlight_destination{
+  font-size: 20px;
+}
+.chooseTitle{
+  font-size: 19px;
+  font-weight: 700;
 }
 .mainText h1, .sugestionTour h1{
   text-align: center;
@@ -260,15 +274,9 @@
   background-color: rgba(252, 70, 13, 1);
   color: white;
 }
-.locat p {
-  font-size: 15px;
-}
 .price{
   display: grid;
   grid-template-columns: 40% 60%;
-}
-.tbl{
-  border: 1px solid black;
 }
 tr th {
  background-color: blue;
@@ -277,19 +285,16 @@ tr th {
 tr th ,tr td{
   border: 1px solid black;
  text-align: center;
- font-size: 13px;
+ font-size: 16px;
 }
 .chose{
   display: block;
 }
-.chose label {
-  font-size: 16px;
-}
 #select{
-  font-size: 15px;
-}
-.describePrice li{
-  font-size: 15px;
+  width: 200px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: 500;
 }
 #book-now-button{
   font-size: 20px;
@@ -311,7 +316,7 @@ tr th ,tr td{
 } 
 
   .mainText {
-    margin-top:730px;
+    margin-top: 650px;
     font-size: 22px;
   } 
   
@@ -623,10 +628,6 @@ div.desc {
       padding-left: 10px;
       margin-top: 20px;
     }
-
-  .especialy h1{
-    font-size: 15px;
-  }
 
   .especialy h2{
     font-size: 13px;
