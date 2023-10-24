@@ -208,7 +208,6 @@ function sendEmail() {
     emailjs.send("service_3po5icg", "template_q8sb7jm", templateParams)
         .then(function (response) {
             alert("Email đã được gửi thành công!");
-           
             document.getElementById("contactForm").reset();
         }, function (error) {
             alert("Có lỗi xảy ra khi gửi email: " + error);

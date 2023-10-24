@@ -6,7 +6,7 @@
   
   html,
   body {
-    font-family: 'Volkhov', serif;
+    font-family: 'Volkhov';
     padding: 0 24px 24px 24px;
   }
   
@@ -210,6 +210,7 @@
   #product-img{
     border: 1px ;
     border-radius: 4%;
+    height: 410px;
   }
   .small-img{
     border-radius: 6px;
@@ -228,23 +229,32 @@
   margin-right: 20px;
   padding-left: 50px;
   padding-right: 50px;
-  padding-top: 50px;
+  padding-top: 60px;
   border-radius: 12px;
   background-color: rgba(231, 244, 246, 1);
-  height: 650px;
+  height: 550px;
   width: 100%;
 }
-.especialy h1 {
+.main_name_destination{
   font-size: 30px;
-  font-weight: 2px;
+}
+.sub_name_destination{
+  font-size: 20px;
+}
+.highlight, .priceTitle{
+  font-size: 22px;
+  font-weight: 700;
+}
+.highlight_destination{
+  font-size: 20px;
+}
+.chooseTitle{
+  font-size: 19px;
+  font-weight: 700;
 }
 .mainText h1, .sugestionTour h1{
   text-align: center;
   font-size: 30px;
-}
-
-.sub_name_destination{
-  font-size: 22px;
 }
 .name_destination{
   font-size: 35px;
@@ -252,7 +262,7 @@
 }
 .locat {
   margin-top: 20px;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   display: flex;
 }
 .locat iconify-icon {
@@ -264,30 +274,28 @@
   background-color: rgba(252, 70, 13, 1);
   color: white;
 }
-.locat p {
-  font-size: 20px;
+.price{
+  display: grid;
+  grid-template-columns: 40% 60%;
 }
-.children{
-  margin-bottom: 20px;
+tr th {
+ background-color: blue;
+ color: white;
 }
-.adult,
-.children {
-  margin-left: 10px;
-  display: flex;
+tr th ,tr td{
+  border: 1px solid black;
+ text-align: center;
+ font-size: 16px;
 }
-.adult p {
-  margin-right: 85px;
-  font-size: 20px;
+.chose{
+  display: block;
 }
-.children p {
-  margin-right: 63px;
-  font-size: 20px;
+#select{
+  width: 200px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: 500;
 }
-#pr1,
-#pr2 {
-  color: rgba(252, 70, 13, 1);
-}
-
 #book-now-button{
   font-size: 20px;
   background-color: orangered;
@@ -297,9 +305,7 @@
   border: none;
   padding:5px 10px;
   font-weight: 540;
-  margin-bottom: 20px;
-  margin-left: 250px;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 
 #book-now-button p {
@@ -310,7 +316,7 @@
 } 
 
   .mainText {
-    margin-top:730px;
+    margin-top: 650px;
     font-size: 22px;
   } 
   
@@ -339,16 +345,32 @@ div.desc {
   text-align: center;
 }
 
+.stars{
+  background-color: #e0e0e0; /* Màu nền mặc định */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Thời gian chuyển đổi màu nền */
+
+  /* Áp dụng hiệu ứng khi người dùng click */
+}
+.iconStar {
+  color: #333; /* Màu ngôi sao mặc định */
+  margin-right: 5px; /* Khoảng cách giữa ngôi sao và văn bản */
+}
+.stars.voted.iconStar{
+  color: orangered;
+}
+
 
 
 .star {
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   font-size: 30px;
 }
 .star iconify-icon {
-  color: rgba(252, 70, 13, 1);
+  color: none;
 }
-
 
 #but{
   margin-left: 130px;
@@ -606,10 +628,6 @@ div.desc {
       padding-left: 10px;
       margin-top: 20px;
     }
-
-  .especialy h1{
-    font-size: 15px;
-  }
 
   .especialy h2{
     font-size: 13px;
