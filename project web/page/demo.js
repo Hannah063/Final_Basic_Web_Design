@@ -1,3 +1,8 @@
+// Thay đổi star trên 
+const voteButton = document.getElementById('voteButton');
+voteButton.addEventListener('click', function() {
+  voteButton.classList.add('voted');
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   
@@ -29,8 +34,6 @@ const destinationId = parseInt(urlParams.get("id"));
                 document.querySelector(".sub_name_destination").textContent = detail.sub_name_destination;
 
                 document.querySelector(".highlight_destination").textContent = detail.highlight_destination;
-                document.querySelector("#pr1").textContent = detail.adultPrice +"$";
-                document.querySelector("#pr2").textContent = detail.childPrice +"$";
 
                 const descriptionElements = document.querySelectorAll(".descriptions_destination");
                 descriptionElements.forEach((element, index) => {
