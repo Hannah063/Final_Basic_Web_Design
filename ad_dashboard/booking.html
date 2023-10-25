@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin dashboard</title>
     <link rel="stylesheet" href="css/dashboard.css">
-    <link 
-    rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </head>
 
@@ -33,18 +32,13 @@
                     <span>Destinations</span>
                 </a>
             </li>
-            <li  class="active">
+            <li class="active">
                 <a href="booking.html">
                     <i class="fas fa-ticket"></i>
                     <span>Booking</span>
                 </a>
             </li>
-            <li>
-                <a href="setting.html">
-                    <i class="fas fa-gear"></i>
-                    <span>Settings</span>
-                </a>
-            </li>
+            
             <li class="logout">
                 <a href="#">
                     <i class="fas fa-sign-out-alt"></i>
@@ -60,13 +54,7 @@
                 <span>Primary</span>
                 <h2>Booking</h2>
             </div>
-            <div class="user--info">
-                <div class="search--box">
-                    <i class="fa-solid fa-search"></i>
-                    <input type="text" placeholder="Search">
-                </div>
-                <img src="https://img.freepik.com/free-vector/cute-rich-boy-businessman-cartoon-vector-icon-illustration-people-business-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-3974.jpg?w=740&t=st=1696910116~exp=1696910716~hmac=3ba1c4ca393c4ee0007a81c80ffe08708a97ed4b5d76aee33471e8f428813001" alt="">
-            </div>
+            
         </div>
 
         <div class="tabular--wrapper">
@@ -90,7 +78,7 @@
                         </tr>
                     </thead>
                     <tbody id="tbody">
-                        
+
                     </tbody>
                     <tfoot>
                         <tr>
@@ -111,7 +99,75 @@
                 </div>
             </div>
         </div>
-        <div id="deleteSuccessMessage" style="display: none;">Delete successful!</div>
+
+        <div id="id02" class="modal-update">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close-update"
+                title="Close Modal">X</span>
+            <form class="modal-content">
+                <div class="container">
+                    <h1>Update Booking</h1>
+                    <p>Please fill in this form to update Booking .</p>
+                    <hr />
+                    <label for="id_destination-update"><b>ID destination</b></label>
+                    <input name="id_destination-update" id="id_destination-update" type="text" placeholder="Enter ID" required />
+                    <label for="id_user-update"><b>ID user</b></label>
+                    <input name="id_user-update" id="id_user-update" type="text"
+                        placeholder="Enter ID" required />
+
+                    <label for="adults-update"><b>Total adults</b></label>
+                    <input name="adults-update" id="adults-update" type="text" placeholder="Enter total adults"
+                        required />
+
+                    <label for="children-update"><b>Total children</b></label>
+                    <input name="children-update" id="children-update" type="text" placeholder="Enter total children"
+                        required />
+
+                    <label for="date-update"><b>Start date</b></label>
+                    <input name="date-update" id="date-update" type="text" placeholder="Enter start date"
+                        required />
+
+                    <label for="duration-update"><b>Duration</b></label>
+                    <select name="duration-update" id="duration-update">
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+
+                    <label for="fullname-update"><b>Fullname</b></label>
+                    <input name="fullname-update" id="fullname-update" type="text"
+                        placeholder="Enter fullname" required />
+
+                    <label for="phone-update"><b>Phone number</b></label>
+                    <input name="phone-update" id="phone-update" type="text" placeholder="Enter phone number"
+                        required />
+
+                    <label for="email-update"><b>Email</b></label>
+                    <input name="email-update" id="email-update" type="text" placeholder="Enter email"
+                        required />
+
+                    <label for="payment-update"><b>Payment</b></label>
+                    <select name="payment-update" id="payment-update">
+                        <option value="CASH">Cash payment</option>
+                        <option value="MOMO">MOMO payment</option>
+                    </select>
+
+                    <label for="status-update"><b>Status</b></label>
+                    <select name="status-update" id="status-update">
+                        <option value="Unpaid">Unpaid</option>
+                        <option value="Paid">Paid</option>
+                    </select>
+
+                    <div class="clearfix">
+                        <button type="button" onclick="document.getElementById('id02').style.display='none'"
+                            class="cancelbtn">
+                            Cancel
+                        </button>
+                        <button type="submit" class="updatebtn" id="updatebtn" onclick="handleUpdate(event)">
+                            Update
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 <script src="js/booking.js"></script>

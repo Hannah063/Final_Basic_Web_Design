@@ -10,7 +10,7 @@ fetch("https://touring.glitch.me/users")
         document.getElementById('total--users').innerHTML = arrayLength;
     });
 
-function td_fun({ id, name, email, password, phone, status, role }) {
+function td_fun({ id, name, email, phone, status, role }) {
     let td = document.createElement("tr");
     td.setAttribute("id", `child-${id}`);
     td.innerHTML = `

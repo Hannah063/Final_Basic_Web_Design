@@ -47,6 +47,7 @@ function checkout_review() {
   // lấy giá trị từ ô input
   adults = document.querySelector('input[id="adults-input"]').value;
   start = document.querySelector('input[id="start-date-input"]').value;
+  console.log(start);
   children = document.querySelector('input[id="children-input"]').value;
   var selectDuration = document.querySelector('input[id="duration-input"]').value;
   duration = selectDuration.value;
