@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="./abcontact.css">
+    <!-- Link gui mail -->
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 
     <title>About-Contact</title>
@@ -110,51 +113,17 @@
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <p>132 Dartmouth Street Boston, Massachusetts </p>
             </div>
-
-            <form >
-                <div class="input-container">
-                    <div class="name-input">
-                        <input type="text" id="lastname" required pattern="[A-Za-z]+" title="Vui lòng nhập ký tự chữ">
-                        <label class="label-input" for="lastname">Last Name</label>
-                        <div class="underline"></div>
-                    </div>
-
-
-                    <div class="name-input">
-                        <input type="text" id="firstname" required pattern="[A-Za-z]+" title="Vui lòng nhập ký tự chữ">
-                        <label class="label-input" for="firstname">First Name</label>
-                        <div class="underline"></div>
-                    </div>
-                </div>
-
-                <div class="input-container">
-                    <div class="email-input">
-                        <input type="email" id="email" required>
-                        <label class="label-input" for="email">Email</label>
-                        <div class="underline"></div>
-                    </div>
-                    <div class="phone-input">
-                        <input type="tel" id="phone" required>
-                        <label class="label-input" for="phone">Phone</label>
-                        <div class="underline"></div>
-                    </div>
-                </div>
-
-                <div class="input-container2">
-                    <label for="message" id="message-label">Message</label>
-                    <textarea id="message" rows="4" required placeholder="Enter your message..."></textarea>
-                    <div class="underline"></div>
-                </div>
-
-                <button id="btn-send" type="submit" onclick="sendEmail()" style="cursor: pointer">SEND</button>
-            </form >
+            <form id="contact-form">
+                <input type="hidden" name="contact_number">
+                <label>Email</label>
+                <input type="email" name="email" id="email">
+                <label>Message</label>
+                <input type="text" name="message" id="message">
+                <input type="submit" value="Send Email">
+              </form>
         </section>
 <div id="footer"></div>
     </div>
-
-
-
-
     <script>
         const toggleBtn = document.querySelector('.toggle_btn')
         const toggleBtnIcon = document.querySelector('.toggle_btn i')
@@ -179,40 +148,32 @@
     </script>
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script>
-
-emailjs.init("user_your_emailjs_user_id");
-
-
-function sendEmail() {
-    const firstname = document.getElementById("firstname").value;
-    const lastname = document.getElementById("lastname").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    const message = document.getElementById("message").value;
-
-    const templateParams = {
-        from_name: firstname + " " + lastname,
-        email: email,
-        phone: phone,
-        message: message,
-    };
-
-
-    emailjs.send("service_3po5icg", "template_q8sb7jm", templateParams)
-        .then(function (response) {
-            alert("Email đã được gửi thành công!");
-            document.getElementById("contactForm").reset();
-        }, function (error) {
-            alert("Có lỗi xảy ra khi gửi email: " + error);
+<script type="text/javascript">
+    (function () {
+      emailjs.init("KB8xFDF1VWtYq9f4L");
+    })();
+  </script>
+  <script type="text/javascript">
+    window.onload = function () {
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", function(even){
+          even.preventDefault();
+          // this.contact_number.value =(Math.random()*10000)|0;
+          console.log(this)
+          emailjs.sendForm("service_klm0uxr", "template_9bst307", this).then(
+            function(){
+              console.log("SUCCESSFUL!");
+              document.getElementById("email").value="";
+              document.getElementById("message").value="";
+            },
+            function(error){
+              console.log("FAILED>>>", error);
+            }
+          );
         });
-
- 
-    return false;
-}
-
-document.getElementById("btn-send").addEventListener("click", sendEmail);
-</script>
+      };
+      </script>
 <script src="/Final_Basic_Web_Design/HeaderFooter/loadHeaderFooter.js"></script>
 
 </body>
