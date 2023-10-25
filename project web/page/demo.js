@@ -1,8 +1,7 @@
 // Thay đổi star trên 
-const voteButton = document.getElementById('voteButton');
-voteButton.addEventListener('click', function() {
-  voteButton.classList.add('voted');
-});
+function toggleStarColor(star) {
+    star.classList.toggle('orange');
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   
