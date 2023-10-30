@@ -210,7 +210,7 @@
   #product-img{
     border: 1px ;
     border-radius: 4%;
-    height: 410px;
+    height: 450px;
   }
   .small-img{
     border-radius: 6px;
@@ -227,12 +227,13 @@
 }
 .especialy {
   margin-right: 20px;
+  margin-bottom: 30px;
   padding-left: 50px;
   padding-right: 50px;
   padding-top: 60px;
   border-radius: 12px;
   background-color: rgba(231, 244, 246, 1);
-  height: 550px;
+  height: 600px;
   width: 100%;
 }
 .main_name_destination{
@@ -276,36 +277,55 @@
 }
 .price{
   display: grid;
-  grid-template-columns: 40% 60%;
+  gap: 25px;
+  grid-template-columns: 60% 40%;
 }
+
 tr th {
- background-color: blue;
+ background-color: #fd661f;
  color: white;
+ border: none;
+ padding: 8px;
 }
 tr th ,tr td{
-  border: 1px solid black;
+
  text-align: center;
- font-size: 16px;
+ font-size: 14px;
+}
+
+
+.tbl {
+  border-collapse: collapse;
+  width: 300px;
+}
+
+.tbl th,
+.tbl td {
+  border: none;
+  padding: 10px;
+  text-align: center;
 }
 .chose{
   display: block;
 }
 #select{
-  width: 200px;
+  width: 150px;
   height: 30px;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
 }
 #book-now-button{
-  font-size: 20px;
+  font-size: 23px;
   background-color: orangered;
   border-radius: 10px;
   color:#fff;
   outline: none;
   border: none;
-  padding:5px 10px;
+  padding:10px 10px;
+  width: 70%;
   font-weight: 540;
   margin-top: 30px;
+  margin-left: 100px;
 }
 
 #book-now-button p {
@@ -345,31 +365,14 @@ div.desc {
   text-align: center;
 }
 
-.stars{
-  background-color: #e0e0e0; /* Màu nền mặc định */
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s; /* Thời gian chuyển đổi màu nền */
-
-  /* Áp dụng hiệu ứng khi người dùng click */
-}
-.iconStar {
-  color: #333; /* Màu ngôi sao mặc định */
-  margin-right: 5px; /* Khoảng cách giữa ngôi sao và văn bản */
-}
-.stars.voted.iconStar{
-  color: orangered;
-}
-
-
-
 .star {
-  margin-bottom: 20px;
+  color: grey;
   font-size: 30px;
+  cursor: pointer;
 }
-.star iconify-icon {
-  color: none;
+
+.star.orange {
+  color: orange;
 }
 
 #but{
@@ -570,12 +573,19 @@ div.desc {
     .mainText{
       padding-top: 525px;
     }
+    .mainText p{
+      font-size: 18px;
+    }
     .title iconify-icon, .title h3{
       font-size: 18px;
     }
     
     #book-now-button{
       margin-left: 40px;
+      width: 40%;
+      font-size: 18px;
+      margin-left: 250px;
+      margin-top: -20px;
     }
     .cmt{
       height:890px ;
@@ -600,6 +610,18 @@ div.desc {
     .especialy{
       margin-top: 15px;
     }
+    .card-text{
+      font-size: 17px;
+    }
+    .price{
+      display: block;
+    }
+    .chose{
+      margin-top: 30px;
+    }
+   .tbl{
+    width: 390px;
+   }
     
     
   }
@@ -622,28 +644,6 @@ div.desc {
     .title iconify-icon, .title h3{
       font-size: 18px;
     }
-    .especialy{
-      width: 100%;
-      height: 470px;
-      padding-left: 10px;
-      margin-top: 20px;
-    }
-
-  .especialy h2{
-    font-size: 13px;
-  }
-  .especialy p{
-    font-size: 13px;
-  }
-  .adult p{
-    font-size: 13px;
-    margin-right: 70px;
-  }
- .children p{
-    font-size: 13px;
-    margin-right: 55px;
-
-  }
   #book-now-button{
     margin-left: 70px;
     font-size: 15px;
@@ -685,8 +685,54 @@ div.desc {
     .row_img{
       display: block;
     }
+    #product-img{
+      height: 250px;
+    }
     .small-img{
       height: 50px;
-    } 
+    }
+    .especialy{
+      width: 100%;
+      height: 670px;
+      padding-left: 20px;
+      margin-top: 20px;
+    }
+    .especialy p{
+      font-size: 13px;
+    }
+    .main_name_destination{
+      font-size: 20px;
+    }
+    .sub_name_destination{
+      font-size: 15px;
+    }
+    .star{
+      font-size: 20px;
+    }
+    .highlight, .priceTitle{
+      font-size: 15px;
+      margin-top: 10px;
+    }
+    .price{
+      display: block;
+    }
+    .tbl{
+      width: 100%;
+    }
+    tr>th, tr>td{
+      font-size: 13px;
+    }
+    .chooseTitle{
+      font-size: 15px;
+    }
+    .chose{
+      margin-top: 30px;
+    }
+    #select{
+      font-size: 13px;
+    }
+    #but {
+      font-size: 13px;
+    }
   }
   

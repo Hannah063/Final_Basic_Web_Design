@@ -33,7 +33,9 @@ body {
   line-height: 1.6;
   letter-spacing: 1px;
 }
-
+.header-title h1 {
+  color: white;
+}
 
 
 

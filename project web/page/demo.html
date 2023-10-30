@@ -131,15 +131,11 @@
                             <h3 class="sub_name_destination"></h3>
 
                             <div class="star">
-                                <button class="stars" id="voteButton">
-                                    <span class="iconStar">
-                                        <iconify-icon icon="ic:sharp-star"></iconify-icon>
-                                    </span>
-                                </button>
-
-                                <iconify-icon icon="ic:sharp-star"></iconify-icon>
-                                <iconify-icon icon="ic:sharp-star"></iconify-icon>
-                                <iconify-icon icon="ic:sharp-star"></iconify-icon>
+                                <span class="star" onclick="toggleStarColor(this)">★</span>
+                                <span class="star" onclick="toggleStarColor(this)">★</span>
+                                <span class="star" onclick="toggleStarColor(this)">★</span>
+                                <span class="star" onclick="toggleStarColor(this)">★</span>
+                                <span class="star" onclick="toggleStarColor(this)">★</span>
                             </div>
 
                             <h2 class="highlight">Highlight</h2>
@@ -149,17 +145,6 @@
                             </div>
                             <h2 class="priceTitle">Price</h2>
                             <div class="price">
-                                <div class="chose">
-                                    <div>
-                                        <label for="select" class="chooseTitle">Choose your opption</label>
-                                        <select name="select" id="select">
-                                            <option value="3 day 2 night" id="chooseTitle">3 day 2 night</option>
-                                            <option value="2 day 1 night" id="chooseTitle">2 day 1 night</option>
-                                        </select>
-                                    </div>
-                                    <input type="submit" id="book-now-button" value="BOOK NOW">
-
-                                </div>
                                 <table class="tbl">
                                     <tr>
                                         <th></th>
@@ -177,7 +162,20 @@
                                         <td>150$</td>
                                     </tr>
                                 </table>
+                                <div class="chose">
+                                    <div>
+                                        <select name="select" id="select">
+                                            <option value="3 day 2 night" id="chooseTitle">3 day 2 night</option>
+                                            <option value="2 day 1 night" id="chooseTitle">2 day 1 night</option>
+                                        </select>
+                                    </div>
+                                   
+
+                                </div>
+                                
+
                             </div>
+                            <input type="submit" id="book-now-button" value="BOOK NOW">
 
 
 
