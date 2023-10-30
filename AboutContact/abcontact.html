@@ -14,8 +14,7 @@
     <link rel="stylesheet" href="./abcontact.css">
     <!-- Link gui mail -->
     <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <title>About-Contact</title>
 </head>
@@ -115,14 +114,14 @@
             </div>
             <form id="contact-form">
                 <input type="hidden" name="contact_number">
-                <label>Email</label>
-                <input type="email" name="email" id="email">
-                <label>Message</label>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
+                <label for="message">Message</label>
                 <input type="text" name="message" id="message">
                 <input type="submit" value="Send Email">
-              </form>
+            </form>
         </section>
-<div id="footer"></div>
+        <div id="footer"></div>
     </div>
     <script>
         const toggleBtn = document.querySelector('.toggle_btn')
@@ -147,34 +146,33 @@
         }
     </script>
 
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-<script type="text/javascript">
-    (function () {
-      emailjs.init("KB8xFDF1VWtYq9f4L");
-    })();
-  </script>
-  <script type="text/javascript">
-    window.onload = function () {
-      document
-        .getElementById("contact-form")
-        .addEventListener("submit", function(even){
-          even.preventDefault();
-          // this.contact_number.value =(Math.random()*10000)|0;
-          console.log(this)
-          emailjs.sendForm("service_klm0uxr", "template_9bst307", this).then(
-            function(){
-              console.log("SUCCESSFUL!");
-              document.getElementById("email").value="";
-              document.getElementById("message").value="";
-            },
-            function(error){
-              console.log("FAILED>>>", error);
-            }
-          );
-        });
-      };
-      </script>
-<script src="/Final_Basic_Web_Design/HeaderFooter/loadHeaderFooter.js"></script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("KB8xFDF1VWtYq9f4L");
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function () {
+            document
+                .getElementById("contact-form")
+                .addEventListener("submit", function (even) {
+                    even.preventDefault();
+                    // this.contact_number.value =(Math.random()*10000)|0;
+                    console.log(this)
+                    emailjs.sendForm("service_klm0uxr", "template_pjtlkei", this).then(
+                        function () {
+                            console.log("SUCCESSFUL!");
+                            document.getElementById("email").value = "";
+                            document.getElementById("message").value = "";
+                        },
+                        function (error) {
+                            console.log("FAILED>>>", error);
+                        }
+                    );
+                });
+        };
+    </script>
+    <script src="/Final_Basic_Web_Design/HeaderFooter/loadHeaderFooter.js"></script>
 
 </body>
 
