@@ -12,30 +12,31 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Travel Agency-Header </title>
-    <link rel="stylesheet" href="/Final_Basic_Web_Design/HeaderFooter/res-menu.css">
+    <link rel="stylesheet" href="/HeaderFooter/header.css">
+    <link rel="stylesheet" href="/HeaderFooter/res-menu.css">
 </head>
 
 <body>
     <section class="header-navbar">
         <div class="navbar">
             <div class="logo">
-                <img src="/Final_Basic_Web_Design/HeaderFooter/logo (1).png" alt="Ảnh logo">
+                <img src="/HeaderFooter/logo (1).png" alt="Ảnh logo">
             </div>
 
             <ul class="links">
-                <li><a href="/Final_Basic_Web_Design/HomePage/homepage.html">Home</a></li>
-                <li><a href="/Final_Basic_Web_Design/Tour/Tour.html">Tours</a></li>
-                <li><a href="/Final_Basic_Web_Design/AboutContact/abcontact.html">About us</a></li>
-                <li><a href="/Final_Basic_Web_Design/AboutContact/abcontact.html#contact-us">Contact us</a></li>
-                <li><a href="/Final_Basic_Web_Design/ProfileUser/profile.html">History Booking </a></li>
+                <li><a href="/HomePage/homepage.html">Home</a></li>
+                <li><a href="/Tour/Tour.html">Tours</a></li>
+                <li><a href="/AboutContact/abcontact.html">About us</a></li>
+                <li><a href="/AboutContact/abcontact.html#contact-us">Contact us</a></li>
+                <li><a href="/ProfileUser/profile.html">History Booking </a></li>
             </ul>
 
-            <img src="/Final_Basic_Web_Design/HeaderFooter/user2.png" alt="" class="user-pic" id="userPic" onclick="toggleProfile()">
+            <img src="/HeaderFooter/user2.png" alt="" class="user-pic" id="userPic" onclick="toggleProfile()">
 
             <div class="sub-menu-wrap" id="subProfile">
                 <div class="sub-menu" id="subMenuLogin">
                     <div class="user-info">
-                        <img src="/Final_Basic_Web_Design/HeaderFooter/user2.png" alt="Default avatar" style="margin-right: 6px;" id="userInfoPic">
+                        <img src="/HeaderFooter/user2.png" alt="Default avatar" style="margin-right: 6px;" id="userInfoPic">
                         <h3>Guest</h3>
                     </div>
                     <hr>
@@ -48,11 +49,11 @@
 
                 <div class="sub-menu" id="subMenuUser" style="display: none;">
                     <div class="user-info">
-                        <img src="/Final_Basic_Web_Design/HeaderFooter/user1.png" style="margin-right: 6px;" id="userInfoPicLoggedIn">
+                        <img src="/HeaderFooter/user1.png" style="margin-right: 6px;" id="userInfoPicLoggedIn">
                         <h3 id="loggedInUserName"></h3>
                     </div>
                     <hr>
-                    <a href="/Final_Basic_Web_Design/ProfileUser/profile.html" target="_blank" class="sub-menu-links"> <i
+                    <a href="/ProfileUser/profile.html" target="_blank" class="sub-menu-links"> <i
                             class="fa fa-pencil-square-o"></i> Edit Profile</a>
                     <a href="#" class="sub-menu-links" id="logoutLink" onclick="logoutUser()"> <i
                             class="fa fa-sign-out"></i>Log out</a>
@@ -129,11 +130,11 @@
         </div>
 
         <div class="dropdown_menu">
-            <li><a href="/Final_Basic_Web_Design/HomePage/homepage.html">Home</a></li>
-                <li><a href="/Final_Basic_Web_Design/Tour/Tour.html">Tours</a></li>
-                <li><a href="/Final_Basic_Web_Design/AboutContact/abcontact.html">About us</a></li>
-                <li><a href="/Final_Basic_Web_Design/AboutContact/abcontact.html#contact-us">Contact us</a></li>
-                <li><a href="/Final_Basic_Web_Design/ProfileUser/profile.html">History Booking </a></li>
+            <li><a href="/HomePage/homepage.html">Home</a></li>
+                <li><a href="/Tour/Tour.html">Tours</a></li>
+                <li><a href="/AboutContact/abcontact.html">About us</a></li>
+                <li><a href="/AboutContact/abcontact.html#contact-us">Contact us</a></li>
+                <li><a href="/ProfileUser/profile.html">History Booking </a></li>
         </div>
 
     </section>
@@ -163,11 +164,16 @@
 
 
     
-    <link rel="stylesheet" href="/Final_Basic_Web_Design/HeaderFooter/header.css">
-    <script src="/Final_Basic_Web_Design/HeaderFooter/toastr/jquery.min.js"></script>
-    <script src="/Final_Basic_Web_Design/HeaderFooter/toastr/toastr.init.js"></script>
-    <script src="/Final_Basic_Web_Design/HeaderFooter/toastr/toastr.min.js"></script>
-    <script src="/Final_Basic_Web_Design/HeaderFooter/header.js"></script>
+    <link rel="stylesheet" href="/HeaderFooter/header.css">
+    <script src="/HeaderFooter/toastr/jquery.min.js"></script>
+    <script src="/HeaderFooter/toastr/toastr.init.js"></script>
+    <script src="/HeaderFooter/toastr/toastr.min.js"></script>
+    <script src="/HeaderFooter/header.js"></script>
 </body>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
+<script type="text/javascript">
+  emailjs.init('Osy8L38k62YRgUKem')
+</script>
 </html>
