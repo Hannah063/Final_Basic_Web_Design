@@ -1,679 +1,638 @@
 {
-    "user": [
-        {
-            "user_id": "U1",
-            "user_name":"tranluan",
-            "user_password":"luan123",
-            "user_email":"luan.tran@gmail.com",
-            "status": "active",
-            "role": "user"
-        },
-
-        {
-            "user_id": "U2",
-            "user_name":"hohuyen",
-            "user_password":"huyen321",
-            "user_email":"huyen.ho@gmail.com",
-            "status": "active",
-            "role": "user"
-        }
-    ],
-
-
-    "admin": [
-        {
-            "admin_id": "A1",
-            "admin_name":"yam",
-            "admin_password":"am456",
-            "admin_email":"am.y@gmail.com",
-            "status": "active",
-            "role": "admin"
-        }
-        ,
-        {
-            "admin_id": "A2",
-            "admin_name":"hongan",
-            "admin_password":"ngan789",
-            "admin_email":"ngan.ho@gmail.com",
-            "status": "active",
-            "role": "admin"
-        }
-    ],
-    
-    "destinations": [
-        {
-            "id_destination": 1,
-            "name": "Ha Long Bay",
-            "description": "Ha Long Bay is a UNESCO World Heritage Site located in Quang Ninh Province, Vietnam.",
-            "image": "https://tse4.mm.bing.net/th?id=OIP.dFS7Vb352hwmrkQFL0gpwQHaEt&pid=Api&P=0&h=180",
-            "booked": 100
-        },
-        {
-            "id_destination": 2,
-            "name": "Ban Gioc - Cao Bang",
-            "description": "Ban Gioc Waterfall is one of the famous waterfalls not only in our country but also known ...",
-            "image": "https://tse2.mm.bing.net/th?id=OIP.pv76lopGAwzOhDR116NcAAHaE8&pid=Api&P=0&h=180",
-            "booked": 77
-        },
-        {
-            "id_destination": 3,
-            "name": "Phu Quy Beach",
-            "description": "Phu Quy Island is a new tourist destination in Binh Thuan, so the information related to ...",
-            "image": "https://tse3.mm.bing.net/th?id=OIP.SwyU0GAN14KpgpYt19qaYgHaE6&pid=Api&P=0&h=180",
-            "booked": 75
-        },
-        
-        {
-            "id_destination": 4,
-            "name": "Accient Town Hoi An",
-            "description": "This beautiful scene is not in a strange place but in the land of Central Highlands, the home of the ...",
-            "image": "https://lp-cms-production.imgix.net/2023-02/shutterstockRF_361749332.jpg?sharp=10&vib=20&w=1200&w=600&h=400",
-            "booked": 30
-        },
-        {
-            "id_destination": 5,
-            "name": "G'Lun Waterfall",
-            "description": "Let's immerse yourself in the cool space of countless magical stalactites and stalagmites ...",
-            "image": "https://taxitour.com.vn/wp-content/uploads/2021/04/thac-dray-sap.jpg",
-            "booked": 75
-        },
-
-
-        {
-            "id_destination": 6,
-            "name": "Thien Duong Cave",
-            "description": "The One Pillar Pagoda formally belongs to an architecture complex called Dien Huu Tu which means ...",
-            "image": "https://img.freepik.com/free-photo/phrayanakorn-cave-prachuap-khiri-khan-province-thailand_335224-912.jpg?w=900&t=st=1697611556~exp=1697612156~hmac=d3d54fcc89ed656eb8b06564cf5a562a7d4930f10d9b2ac97aee6740cc4c7d73",
-            "booked": 34
-        },
-
-        {
-            "id_destination": 7,
-            "name": "Fansipan Legend - Sapa",
-            "description": "Fansipan Legend is located in the southwest of Sa Pa town, is a complex of cultural ...",
-            "image": "https://tse3.mm.bing.net/th?id=OIP.wgJOVCovcc7k4lU2j0w4BwAAAA&pid=Api&P=0&h=180",
-            "booked": 71
-        },
-
-        {
-            "id_destinationd": 8,
-            "name": "Ganh Da Dia - Phu Yen",
-            "description": "Ganh Da Dia is a natural landscape in An Ninh Dong commune, Tuy An district, Phu Yen ...",
-            "image": "https://tse3.mm.bing.net/th?id=OIP.Zc4e3h5Dvsldzsn7BEOPZwHaFQ&pid=Api&P=0&h=180",
-            "booked": 71
-        },
-
-        {
-            "id_destination": 9,
-            "name": "Tam Coc - Ninh Binh",
-            "description": "The place witnessed an important milestone in the nation's history with the capital ...",
-            "image": "https://tse2.mm.bing.net/th?id=OIP.oFLi6BkymquDoUCw1iBL9gHaE8&pid=Api&P=0&h=180",
-            "booked": 69
-        },
-
-        {
-            "id_destination": 10,
-            "name": "Mang Den - Kon Tum",
-            "description": "The space close to nature and the beauty and wildness, pure as a newly blooming forest ...",
-            "image": "https://tse2.mm.bing.net/th?id=OIP.NzQwXKPTH2xOJ2_QX4fgAQHaEH&pid=Api&P=0&h=180",
-            "booked": 50
-        },
-
-        {
-            "id_destination": 11,
-            "name": "Truc Lam Bach Ma Zen Monastery",
-            "description": "Truc Lam Bach Ma zen monastery is a complex of landscape located in the moutainous area ...",
-            "image": "https://tse4.mm.bing.net/th?id=OIP.mLjdlppi2AlN006bzr4_UgHaEK&pid=Api&P=0&h=180",
-            "booked": 48
-        },
-
-        {
-            "id_destination": 12,
-            "name": "Marble Mountains - Da Nang",
-            "description": "The cluster of hills is a well-known pilgrimage site with beautiful peaks, vast networks of ...",
-            "image": "https://tse3.mm.bing.net/th?id=OIP.wm6J3uggKt1T1wWMNO0MmwHaE8&pid=Api&P=0&h=180",
-            "booked": 46
-        },
-
-        {
-            "id_destination": 13,
-            "name": "Ta Nang - Phan Dung",
-            "description": "Diverse vegetation, majestic scenery, and moderate difficulty make this trail suitable for ...",
-            "image": "https://tse2.mm.bing.net/th?id=OIP.syUbWboZAfz2x3-oA0ZA_gHaE8&pid=Api&P=0&h=180",
-            "booked": 45
-        },
-
-        {
-            "id_destination": 14,
-            "name": "Ghenh Bang - Da Nang",
-            "description": "Ghenh Bang Da Nang has wild beauty and is still unknown to many tourists.",
-            "image": "https://tse3.mm.bing.net/th?id=OIP.17YGzRgrOWm2unpPVTGSkgHaE7&pid=Api&P=0&h=180",
-            "booked": 45
-        },
-
-        {
-            "id_destination": 15,
-            "name": "Hai Van Pass - Thua Thien Hue",
-            "description": "Hai Van Pass is not only a major important role in the history of Vietnam but also as one of the ...",
-            "image": "https://tse3.mm.bing.net/th?id=OIP.tQuCNhG6vOL8J_uHVWWGRAHaE7&pid=Api&P=0&h=180",
-            "booked": 40
-        },
-
-        {
-            "id_destination": 16,
-            "name": "Cat Cat village - Sapa",
-            "description": "The Northwest of Vietnam has long been famous for its impressive and glamorous beauty that can ...",
-            "image": "https://tse3.mm.bing.net/th?id=OIP.t1kKuD64fPrvGYv3ApDKrgHaE8&pid=Api&P=0&h=180",
-            "booked": 35
-        },
-        {
-            "iid_destinationd": 17,
-            "name": "Wind fan field - Bac Lieu",
-            "description": "Visiting Bac Lieu wind power field, visitors admire the beauty of giant wind turbines, ...",
-            "image": "https://tse2.mm.bing.net/th?id=OIP.z-Lvm00Gi28f9OOjF0fIjwHaE8&pid=Api&P=0&h=180",
-            "booked": 72
-        },
-
-        
-
-        {
-            "id_destination": 18,
-            "name": "Hoa Lu ancient capital - Ninh Binh",
-            "description": "Hoa Lu Ancient Capital is the capital of an ancient Vietnamese Kingdom called Dai Co Viet in the ...",
-            "image": "https://tse2.mm.bing.net/th?id=OIP.ShVA5biUmFm4wz7AoDUXfQHaEL&pid=Api&P=0&h=180",
-            "booked": 31
-        },
-
-        
-
-        {
-            "id_destination": 19,
-            "name": "Ghenh Bang-Hoang Sa",
-            "description": "Ghenh Bang's gleaming white sand beaches have earned it the nickname 'Pearl Island', but the island's ...",
-            "image": "https://tse4.mm.bing.net/th?id=OIP.1FiSpVQbUieAZIinvRy2aQHaE8&pid=Api&P=0&h=180",
-            "booked": 28
-        },
-        {
-            "id_destination":20,
-            "name": "Doi cat Nam Cuong-Ninh Thuan",
-            "description": "Desert area with sea & mountain vistas popular for sunset viewing, plus bike trails & campgrounds.",
-            "image": "./img/doicatNamCuong1_NinhThuan.jpg",
-            "booked": 80 
-        }
-        
-    ],
-    
-
-    "details_destination": [
-        {
-            "id_detail":1,
-            "id_destination":1,
-
-            "name_destination": "Ha Long Bay",
-            "main_name_destination": "Panoramic scene  ",
-            "sub_name_destination":"Beaches, caves and boating surroundings",
-
-            "mainImage":"./img/halong1.jpg",
-            "sub_images": [
-                "./img/halong1.jpg",
-                "./img/halong2.jpg",
-                "./img/halong3.jpg",
-                "./img/halong4.jpg"
-            ],
-            "descriptions_destination": [
-                "Ha Long Bay in northeast Vietnam, is known for its emerald waters and thousands of towering limestone islands topped by rainforests",
-                "Ha Long Bay is suitable for enjoying a vacation with family, friends or colleagues. You will discover the majestic and mysterious scenes of Vietnam ",
-                "Activity: rock climbing and hiking, particularly in mountainous Cat Ba National Park",
-                "Vehicle: Kayak"
-            ],
-            "highlight_destination": "Top places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
-
-            "adultPrice": 500,
-            "childPrice": 400
-        },
-
-        {
-            "id_detail":2,
-            "id_destination":2,
-
-            "name_destination": "Ban Gioc-Cao Bang",
-            "main_name_destination": "Panoramic scene  ",
-            "sub_name_destination":"Beaches, caves and boating surroundings",
-
-            "mainImage":"./img/bangiocCaobang.jpg",
-            "sub_images": [
-            "./img/bangiocCaobang.jpg",
-                "./img/bangioc2.jpg",
-                "./img/bangioc3.jpg",
-                "./img/bangioc4.jpg"
-            ],
-
-            "descriptions_destination": [
-                "Visitors can explore the ancient ruins, temples, and monuments spread across the vast archaeological site.",
-                "The site is known for its spiritual and historical significance."
-            ],
-            "highlight_destination": "Top places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
-
-            "adultPrice": 500,
-            "childPrice": 250
-        },
-
-
-        {
-            "id_detail":3,
-            "id_destination":3,
-
-            "name_destination": "Bien Binh Thuan",
-            "main_name_destination": "Panoramic scene  ",
-            "sub_name_destination":"Beaches, caves and boating surroundings",
-
-            "mainImage":"./img/bienBinhThuan1.jpg",
-            "sub_images": [
-                "./img/bienBinhThuan1.jpg",
-                "./img/bienBinhThuan2.jpg",
-                "./img/bienBinhThuan3.jpg",
-                "./img/bienBinhThuan4.jpg"
-            ],
-
-            "descriptions_destination": [
-                "Phu Quy, also known as Thu Islet, Khoai Xu Islet, is a small island located about 120 km southeast of Phan Thiet, Binh Thuan. In addition to the main island, around Phu Quy island there are Hon Da Cao, Hon Do, Hon Tranh and Hon Hai. Phu Quy Island's area is just over 18km2 but has enough beautiful scenery, landscapes, experiences... for visitors to explore for a few days.",
-                 "As the most remote island district of Binh Thuan province, Phu Quy island has a wild and beautiful scenery but tourism has not really developed. Currently, the only means to get to the island is by boat from Phan Thiet city, a distance of more than 110 km." 
-
-            ],
-            "highlight_destination": "Top places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
-
-            "adultPrice": 500,
-            "childPrice": 250
-        },
-        {
-            "id_detail":4,
-            "id_destination":4,
-
-            "name_destination": "Hoi An",
-            "main_name_destination": "Panoramic scene  ",
-            "sub_name_destination":"Beaches, caves and boating surroundings",
-
-            "mainImage":"./img/hoiAn1.jpg",
-            "sub_images": [
-                "./img/hoiAn1.jpg",
-                "./img/hoiAn2.jpg",
-                "./img/hoiAn3.jpg",
-                "./img/hoiAn4.jpg"
-            ],
-
-            "descriptions_destination": [
-                "Ha Long Bay in northeast Vietnam, is known for its emerald waters and thousands of towering limestone islands topped by rainforests",
-                "Ha Long Bay is suitable for enjoying a vacation with family, friends or colleagues. You will discover the majestic and mysterious scenes of Vietnam ",
-                "Activity: rock climbing and hiking, particularly in mountainous Cat Ba National Park",
-                "Vehicle: Kayak"
-            ],
-            "highlight_destination": "Top places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
-
-            "adultPrice": 500,
-            "childPrice": 250
-        },
-        {
-            "id_detail":5,
-            "id_destination":5,
-
-            "name_destination": "Dak Nong",
-            "main_name_destination": "Panoramic scene  ",
-            "sub_name_destination":"Beaches, caves and boating surroundings",
-
-            "mainImage":"./img/thacDakNong1.jpg",
-            "sub_images": [
-                "./img/thacDakNong1.jpg",
-                "./img/thacDakNong2.jpg",
-                "./img/thacDakNong3.jpg",
-                "./img/thacDakNong4.jpg"
-            ],
-
-            "descriptions_destination": [
-                "Ha Long Bay in northeast Vietnam, is known for its emerald waters and thousands of towering limestone islands topped by rainforests",
-                "Ha Long Bay is suitable for enjoying a vacation with family, friends or colleagues. You will discover the majestic and mysterious scenes of Vietnam ",
-                "Activity: rock climbing and hiking, particularly in mountainous Cat Ba National Park",
-                "Vehicle: Kayak"
-            ],
-            "highlight_destination": "Top places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
-
-            "adultPrice": 500,
-            "childPrice": 250
-        },
-        {
-            "id_detail":6,
-            "id_destination":6,
-
-            "name_destination": "Dong Thien Duong-Quang Binh",
-            "main_name_destination": "Panoramic scene  ",
-            "sub_name_destination":"Beaches, caves and boating surroundings",
-
-            "mainImage":"https://www.visithalongbay.com/media/uploads/froala_editor/images/SungSotCave_1.jpg",
-            "sub_images": [
-                "https://vietnamtrips.com/files/photos/article817/sung-sot-cave-vietnam-2.jpg",
-                "https://www.uncovervietnam.com/wp-content/uploads/2021/03/Sung-Sot-Cave-Halong-Bay-Vietnam-1.jpg",
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7twXy5MH8950nypzuD-poWsPwnL6dsB63Jw&usqp=CAU",
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTujpvfxU66-jg0J2DYxHJ8XQ6RURItLRC0WA&usqp=CAU"
-            ],
-
-            "descriptions_destination": [
-                "In Thien Duong cave, there are many magical stalactites and stalagmites. Most of the ground in this cave is soft and quite flat, so it is convenient for sightseeing and exploration. The temperature inside Thien Duong cave is always about 16 °C different from outside."
-            ],
-            "highlight_destination": "Top places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
-
-            "adultPrice": 500,
-            "childPrice": 250
-        },
-        
-       
-        {
-            "id": 7,
-            "id_destination":7,
-            "name": "Pho Co-Ha Noi",
-            "mainImage": "./img/pho-co-ha-noi1.jpeg",
-            "images": [
-                "./img/pho-co-ha-noi1.jpeg",
-                "./img/pho-co-ha-noi2.jpeg",
-                "./img/pho-co-ha-noi3.jpeg",
-                "./img/pho-co-ha-noi4.jpeg"
-            ],
-            "descriptions": [
-                "The most famous feature of the old town is the craft streets. Craftsmen from craft villages around ancient Thang Long gathered here, focusing on each area specializing in their craft. Merchant ships can enter the middle of the street to trade, making the craft streets even more developed. And the products being traded become the names of the streets, with the word in front, each street specializes in trading one type of item."
-            ],
-            "highlight": "When you come to Phu Quy Beach, you can take tours on the shore, near the island, especially there are tours to see corals.",
-            "adultPrice": 3000,
-            "childPrice": 1800
-        
-        },
-        {
-            "id": 8,
-            "id_destination":8,
-            "name": "Fansipan - Sapa",
-            "mainImage":"./img/fansipan1_LaoCai.jpg",
-            "images": [
-                "./img/fansipan1_LaoCai.jpg",
-                "./img/fansipan2_LaoCai.jpg",
-                "./img/fansipan3_LaoCai.jpg",
-                "./img/fansipan4_LaoCai.jpg"
-            ],
-            "descriptions": [
-                "A breathtaking experience awaits at the top of Mt. Fansipan, the highest peak in Vietnam. It used to take travellers two days of hard trekking to reach the summit. Now, you can reach the ‘Roof of Indochina’ in just 15 minutes. Jaw-dropping views of swirling clouds and forested slopes from the top of Fansipan make this adventure a must-do on any Sapa itinerary. "
-                  ],
-            "highlight":"Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
-            "adultPrice": 3000,
-            "childPrice": 1800
-        
-        },
-        {
-            "id": 9,
-            "id_destination":9,
-            "name": "Tam Coc-Ninh Binh",
-            "mainImage":"./img/tamcoc1_NinhBinh.jpg",
-            "images": [
-                "./img/tamcoc1_NinhBinh.jpg",
-                "./img/tamcoc2_NinhBinh.jpg",
-                "./img/tamcoc3_NinhBinh.jpg",
-                "./img/tamcoc4_NinhBinh.jpg"
-
-
-            ],
-            "descriptions": [
-                "Tam Coc Bich Dong is a cave complex and a key national tourist area of Vietnam. This place is also known by beautiful names such as Ha Long Bay on land or Nam Thien De Nhi Dong. The entire area is surrounded by a system of limestone caves and many valuable historical relics."
-                ],
-            "highlight":"Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
-            "adultPrice": 3000,
-            "childPrice": 1800
-        
-        },
-       
-        
-        {
-            "id": 10,
-            "id_destination":10,
-            "name": "Mang Den- Kon Tum ",
-            "mainImage":"./img/mangden1_KonTum.jpg",
-            "images": [
-                "./img/mangden1_KonTum.jpg",
-                "./img/mangden2_KonTum.jpg",
-                "./img/mangden3_KonTum.jpg",
-                "./img/mangden4_KonTum.jpg"
-            ],
-            "descriptions": [
-                "Completely different from imagining the sunny and windy land of Kon Tum, Mang Den tourism is likened to a fairyland with a diverse ecosystem and fresh atmosphere that is not inferior to tourist destinations such as Da Lat, Sa Pa. With pure, somewhat simple and rustic beauty, this is a land that promises to bring many outstanding discovery experiences to visitors when visiting."
-                     ],
-            "highlight":"Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
-            "adultPrice": 3000,
-            "childPrice": 1800
-        
-        },
-        {
-            "id": 11,
-            "id_destination":11,
-            "name": "Thien vien Truc Lam Bach Ma Hue ",
-            "mainImage":"./img/bachMa.jpg",
-            "images": [
-                "./img/bachMa.jpg",
-                "./img/bachMa2.jpg",
-                "./img/bachMa3.jpg",
-                "./img/bachMa4.jpg"
-
-
-            ],
-            "descriptions": ["The trees are lush all year round, especially during the leaf-changing season. The waves crashing with white foam make the scene even more poetic. Along with that are two steep cliffs and gates welcoming visitors. visitors. Coming to Ghenh Bang, you will be able to immerse yourself in the wonderful natural scenery and experience many interesting activities."],
-            "highlight":"Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
-            "adultPrice": 3000,
-            "childPrice": 1800
-        
-        },
-        {
-            "id": 12,
-            "id_destination":12,
-            "name": "Ngu Hanh Son-Da Nang",
-            "mainImage":"./img/nguhanhson1.jpg",
-            "images": [
-                "./img/nguhanhson1.jpg",
-                "./img/nguhanhson2.jpg",
-                "./img/nguhanhson3.jpg",
-                "./img/nguhanhson4.jpg"
-
-            ],
-            "descriptions": [
-                "The structures and temples blend harmoniously with nature: grape vines drip from above, frangipani trees and poincianas bloom on stone paths, and the ornate pagoda roofs of The pagodas sparkle under the tropical sun. It's a scene that easily captures the imagination."
-                ],
-            "highlight":"Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
-            "adultPrice": 3000,
-            "childPrice": 1800
-        
-        },
-        {
-            "id": 13,
-            "id_destination":"13",
-            "name": "Na Tang-Phan Dung",
-            "mainImage":"./img/naTang1.jpg",
-            "images": [
-                "./img/naTang1.jpg",
-                "./img/naTang2.jpg",
-                "./img/naTang3.jpg",
-                "./img/naTang4.jpg"
-
-            ],
-            "descriptions": [
-                    "Ta Nang - Phan Dung is a famous trek, voted as one of the most beautiful treks in Vietnam. Ta Nang belongs to Duc Trong district, Lam Dong. Phan Dung belongs to Tuy Phong district, Binh Thuan.The total trek is 30km long, going from Ta Nang through the forest to Phan Dung, up to a 1,168m high milestone between 3 provinces of Lam Dong, Ninh Thuan, Binh Thuan. Vegetation also gradually changes with altitude, the air changes from cool to slightly hot according to the sun and wind of Binh Thuan, but you will be cooled by the cool stream."
-
-                ],
-            "highlight":"Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
-            "adultPrice": 3000,
-            "childPrice": 1800
-        
-        },
-        {
-            "id": "14",
-            "id_destination":"14",
-            "name": "Ghenh Bang-Hoang Sa",
-            "mainImage":"./img/ghenhBang1.jpg",
-            "images": [
-                "./img/ghenhBang1.jpg",
-                "./img/ghenhBang2.jpg",
-                "./img/ghenhBang3.jpg",
-                "./img/ghenhBang4.jpg"
-            ],
-            "descriptions": [
-                "The trees are lush all year round, especially during the leaf-changing season. The waves crashing with white foam make the scene even more poetic. Along with that are two steep cliffs and gates welcoming visitors. visitors. Coming to Ghenh Bang, you will be able to immerse yourself in the wonderful natural scenery and experience many interesting activities."],
-            "highlight":"Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
-            "adultPrice": 3000,
-            "childPrice": 1800
-        
-        },
-        {
-            "id": "15",
-            "id_destination":"15",
-            "name": "Deo Hai Van-Da Nang",
-            "mainImage":"./img/deoHaiVan1.jpg",
-            "images": [
-                "./img/deoHaiVan1.jpg",
-                "./img/deoHaiVan2.jpg",
-                "./img/deoHaiVan3.jpg",
-                "./img/deoHaiVan4.jpg"
-
-            ],
-            "descriptions": [
-                "Hai Van Quan is to tourists because of its majestic and beautiful natural scenery. From the gate, you will see the rolling mountains, winding mountain passes, blue coastline and soaring sky. At Hai Van Quan, visitors will get super impressive check-in photos at the North - South Thien Ly road"
-               ],
-            "highlight":"Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
-            "adultPrice": 3000,
-            "childPrice": 1800
-        
-        },
-        {
-            "id": "16",
-            "id_destination":"16",
-            "name": "Cat ba-Sapa",
-            "mainImage":"./img/banCatBa_LaoCai1.jpg",
-            "images": [
-                "./img/banCatBa_LaoCai1.jpg",
-                "./img/banCatBa_LaoCai2.jpg",
-                "./img/banCatBa_LaoCai3.jpg",
-                "./img/banCatBa_LaoCai4.jpg"
-
-            ],
-            "descriptions": [
-                "Cat Cat village has long attracted tourism enthusiasts because even though it is only a small village, this place is covered with the green of mountains and forests, terraced fields mixed with the rustic and simple features of the houses. Small is built from wood. Thereby, giving visitors a sense of simplicity in contrast to the hustle and bustle of the city."
-            ],
-            "highlight": "When you come to Phu Quy Beach, you can take tours on the shore, near the island, especially there are tours to see corals.",
-            "adultPrice": 3000,
-            "childPrice": 1800
-        
-        },
-
-
-        
-        {
-            "id": "17",
-            "id_destination":"17",
-            "name": "Na Tang-Phan Dung",
-            "mainImage":"./img/canhdonggio1_BacLieu.jpg",
-            "images": [
-                "./img/canhdonggio1_BacLieu.jpg",
-                "./img/canhdonggio2_BacLieu.jpg",
-                "./img/canhdonggio3_BacLieu.jpg",
-                "./img/canhdonggio4_BacLieu.jpg"
-            ],
-            "descriptions": [
-                    "Looking up from below to see the turbines standing tall in front of the sea, few people know that this place used to be long stretches of cork and mangrove forests. Below the road are layers of rocks arranged alternately, forming a stone fence to prevent sea erosion, causing soil erosion. Amidst the wind and ocean waves roaring day and night without rest, we can clearly feel the smallness of humans in front of nature. But nature had to surrender to human intelligence, when wind - the specialty of Bac Lieu, was transformed into energy to serve life."
-                ],
-            "highlight":"Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
-            "adultPrice": 3000,
-            "childPrice": 1800
-        
-        },
-
-        {
-            "id": "18",
-            "id_destination":"18",
-            "name": "Co do Hoa Lu-Ninh Binh",
-            "mainImage": "./img/coHoaLu1.jpg",
-            "images": [
-                "./img/coHoaLu1.jpg",
-                "./img/coHoaLu2.jpg",
-                "./img/coHoaLu3.jpg",
-                "./img/coHoaLu4.jpg"
-            ],
-            "descriptions": [
-                 "Phu Quy, also known as Thu Islet, Khoai Xu Islet, is a small island located about 120 km southeast of Phan Thiet, Binh Thuan. In addition to the main island, around Phu Quy island there are Hon Da Cao, Hon Do, Hon Tranh and Hon Hai. Phu Quy Island's area is just over 18km2 but has enough beautiful scenery, landscapes, experiences... for visitors to explore for a few days.",
-                 "As the most remote island district of Binh Thuan province, Phu Quy island has a wild and beautiful scenery but tourism has not really developed. Currently, the only means to get to the island is by boat from Phan Thiet city, a distance of more than 110 km." 
-
-            ],
-            "highlight": "When you come to Phu Quy Beach, you can take tours on the shore, near the island, especially there are tours to see corals.",
-            "adultPrice": 3000,
-            "childPrice": 1800
-        
-        },
-        {
-            "id": "",
-            "id_destination":"",
-            "name": "Ghenh Bang-Hoang Sa",
-            "mainImage":"./img/ghenhBang1.jpg",
-            "images": [
-                "./img/ghenhBang1.jpg",
-                "./img/ghenhBang2.jpg",
-                "./img/ghenhBang3.jpg",
-                "./img/ghenhBang4.jpg"
-            ],
-            "descriptions": [
-                "The trees are lush all year round, especially during the leaf-changing season. The waves crashing with white foam make the scene even more poetic. Along with that are two steep cliffs and gates welcoming visitors. visitors. Coming to Ghenh Bang, you will be able to immerse yourself in the wonderful natural scenery and experience many interesting activities."],
-            "highlight":"Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
-            "adultPrice": 3000,
-            "childPrice": 1800
-        
-        },
-        {
-            "id": "",
-            "id_destination":"",
-            "name": "Tam Coc-Ninh Binh",
-            "mainImage":"./img/tamcoc1_NinhBinh.jpg",
-            "images": [
-                "./img/tamcoc1_NinhBinh.jpg",
-                "./img/tamcoc2_NinhBinh.jpg",
-                "./img/tamcoc3_NinhBinh.jpg",
-                "./img/tamcoc4_NinhBinh.jpg"
-
-
-            ],
-            "descriptions": [
-                "Tam Coc Bich Dong is a cave complex and a key national tourist area of Vietnam. This place is also known by beautiful names such as Ha Long Bay on land or Nam Thien De Nhi Dong. The entire area is surrounded by a system of limestone caves and many valuable historical relics."
-                ],
-            "highlight":"Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
-            "adultPrice": 3000,
-            "childPrice": 1800
-        
-        },
-        
-        {
-            "id": "20",
-            "id_destination":"20",
-            "name": "Doi cat Nam Cuong-Ninh Thuan",
-            "mainImage":"./img/doicatNamCuong1_NinhThuan.jpg",
-            "images": [
-                "./img/doicatNamCuong1_NinhThuan.jpg",
-                "./img/doicatNamCuong2_NinhThuan.jpg",
-                "./img/doicatNamCuong3_NinhThuan.jpg",
-                "./img/doicatNamCuong4_NinhThuan.jpg"
-
-            ],
-            "descriptions": [
-                "Nam Cuong Sand Dunes is a system of sand dunes and sand fields with steep slopes and unique sand patterns. The sand here is white, smooth and soft, but it is not sea sand, but stone sand poured down from mountain streams. The picture of white sand dunes in bright yellow sunlight creates impressive frames. Nam Cuong Sand Dunes is also an ideal destination for fun and entertainment activities. Visitors can enjoy playing in the sand, sandboarding on the slopes, or participating in activities such as sand biking, sand climbing, sandboarding, and even parasailing."
-            ],
-            "highlight":"Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
-            "adultPrice": 3000,
-            "childPrice": 1800
-        
-        }
-
-
-
-
-    ], 
-
-    "bookings":[],
-    "historyBooking": []
-
+  "user": [
+    {
+      "user_id": "U1",
+      "user_name": "tranluan",
+      "user_password": "luan123",
+      "user_email": "luan.tran@gmail.com",
+      "status": "active",
+      "role": "user"
+    },
+
+    {
+      "user_id": "U2",
+      "user_name": "hohuyen",
+      "user_password": "huyen321",
+      "user_email": "huyen.ho@gmail.com",
+      "status": "active",
+      "role": "user"
+    }
+  ],
+
+  "admin": [
+    {
+      "admin_id": "A1",
+      "admin_name": "yam",
+      "admin_password": "am456",
+      "admin_email": "am.y@gmail.com",
+      "status": "active",
+      "role": "admin"
+    },
+    {
+      "admin_id": "A2",
+      "admin_name": "hongan",
+      "admin_password": "ngan789",
+      "admin_email": "ngan.ho@gmail.com",
+      "status": "active",
+      "role": "admin"
+    }
+  ],
+
+  "destinations": [
+    {
+      "id_destination": 1,
+      "name": "Ha Long Bay",
+      "description": "Ha Long Bay is a UNESCO World Heritage Site located in Quang Ninh Province, Vietnam.",
+      "image": "https://tse4.mm.bing.net/th?id=OIP.dFS7Vb352hwmrkQFL0gpwQHaEt&pid=Api&P=0&h=180",
+      "booked": 100
+    },
+    {
+      "id_destination": 2,
+      "name": "Ban Gioc - Cao Bang",
+      "description": "Ban Gioc Waterfall is one of the famous waterfalls not only in our country but also known ...",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.pv76lopGAwzOhDR116NcAAHaE8&pid=Api&P=0&h=180",
+      "booked": 77
+    },
+    {
+      "id_destination": 3,
+      "name": "Phu Quy Beach",
+      "description": "Phu Quy Island is a new tourist destination in Binh Thuan, so the information related to ...",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.SwyU0GAN14KpgpYt19qaYgHaE6&pid=Api&P=0&h=180",
+      "booked": 75
+    },
+
+    {
+      "id_destination": 4,
+      "name": "Accient Town Hoi An",
+      "description": "This beautiful scene is not in a strange place but in the land of Central Highlands, the home of the ...",
+      "image": "https://lp-cms-production.imgix.net/2023-02/shutterstockRF_361749332.jpg?sharp=10&vib=20&w=1200&w=600&h=400",
+      "booked": 30
+    },
+    {
+      "id_destination": 5,
+      "name": "G'Lun Waterfall",
+      "description": "Let's immerse yourself in the cool space of countless magical stalactites and stalagmites ...",
+      "image": "https://taxitour.com.vn/wp-content/uploads/2021/04/thac-dray-sap.jpg",
+      "booked": 75
+    },
+
+    {
+      "id_destination": 6,
+      "name": "Thien Duong Cave",
+      "description": "The One Pillar Pagoda formally belongs to an architecture complex called Dien Huu Tu which means ...",
+      "image": "https://img.freepik.com/free-photo/phrayanakorn-cave-prachuap-khiri-khan-province-thailand_335224-912.jpg?w=900&t=st=1697611556~exp=1697612156~hmac=d3d54fcc89ed656eb8b06564cf5a562a7d4930f10d9b2ac97aee6740cc4c7d73",
+      "booked": 34
+    },
+
+    {
+      "id_destination": 7,
+      "name": "Fansipan Legend - Sapa",
+      "description": "Fansipan Legend is located in the southwest of Sa Pa town, is a complex of cultural ...",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.wgJOVCovcc7k4lU2j0w4BwAAAA&pid=Api&P=0&h=180",
+      "booked": 71
+    },
+
+    {
+      "id_destinationd": 8,
+      "name": "Ganh Da Dia - Phu Yen",
+      "description": "Ganh Da Dia is a natural landscape in An Ninh Dong commune, Tuy An district, Phu Yen ...",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.Zc4e3h5Dvsldzsn7BEOPZwHaFQ&pid=Api&P=0&h=180",
+      "booked": 71
+    },
+
+    {
+      "id_destination": 9,
+      "name": "Tam Coc - Ninh Binh",
+      "description": "The place witnessed an important milestone in the nation's history with the capital ...",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.oFLi6BkymquDoUCw1iBL9gHaE8&pid=Api&P=0&h=180",
+      "booked": 69
+    },
+
+    {
+      "id_destination": 10,
+      "name": "Mang Den - Kon Tum",
+      "description": "The space close to nature and the beauty and wildness, pure as a newly blooming forest ...",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.NzQwXKPTH2xOJ2_QX4fgAQHaEH&pid=Api&P=0&h=180",
+      "booked": 50
+    },
+
+    {
+      "id_destination": 11,
+      "name": "Truc Lam Bach Ma Zen Monastery",
+      "description": "Truc Lam Bach Ma zen monastery is a complex of landscape located in the moutainous area ...",
+      "image": "https://tse4.mm.bing.net/th?id=OIP.mLjdlppi2AlN006bzr4_UgHaEK&pid=Api&P=0&h=180",
+      "booked": 48
+    },
+
+    {
+      "id_destination": 12,
+      "name": "Marble Mountains - Da Nang",
+      "description": "The cluster of hills is a well-known pilgrimage site with beautiful peaks, vast networks of ...",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.wm6J3uggKt1T1wWMNO0MmwHaE8&pid=Api&P=0&h=180",
+      "booked": 46
+    },
+
+    {
+      "id_destination": 13,
+      "name": "Ta Nang - Phan Dung",
+      "description": "Diverse vegetation, majestic scenery, and moderate difficulty make this trail suitable for ...",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.syUbWboZAfz2x3-oA0ZA_gHaE8&pid=Api&P=0&h=180",
+      "booked": 45
+    },
+
+    {
+      "id_destination": 14,
+      "name": "Ghenh Bang - Da Nang",
+      "description": "Ghenh Bang Da Nang has wild beauty and is still unknown to many tourists.",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.17YGzRgrOWm2unpPVTGSkgHaE7&pid=Api&P=0&h=180",
+      "booked": 45
+    },
+
+    {
+      "id_destination": 15,
+      "name": "Hai Van Pass - Thua Thien Hue",
+      "description": "Hai Van Pass is not only a major important role in the history of Vietnam but also as one of the ...",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.tQuCNhG6vOL8J_uHVWWGRAHaE7&pid=Api&P=0&h=180",
+      "booked": 40
+    },
+
+    {
+      "id_destination": 16,
+      "name": "Cat Cat village - Sapa",
+      "description": "The Northwest of Vietnam has long been famous for its impressive and glamorous beauty that can ...",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.t1kKuD64fPrvGYv3ApDKrgHaE8&pid=Api&P=0&h=180",
+      "booked": 35
+    },
+    {
+      "iid_destinationd": 17,
+      "name": "Wind fan field - Bac Lieu",
+      "description": "Visiting Bac Lieu wind power field, visitors admire the beauty of giant wind turbines, ...",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.z-Lvm00Gi28f9OOjF0fIjwHaE8&pid=Api&P=0&h=180",
+      "booked": 72
+    },
+
+    {
+      "id_destination": 18,
+      "name": "Hoa Lu ancient capital - Ninh Binh",
+      "description": "Hoa Lu Ancient Capital is the capital of an ancient Vietnamese Kingdom called Dai Co Viet in the ...",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.ShVA5biUmFm4wz7AoDUXfQHaEL&pid=Api&P=0&h=180",
+      "booked": 31
+    },
+
+    {
+      "id_destination": 19,
+      "name": "Ghenh Bang-Hoang Sa",
+      "description": "Ghenh Bang's gleaming white sand beaches have earned it the nickname 'Pearl Island', but the island's ...",
+      "image": "https://tse4.mm.bing.net/th?id=OIP.1FiSpVQbUieAZIinvRy2aQHaE8&pid=Api&P=0&h=180",
+      "booked": 28
+    },
+    {
+      "id_destination": 20,
+      "name": "Doi cat Nam Cuong-Ninh Thuan",
+      "description": "Desert area with sea & mountain vistas popular for sunset viewing, plus bike trails & campgrounds.",
+      "image": "./img/doicatNamCuong1_NinhThuan.jpg",
+      "booked": 80
+    }
+  ],
+
+  "details_destination": [
+    {
+      "id_detail": 1,
+      "id_destination": 1,
+
+      "name_destination": "Ha Long Bay",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+
+      "mainImage": "./img/halong1.jpg",
+      "sub_images": [
+        "./img/halong1.jpg",
+        "./img/halong2.jpg",
+        "./img/halong3.jpg",
+        "./img/halong4.jpg"
+      ],
+      "descriptions_destination": [
+        "Ha Long Bay in northeast Vietnam, is known for its emerald waters and thousands of towering limestone islands topped by rainforests",
+        "Ha Long Bay is suitable for enjoying a vacation with family, friends or colleagues. You will discover the majestic and mysterious scenes of Vietnam ",
+        "Activity: rock climbing and hiking, particularly in mountainous Cat Ba National Park",
+        "Vehicle: Kayak"
+      ],
+      "highlight_destination": "Top places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
+      "option1": "3 day 2 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 500,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 300,
+      "priceChildrenOption_2": 500
+    },
+
+    {
+      "id_detail": 2,
+      "id_destination": 2,
+
+      "name_destination": "Ban Gioc-Cao Bang",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+
+      "mainImage": "./img/bangiocCaobang.jpg",
+      "sub_images": [
+        "./img/bangiocCaobang.jpg",
+        "./img/bangioc2.jpg",
+        "./img/bangioc3.jpg",
+        "./img/bangioc4.jpg"
+      ],
+
+      "descriptions_destination": [
+        "Visitors can explore the ancient ruins, temples, and monuments spread across the vast archaeological site.",
+        "The site is known for its spiritual and historical significance."
+      ],
+      "highlight_destination": "Top places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
+
+      "adultPrice": 500,
+      "childPrice": 250
+    },
+
+    {
+      "id_detail": 3,
+      "id_destination": 3,
+
+      "name_destination": "Bien Binh Thuan",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+
+      "mainImage": "./img/bienBinhThuan1.jpg",
+      "sub_images": [
+        "./img/bienBinhThuan1.jpg",
+        "./img/bienBinhThuan2.jpg",
+        "./img/bienBinhThuan3.jpg",
+        "./img/bienBinhThuan4.jpg"
+      ],
+
+      "descriptions_destination": [
+        "Phu Quy, also known as Thu Islet, Khoai Xu Islet, is a small island located about 120 km southeast of Phan Thiet, Binh Thuan. In addition to the main island, around Phu Quy island there are Hon Da Cao, Hon Do, Hon Tranh and Hon Hai. Phu Quy Island's area is just over 18km2 but has enough beautiful scenery, landscapes, experiences... for visitors to explore for a few days.",
+        "As the most remote island district of Binh Thuan province, Phu Quy island has a wild and beautiful scenery but tourism has not really developed. Currently, the only means to get to the island is by boat from Phan Thiet city, a distance of more than 110 km."
+      ],
+      "highlight_destination": "Top places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
+
+      "adultPrice": 500,
+      "childPrice": 250
+    },
+    {
+      "id_detail": 4,
+      "id_destination": 4,
+
+      "name_destination": "Hoi An",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+
+      "mainImage": "./img/hoiAn1.jpg",
+      "sub_images": [
+        "./img/hoiAn1.jpg",
+        "./img/hoiAn2.jpg",
+        "./img/hoiAn3.jpg",
+        "./img/hoiAn4.jpg"
+      ],
+
+      "descriptions_destination": [
+        "Ha Long Bay in northeast Vietnam, is known for its emerald waters and thousands of towering limestone islands topped by rainforests",
+        "Ha Long Bay is suitable for enjoying a vacation with family, friends or colleagues. You will discover the majestic and mysterious scenes of Vietnam ",
+        "Activity: rock climbing and hiking, particularly in mountainous Cat Ba National Park",
+        "Vehicle: Kayak"
+      ],
+      "highlight_destination": "Top places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
+
+      "adultPrice": 500,
+      "childPrice": 250
+    },
+    {
+      "id_detail": 5,
+      "id_destination": 5,
+
+      "name_destination": "Dak Nong",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+
+      "mainImage": "./img/thacDakNong1.jpg",
+      "sub_images": [
+        "./img/thacDakNong1.jpg",
+        "./img/thacDakNong2.jpg",
+        "./img/thacDakNong3.jpg",
+        "./img/thacDakNong4.jpg"
+      ],
+
+      "descriptions_destination": [
+        "Ha Long Bay in northeast Vietnam, is known for its emerald waters and thousands of towering limestone islands topped by rainforests",
+        "Ha Long Bay is suitable for enjoying a vacation with family, friends or colleagues. You will discover the majestic and mysterious scenes of Vietnam ",
+        "Activity: rock climbing and hiking, particularly in mountainous Cat Ba National Park",
+        "Vehicle: Kayak"
+      ],
+      "highlight_destination": "Top places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
+
+      "adultPrice": 500,
+      "childPrice": 250
+    },
+    {
+      "id_detail": 6,
+      "id_destination": 6,
+
+      "name_destination": "Dong Thien Duong-Quang Binh",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+
+      "mainImage": "https://www.visithalongbay.com/media/uploads/froala_editor/images/SungSotCave_1.jpg",
+      "sub_images": [
+        "https://vietnamtrips.com/files/photos/article817/sung-sot-cave-vietnam-2.jpg",
+        "https://www.uncovervietnam.com/wp-content/uploads/2021/03/Sung-Sot-Cave-Halong-Bay-Vietnam-1.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7twXy5MH8950nypzuD-poWsPwnL6dsB63Jw&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTujpvfxU66-jg0J2DYxHJ8XQ6RURItLRC0WA&usqp=CAU"
+      ],
+
+      "descriptions_destination": [
+        "In Thien Duong cave, there are many magical stalactites and stalagmites. Most of the ground in this cave is soft and quite flat, so it is convenient for sightseeing and exploration. The temperature inside Thien Duong cave is always about 16 °C different from outside."
+      ],
+      "highlight_destination": "Top places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
+
+      "adultPrice": 500,
+      "childPrice": 250
+    },
+
+    {
+      "id": 7,
+      "id_destination": 7,
+      "name": "Pho Co-Ha Noi",
+      "mainImage": "./img/pho-co-ha-noi1.jpeg",
+      "images": [
+        "./img/pho-co-ha-noi1.jpeg",
+        "./img/pho-co-ha-noi2.jpeg",
+        "./img/pho-co-ha-noi3.jpeg",
+        "./img/pho-co-ha-noi4.jpeg"
+      ],
+      "descriptions": [
+        "The most famous feature of the old town is the craft streets. Craftsmen from craft villages around ancient Thang Long gathered here, focusing on each area specializing in their craft. Merchant ships can enter the middle of the street to trade, making the craft streets even more developed. And the products being traded become the names of the streets, with the word in front, each street specializes in trading one type of item."
+      ],
+      "highlight": "When you come to Phu Quy Beach, you can take tours on the shore, near the island, especially there are tours to see corals.",
+      "adultPrice": 3000,
+      "childPrice": 1800
+    },
+    {
+      "id": 8,
+      "id_destination": 8,
+      "name": "Fansipan - Sapa",
+      "mainImage": "./img/fansipan1_LaoCai.jpg",
+      "images": [
+        "./img/fansipan1_LaoCai.jpg",
+        "./img/fansipan2_LaoCai.jpg",
+        "./img/fansipan3_LaoCai.jpg",
+        "./img/fansipan4_LaoCai.jpg"
+      ],
+      "descriptions": [
+        "A breathtaking experience awaits at the top of Mt. Fansipan, the highest peak in Vietnam. It used to take travellers two days of hard trekking to reach the summit. Now, you can reach the ‘Roof of Indochina’ in just 15 minutes. Jaw-dropping views of swirling clouds and forested slopes from the top of Fansipan make this adventure a must-do on any Sapa itinerary. "
+      ],
+      "highlight": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "adultPrice": 3000,
+      "childPrice": 1800
+    },
+    {
+      "id": 9,
+      "id_destination": 9,
+      "name": "Tam Coc-Ninh Binh",
+      "mainImage": "./img/tamcoc1_NinhBinh.jpg",
+      "images": [
+        "./img/tamcoc1_NinhBinh.jpg",
+        "./img/tamcoc2_NinhBinh.jpg",
+        "./img/tamcoc3_NinhBinh.jpg",
+        "./img/tamcoc4_NinhBinh.jpg"
+      ],
+      "descriptions": [
+        "Tam Coc Bich Dong is a cave complex and a key national tourist area of Vietnam. This place is also known by beautiful names such as Ha Long Bay on land or Nam Thien De Nhi Dong. The entire area is surrounded by a system of limestone caves and many valuable historical relics."
+      ],
+      "highlight": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "adultPrice": 3000,
+      "childPrice": 1800
+    },
+
+    {
+      "id": 10,
+      "id_destination": 10,
+      "name": "Mang Den- Kon Tum ",
+      "mainImage": "./img/mangden1_KonTum.jpg",
+      "images": [
+        "./img/mangden1_KonTum.jpg",
+        "./img/mangden2_KonTum.jpg",
+        "./img/mangden3_KonTum.jpg",
+        "./img/mangden4_KonTum.jpg"
+      ],
+      "descriptions": [
+        "Completely different from imagining the sunny and windy land of Kon Tum, Mang Den tourism is likened to a fairyland with a diverse ecosystem and fresh atmosphere that is not inferior to tourist destinations such as Da Lat, Sa Pa. With pure, somewhat simple and rustic beauty, this is a land that promises to bring many outstanding discovery experiences to visitors when visiting."
+      ],
+      "highlight": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "adultPrice": 3000,
+      "childPrice": 1800
+    },
+    {
+      "id": 11,
+      "id_destination": 11,
+      "name": "Thien vien Truc Lam Bach Ma Hue ",
+      "mainImage": "./img/bachMa.jpg",
+      "images": [
+        "./img/bachMa.jpg",
+        "./img/bachMa2.jpg",
+        "./img/bachMa3.jpg",
+        "./img/bachMa4.jpg"
+      ],
+      "descriptions": [
+        "The trees are lush all year round, especially during the leaf-changing season. The waves crashing with white foam make the scene even more poetic. Along with that are two steep cliffs and gates welcoming visitors. visitors. Coming to Ghenh Bang, you will be able to immerse yourself in the wonderful natural scenery and experience many interesting activities."
+      ],
+      "highlight": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "adultPrice": 3000,
+      "childPrice": 1800
+    },
+    {
+      "id": 12,
+      "id_destination": 12,
+      "name": "Ngu Hanh Son-Da Nang",
+      "mainImage": "./img/nguhanhson1.jpg",
+      "images": [
+        "./img/nguhanhson1.jpg",
+        "./img/nguhanhson2.jpg",
+        "./img/nguhanhson3.jpg",
+        "./img/nguhanhson4.jpg"
+      ],
+      "descriptions": [
+        "The structures and temples blend harmoniously with nature: grape vines drip from above, frangipani trees and poincianas bloom on stone paths, and the ornate pagoda roofs of The pagodas sparkle under the tropical sun. It's a scene that easily captures the imagination."
+      ],
+      "highlight": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "adultPrice": 3000,
+      "childPrice": 1800
+    },
+    {
+      "id": 13,
+      "id_destination": "13",
+      "name": "Na Tang-Phan Dung",
+      "mainImage": "./img/naTang1.jpg",
+      "images": [
+        "./img/naTang1.jpg",
+        "./img/naTang2.jpg",
+        "./img/naTang3.jpg",
+        "./img/naTang4.jpg"
+      ],
+      "descriptions": [
+        "Ta Nang - Phan Dung is a famous trek, voted as one of the most beautiful treks in Vietnam. Ta Nang belongs to Duc Trong district, Lam Dong. Phan Dung belongs to Tuy Phong district, Binh Thuan.The total trek is 30km long, going from Ta Nang through the forest to Phan Dung, up to a 1,168m high milestone between 3 provinces of Lam Dong, Ninh Thuan, Binh Thuan. Vegetation also gradually changes with altitude, the air changes from cool to slightly hot according to the sun and wind of Binh Thuan, but you will be cooled by the cool stream."
+      ],
+      "highlight": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "adultPrice": 3000,
+      "childPrice": 1800
+    },
+    {
+      "id": "14",
+      "id_destination": "14",
+      "name": "Ghenh Bang-Hoang Sa",
+      "mainImage": "./img/ghenhBang1.jpg",
+      "images": [
+        "./img/ghenhBang1.jpg",
+        "./img/ghenhBang2.jpg",
+        "./img/ghenhBang3.jpg",
+        "./img/ghenhBang4.jpg"
+      ],
+      "descriptions": [
+        "The trees are lush all year round, especially during the leaf-changing season. The waves crashing with white foam make the scene even more poetic. Along with that are two steep cliffs and gates welcoming visitors. visitors. Coming to Ghenh Bang, you will be able to immerse yourself in the wonderful natural scenery and experience many interesting activities."
+      ],
+      "highlight": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "adultPrice": 3000,
+      "childPrice": 1800
+    },
+    {
+      "id": "15",
+      "id_destination": "15",
+      "name": "Deo Hai Van-Da Nang",
+      "mainImage": "./img/deoHaiVan1.jpg",
+      "images": [
+        "./img/deoHaiVan1.jpg",
+        "./img/deoHaiVan2.jpg",
+        "./img/deoHaiVan3.jpg",
+        "./img/deoHaiVan4.jpg"
+      ],
+      "descriptions": [
+        "Hai Van Quan is to tourists because of its majestic and beautiful natural scenery. From the gate, you will see the rolling mountains, winding mountain passes, blue coastline and soaring sky. At Hai Van Quan, visitors will get super impressive check-in photos at the North - South Thien Ly road"
+      ],
+      "highlight": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "adultPrice": 3000,
+      "childPrice": 1800
+    },
+    {
+      "id": "16",
+      "id_destination": "16",
+      "name": "Cat ba-Sapa",
+      "mainImage": "./img/banCatBa_LaoCai1.jpg",
+      "images": [
+        "./img/banCatBa_LaoCai1.jpg",
+        "./img/banCatBa_LaoCai2.jpg",
+        "./img/banCatBa_LaoCai3.jpg",
+        "./img/banCatBa_LaoCai4.jpg"
+      ],
+      "descriptions": [
+        "Cat Cat village has long attracted tourism enthusiasts because even though it is only a small village, this place is covered with the green of mountains and forests, terraced fields mixed with the rustic and simple features of the houses. Small is built from wood. Thereby, giving visitors a sense of simplicity in contrast to the hustle and bustle of the city."
+      ],
+      "highlight": "When you come to Phu Quy Beach, you can take tours on the shore, near the island, especially there are tours to see corals.",
+      "adultPrice": 3000,
+      "childPrice": 1800
+    },
+
+    {
+      "id": "17",
+      "id_destination": "17",
+      "name": "Na Tang-Phan Dung",
+      "mainImage": "./img/canhdonggio1_BacLieu.jpg",
+      "images": [
+        "./img/canhdonggio1_BacLieu.jpg",
+        "./img/canhdonggio2_BacLieu.jpg",
+        "./img/canhdonggio3_BacLieu.jpg",
+        "./img/canhdonggio4_BacLieu.jpg"
+      ],
+      "descriptions": [
+        "Looking up from below to see the turbines standing tall in front of the sea, few people know that this place used to be long stretches of cork and mangrove forests. Below the road are layers of rocks arranged alternately, forming a stone fence to prevent sea erosion, causing soil erosion. Amidst the wind and ocean waves roaring day and night without rest, we can clearly feel the smallness of humans in front of nature. But nature had to surrender to human intelligence, when wind - the specialty of Bac Lieu, was transformed into energy to serve life."
+      ],
+      "highlight": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "adultPrice": 3000,
+      "childPrice": 1800
+    },
+
+    {
+      "id": "18",
+      "id_destination": "18",
+      "name": "Co do Hoa Lu-Ninh Binh",
+      "mainImage": "./img/coHoaLu1.jpg",
+      "images": [
+        "./img/coHoaLu1.jpg",
+        "./img/coHoaLu2.jpg",
+        "./img/coHoaLu3.jpg",
+        "./img/coHoaLu4.jpg"
+      ],
+      "descriptions": [
+        "Phu Quy, also known as Thu Islet, Khoai Xu Islet, is a small island located about 120 km southeast of Phan Thiet, Binh Thuan. In addition to the main island, around Phu Quy island there are Hon Da Cao, Hon Do, Hon Tranh and Hon Hai. Phu Quy Island's area is just over 18km2 but has enough beautiful scenery, landscapes, experiences... for visitors to explore for a few days.",
+        "As the most remote island district of Binh Thuan province, Phu Quy island has a wild and beautiful scenery but tourism has not really developed. Currently, the only means to get to the island is by boat from Phan Thiet city, a distance of more than 110 km."
+      ],
+      "highlight": "When you come to Phu Quy Beach, you can take tours on the shore, near the island, especially there are tours to see corals.",
+      "adultPrice": 3000,
+      "childPrice": 1800
+    },
+    {
+      "id": "",
+      "id_destination": "",
+      "name": "Ghenh Bang-Hoang Sa",
+      "mainImage": "./img/ghenhBang1.jpg",
+      "images": [
+        "./img/ghenhBang1.jpg",
+        "./img/ghenhBang2.jpg",
+        "./img/ghenhBang3.jpg",
+        "./img/ghenhBang4.jpg"
+      ],
+      "descriptions": [
+        "The trees are lush all year round, especially during the leaf-changing season. The waves crashing with white foam make the scene even more poetic. Along with that are two steep cliffs and gates welcoming visitors. visitors. Coming to Ghenh Bang, you will be able to immerse yourself in the wonderful natural scenery and experience many interesting activities."
+      ],
+      "highlight": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "adultPrice": 3000,
+      "childPrice": 1800
+    },
+    {
+      "id": "",
+      "id_destination": "",
+      "name": "Tam Coc-Ninh Binh",
+      "mainImage": "./img/tamcoc1_NinhBinh.jpg",
+      "images": [
+        "./img/tamcoc1_NinhBinh.jpg",
+        "./img/tamcoc2_NinhBinh.jpg",
+        "./img/tamcoc3_NinhBinh.jpg",
+        "./img/tamcoc4_NinhBinh.jpg"
+      ],
+      "descriptions": [
+        "Tam Coc Bich Dong is a cave complex and a key national tourist area of Vietnam. This place is also known by beautiful names such as Ha Long Bay on land or Nam Thien De Nhi Dong. The entire area is surrounded by a system of limestone caves and many valuable historical relics."
+      ],
+      "highlight": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "adultPrice": 3000,
+      "childPrice": 1800
+    },
+
+    {
+      "id": "20",
+      "id_destination": "20",
+      "name": "Doi cat Nam Cuong-Ninh Thuan",
+      "mainImage": "./img/doicatNamCuong1_NinhThuan.jpg",
+      "images": [
+        "./img/doicatNamCuong1_NinhThuan.jpg",
+        "./img/doicatNamCuong2_NinhThuan.jpg",
+        "./img/doicatNamCuong3_NinhThuan.jpg",
+        "./img/doicatNamCuong4_NinhThuan.jpg"
+      ],
+      "descriptions": [
+        "Nam Cuong Sand Dunes is a system of sand dunes and sand fields with steep slopes and unique sand patterns. The sand here is white, smooth and soft, but it is not sea sand, but stone sand poured down from mountain streams. The picture of white sand dunes in bright yellow sunlight creates impressive frames. Nam Cuong Sand Dunes is also an ideal destination for fun and entertainment activities. Visitors can enjoy playing in the sand, sandboarding on the slopes, or participating in activities such as sand biking, sand climbing, sandboarding, and even parasailing."
+      ],
+      "highlight": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "adultPrice": 3000,
+      "childPrice": 1800
+    }
+  ],
+
+  "bookings": [],
+  "historyBooking": []
 }

@@ -104,7 +104,7 @@
                 </div>
                 <div class="contact-email">
                     <i class="fa fa-envelope"></i>
-                    <p>demo@gmail.com</p>
+                    <p>travelagency139@gmail.com</p>
                 </div>
             </div>
 
@@ -113,12 +113,15 @@
                 <p>132 Dartmouth Street Boston, Massachusetts </p>
             </div>
             <form id="contact-form">
-                <input type="hidden" name="contact_number">
+                <label for="phone">PhoneNumber</label>
+                <input type="phone" name="phone" id="phone">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
                 <label for="email">Email</label>
                 <input type="text" name="email" id="email">
                 <label for="message">Message</label>
                 <input type="text" name="message" id="message">
-                <input type="submit" value="Send Email">
+                <input type="submit" value="Send Email" id="btn-send">
             </form>
         </section>
         <div id="footer"></div>
@@ -162,6 +165,8 @@
                     emailjs.sendForm("service_klm0uxr", "template_pjtlkei", this).then(
                         function () {
                             console.log("SUCCESSFUL!");
+                            document.getElementById("name").value = "";
+                            document.getElementById("phone").value = "";
                             document.getElementById("email").value = "";
                             document.getElementById("message").value = "";
                         },

@@ -8,13 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
 const urlParams = new URLSearchParams(window.location.search);
    
 const destinationId = parseInt(urlParams.get("id"));
-   
-    fetch("../../Database/db.json")
+    fetch("https://touring.glitch.me/details")
         .then(response => response.json())
         .then(data => {
-            const destinations = data.destinations;
-            const details = data.details_destination; 
-            const detail = details.find(item => item.id_destination === parseInt(destinationId, 10));
+            
+            // const detail = data.find(item => item.id_destination === parseInt(destinationId, 10));
+            const detail = data.find(item => item.id_destination === destinationId);
+           
+console.log("aasjjsjs" , data);
 
             if (detail) {
          
@@ -33,7 +34,7 @@ const destinationId = parseInt(urlParams.get("id"));
                 document.querySelector(".sub_name_destination").textContent = detail.sub_name_destination;
                 document.querySelector(".highlight_destination").textContent = detail.highlight_destination;
                 document.querySelector(".option1").textContent = detail.option1;
-                console.log(detail.option1);
+                // console.log(detail.option1);
                 document.querySelector(".option2").textContent = detail.option2;
                 document.querySelector(".priceAdultOption_1").textContent = detail.priceAdultOption_1;
                 document.querySelector(".priceAdultOption_2").textContent = detail.priceAdultOption_2;
@@ -47,12 +48,10 @@ const destinationId = parseInt(urlParams.get("id"));
             } else {
                 
                 console.error("Không tìm thấy chi tiết cho địa điểm có ID: " + destinationId);
-            }
-
-            
+            }   
             const bookNowButton = document.querySelector("#book-now-button");
             bookNowButton.addEventListener("click", function () {
-                localStorage.setItem("book",JSON.stringify(detail )) ;
+                localStorage.setItem("book",JSON.stringify(detail)) ;
                 window.location.href = `../../bookingPage/booking.html?id=${destinationId}`;
             });
         })
