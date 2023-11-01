@@ -31,9 +31,14 @@ const destinationId = parseInt(urlParams.get("id"));
 
                 document.querySelector(".main_name_destination").textContent = detail.main_name_destination;
                 document.querySelector(".sub_name_destination").textContent = detail.sub_name_destination;
-
                 document.querySelector(".highlight_destination").textContent = detail.highlight_destination;
-
+                document.querySelector(".option1").textContent = detail.option1;
+                console.log(detail.option1);
+                document.querySelector(".option2").textContent = detail.option2;
+                document.querySelector(".priceAdultOption_1").textContent = detail.priceAdultOption_1;
+                document.querySelector(".priceAdultOption_2").textContent = detail.priceAdultOption_2;
+                document.querySelector(".priceChildrenOption_1").textContent = detail.priceChildrenOption_1;
+                document.querySelector(".priceChildrenOption_2").textContent = detail.priceChildrenOption_2;
                 const descriptionElements = document.querySelectorAll(".descriptions_destination");
                 descriptionElements.forEach((element, index) => {
                     element.textContent = detail.descriptions_destination[index];
