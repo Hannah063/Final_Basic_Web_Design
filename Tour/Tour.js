@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const destinationLinks = document.querySelectorAll('[data-destination-link]');
+
 destinationLinks.forEach((link) => {
   if (link.getAttribute('data-destination-link') === 'true') {
     link.addEventListener('click', function (event) {
