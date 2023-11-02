@@ -13,9 +13,8 @@ const destinationId = parseInt(urlParams.get("id"));
         .then(data => {
             
             // const detail = data.find(item => item.id_destination === parseInt(destinationId, 10));
-            const detail = data.find(item => item.id_destination === destinationId);
-           
-console.log("aasjjsjs" , data);
+            const detail = data.find((item)=> item.id_destination === destinationId);
+
 
             if (detail) {
          
