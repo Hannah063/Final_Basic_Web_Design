@@ -441,6 +441,9 @@ body {
     align-items: center;
     margin:5px 0 14px 0;
 }
+#contact-form label{
+    font-size: 20px;
+}
 
 
 
@@ -458,7 +461,7 @@ body {
     margin-bottom: 20px;
     
 }
-
+.input-container .name-input,
 .input-container .name-input,
 .input-container .email-input,
 .input-container .phone-input {
@@ -469,7 +472,7 @@ body {
 
 input[type="text"],
 input[type="email"],
-input[type="tel"],
+input[type="phone"],
 textarea {
     width: 100%;
     padding: 10px;

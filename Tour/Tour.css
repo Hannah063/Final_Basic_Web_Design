@@ -34,7 +34,8 @@ body {
   letter-spacing: 1px;
 }
 .header-title h1 {
-  color: white;
+  margin-top: 30px;
+  color: whitesmoke;
 }
 
 
@@ -110,6 +111,8 @@ body {
   
 
 form button{
+  margin-top: 10px;
+  margin-left:5px;
     background: tomato;
     height: 40px;
     width: 40px;
