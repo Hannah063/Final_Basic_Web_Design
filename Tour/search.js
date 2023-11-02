@@ -5,7 +5,7 @@ function searchDestinations() {
   
     // Lấy tất cả các thẻ .item-destination
     const destinationElements = document.querySelectorAll('.item-destination');
-  console.log("DestinationElement"+ destinationElements)
+ 
     // Duyệt qua mỗi thẻ và kiểm tra xem tên tour có khớp với tìm kiếm không
     destinationElements.forEach(destinationElement => {
       const nameElement = destinationElement.querySelector('.name-destination');

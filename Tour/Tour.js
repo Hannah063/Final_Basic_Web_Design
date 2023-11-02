@@ -29,9 +29,12 @@ destinationLinks.forEach((link) => {
       event.preventDefault();
       const destinationId = this.closest('.item-destination').getAttribute('data-destination-id');
       window.location.href = '../project web/page/demo.html?id=' + destinationId;
+      console.log(destinationId);
     });
   }
 });
+
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
