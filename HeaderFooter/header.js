@@ -1,154 +1,10 @@
-// var isLogin = JSON.parse(localStorage.getItem("isLogin"));
+// Lấy thông tin người dùng hiện tại từ localStorage
+var currentUser = JSON.parse(localStorage.getItem('CurrentUser'));
 
-// // Hàm mở modal Login
-// function openLoginModal() {
-//     var loginModal = document.getElementById("loginModal");
-//     var signUpModal = document.getElementById("signupModal");
-//     loginModal.style.display = "block";
-//     signUpModal.style.display = "none";
-// }
-// // Hàm đóng modal Login
-// function closeLoginModal() {
-//     var loginModal = document.getElementById("loginModal");
-//     loginModal.style.display = "none";
-//     // signUpModal.style.display = "block";
-// }
+// Kiểm tra nếu currentUser không rỗng (tức là người dùng đã đăng nhập), thì đặt isLogin thành true. Ngược lại, isLogin là false.
+var isLogin = !!currentUser;
 
-// // Hàm mở modal Sign Up
-// function openSignUpModal() {
-//     var loginModal = document.getElementById("loginModal");
-//     var signUpModal = document.getElementById("signupModal");
-//     signUpModal.style.display = "block";
-//     loginModal.style.display = "none";
-// }
-
-// // Hàm đóng modal Sign Up
-// function closeSignUpModal() {
-//     var signUpModal = document.getElementById("signupModal");
-//     signUpModal.style.display = "none";
-//     // loginModal.style.display = "block";
-// }
-
-// async function handleSubmit() {
-
-//     var email = document.getElementById('emailLogIn').value;
-//     var password = document.getElementById('passwordLogIn').value;
-
-//     await axios
-//         .get("https://touring.glitch.me/users")
-//         .then((response) => {
-
-//             var userExist = response.data.find((usr) => usr.email === email);
-//             if (userExist && userExist.password === password) {
-//                 // Lưu ID của người dùng đã đăng nhập vào localStorage
-//                 localStorage.setItem("loggedInUserID", userExist.id);
-
-//                 setTimeout(() => {
-//                     location.href = `${location.origin}header.html`;
-//                 }, 100);
-//             }
-//         });
-
-//     localStorage.setItem("isLoggedIn", "true");
-
-//     document.getElementById("userPic").src = "./user1.png"
-//     document.getElementById("userInfoPic").src = "./user1.png";
-//     document.getElementById("loggedInUserName").textContent = "Thanh Luan";
-//     document.getElementById("subMenuLogin").style.display = "none";
-//     document.getElementById("subMenuUser").style.display = "block";
-
-// }
-
-// // async function handleSubmit() {
-// //     var email = document.getElementById('emailLogIn').value;
-// //     var password = document.getElementById('passwordLogIn').value;
-
-// //     await axios
-// //         .get("https://touring.glitch.me/users")
-// //         .then((response) => {
-// //             var userExist = response.data.find((usr) => usr.email === email);
-// //             if (userExist && userExist.password === password) {
-// //                 // Lưu ID của người dùng đã đăng nhập vào localStorage
-// //                 localStorage.setItem("loggedInUserID", userExist.id);
-// //                 setTimeout(() => {
-// //                     location.href = `${location.origin}header.html`;
-// //                 }, 100);
-// //             }
-// //         });
-// // }
-
-// function logout() {
-
-//     localStorage.removeItem("isLoggedIn", false);
-
-//     document.getElementById("userInfoPic").src = "./user2.png";
-//     document.getElementById("userPic").src = "./user2.png"
-//     document.getElementById("loggedInUserName").textContent = "Guest";
-//     document.getElementById("subMenuLogin").style.display = "block";
-//     document.getElementById("subMenuUser").style.display = "none";
-// }
-
-// // Kiểm tra trạng thái đăng nhập khi trang web được tải
-// document.addEventListener("DOMContentLoaded", function () {
-//     var isLoggedIn = localStorage.getItem("isLoggedIn");
-//     if (isLoggedIn === "true") {
-//         document.getElementById("userInfoPic").src = "./user1.png";
-//         document.getElementById("userPic").src = "./user1.png"
-//         document.getElementById("loggedInUserName").textContent = "Thanh Luan";
-//         document.getElementById("subMenuLogin").style.display = "none";
-//         document.getElementById("subMenuUser").style.display = "block";
-//     }
-// });
-
-// async function handleSignup() {
-//     var email = document.getElementById('email').value;
-//     var phone = document.getElementById('phone').value;
-//     var password = document.getElementById('password').value;
-
-//     await axios
-//         .post("https://touring.glitch.me/users", {
-//             email: email,
-//             password: password,
-//             phone: phone,
-//             role: "",
-//             name: "",
-//             status: "Active",
-//         })
-
-//         .then((response) => {
-//             toastr.success("Signup successfully", "Message", {
-//                 timeOut: 2000,
-//                 closeButton: true,
-//                 debug: false,
-//                 newestOnTop: true,
-//                 progressBar: true,
-//                 positionClass: "toast-top-right",
-//                 preventDuplicates: true,
-//                 onclick: null,
-//                 showDuration: "300",
-//                 hideDuration: "1000",
-//                 extendedTimeOut: "1000",
-//                 showEasing: "swing",
-//                 hideEasing: "linear",
-//                 showMethod: "fadeIn",
-//                 hideMethod: "fadeOut",
-//                 tapToDismiss: false,
-//             });
-//             setTimeout(() => {
-//                 location.href = `${location.origin}header.html`;
-//             }, 200);
-//         });
-// }
-
-// handleSignup;
-
-// async function logout() {
-//     localStorage.setItem("isLogin", false);
-// }
-
-var isLogin = JSON.parse(localStorage.getItem("isLogin"));
-
-// Hàm mở modal Loginá
+// Hàm mở modal Login
 function openLoginModal() {
     var loginModal = document.getElementById("loginModal");
     var signUpModal = document.getElementById("signupModal");
@@ -160,7 +16,6 @@ function openLoginModal() {
 function closeLoginModal() {
     var loginModal = document.getElementById("loginModal");
     loginModal.style.display = "none";
-    // signUpModal.style.display = "block";
 }
 
 // Hàm mở modal Sign Up
@@ -175,136 +30,267 @@ function openSignUpModal() {
 function closeSignUpModal() {
     var signUpModal = document.getElementById("signupModal");
     signUpModal.style.display = "none";
-    // loginModal.style.display = "block";
+    
 }
 
-async function handleLogin() {
-    var email = document.getElementById("emailLogIn").value;
-    var password = document.getElementById("passwordLogIn").value;
+// Hàm lấy người dùng hiện tại đã đăng nhập
+function getCurrentUser() {
+    return JSON.parse(window.localStorage.getItem('CurrentUser'));
+}
 
-    await axios.get("https://touring.glitch.me/users").then((response) => {
-        var userExist = response.data.find((usr) => usr.email === email);
+// Hàm đặt người dùng hiện tại
+function setCurrentUser(user) {
+    window.localStorage.setItem('CurrentUser', JSON.stringify(user));
+}
+
+// Hàm lấy danh sách người dùng từ API
+async function getListUserFromAPI() {
+    try {
+        const response = await axios.get('https://touring.glitch.me/users');
+        return response.data;
+    } catch (error) {
+        console.error('Lỗi khi lấy danh sách người dùng từ API:', error);
+        return [];
+    }
+}
+
+// Hàm cập nhật danh sách người dùng lên API
+async function setListUserToAPI(users) {
+    try {
+        const response = await axios.put('https://touring.glitch.me/users', users);
+        return response.data;
+    } catch (error) {
+        console.error('Lỗi khi cập nhật danh sách người dùng lên API:', error);
+        return false;
+    }
+}
+
+// Hàm cập nhật danh sách người dùng trong localStorage
+async function updateListUser(newUser, newData) {
+    let list = await getListUserFromAPI();
+    for (let i = 0; i < list.length; i++) {
+        if (equalUser(newUser, list[i])) {
+            list[i] = (newData ? newData : newUser);
+        }
+    }
+    await setListUserToAPI(list);
+}
+
+
+// Hàm đăng ký
+function handleSignup() {
+    const username = document.getElementById("newUser").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("phone").value;
+    const password = document.getElementById("pass").value;
+
+    axios.post('https://touring.glitch.me/users', {
+        name: username,
+        email: email,
+        phone: phone,
+        password: password,
+        status: "Active",
+        avatar: "",
+        role: "",
+    })
+    .then(function (response) {
+        const user = response.data;
+        setCurrentUser(user);
+
+        // Cập nhật tên người dùng đã đăng ký
+        const loggedInUserName = document.getElementById("loggedInUserName2");
+        loggedInUserName.innerText = user.name;
+
+        alert('Đăng ký thành công, Bạn sẽ được tự động đăng nhập!');
+        location.reload();
+    })
+    .catch(function (error) {
+        alert('Tên đăng nhập đã có người sử dụng hoặc có lỗi trong quá trình đăng ký.');
+        console.error(error);
+    });
+}
+
+
+// Hàm đăng nhập
+async function handleLogin() {
+    const email = document.getElementById("emailLogIn").value;
+    const password = document.getElementById("passwordLogIn").value;
+    var loginModal = document.getElementById("loginModal");
+
+    await axios.get('https://touring.glitch.me/users')
+    .then(function (response) {
+        const user = response.data
+        const userExist = response.data.find((usr) => usr.email === email)
         if (userExist && userExist.password === password) {
-            localStorage.setItem("isLogin", true);
-            setTimeout(() => {
-                location.href = `${location.origin}/HomePage/homepage.html`;
-            }, 100);
+        loginModal.style.display = "none";
+        localStorage.setItem('me', JSON.stringify(userExist));
+        const loggedInUserName2 = document.getElementById("loggedInUserName2");
+        loggedInUserName2.innerText = userExist.name;
+        if (!user) {
+
+            console.log('Đăng nhập không thành công: Sai email hoặc mật khẩu.');
+            alert('Nhập sai email hoặc mật khẩu !!!');
+            return;
+        }
+
+        if (user.off) {
+            console.log('Đăng nhập không thành công: Tài khoản bị khoá.');
+            alert('Tài khoản này đang bị khoá. Không thể đăng nhập.');
+            return;
+        }
+
+        // Gửi yêu cầu DELETE để xóa thông tin đăng nhập
+        // axios.delete(`https://touring.glitch.me/users/${user.id}`)
+        // .then(function (response) {
+        //     // Xóa thành công, không hiển thị thông báo
+        // })
+        // .catch(function (error) {
+        //     console.error(error);
+        // });
+
+        // Lưu thông tin người dùng vào currentUser
+        currentUser = user;
+        // console.log('Thông tin người dùng sau đăng nhập:', currentUser);
+
+        // Lưu thông tin người dùng vào localStorage
+        setCurrentUser(user);
+        // console.log('Thông tin người dùng đã lưu vào Local Storage:', localStorage.getItem('CurrentUser'));
+
+        // Cập nhật tên người dùng đã đăng nhập
+    
+
+        // Cập nhật giao diện người dùng sau khi đăng nhập
+        handleUserState();
+
+        // Đóng modal đăng nhập
+        closeLoginModal();
+    }
+    })
+    .catch(function (error) {
+        console.error(error);
+    });
+}
+
+
+// Hàm đăng xuất
+function logoutUser() {
+    window.localStorage.removeItem('CurrentUser');
+    window.localStorage.removeItem('me');
+    location.reload();
+}
+
+// Hàm hiển thị form tài khoản
+function toggleProfile() {
+    const subProfile = document.getElementById("subProfile");
+    subProfile.classList.toggle("open-profile");
+    const userData = JSON.parse(localStorage.getItem('me')) 
+document.getElementById("loggedInUserName2").innerHTML = userData.name;
+
+}
+
+// Hàm kiểm tra tài khoản
+function checkTaiKhoan() {
+    if (!getCurrentUser()) {
+        showTaiKhoan(true);
+    }
+}
+
+// Hàm setup sự kiện cho form tài khoản
+function setupEventTaiKhoan() {
+    const taikhoan = document.getElementsByClassName('taikhoan')[0];
+    const list = taikhoan.getElementsByTagName('input');
+
+    ['blur', 'focus'].forEach(function (evt) {
+        for (let i = 0; i < list.length; i++) {
+            list[i].addEventListener(evt, function (e) {
+                const label = this.previousElementSibling;
+                if (e.type === 'blur') {
+                    if (this.value === '') {
+                        label.classList.remove('active');
+                        label.classList.remove('highlight');
+                    } else {
+                        label.classList.remove('highlight');
+                    }
+                } else if (e.type === 'focus') {
+                    label.classList.add('active');
+                    label.classList.add('highlight');
+                }
+            });
         }
     });
 
-    localStorage.setItem("isLogin", "true");
-
-    document.getElementById("userPic").src = "./user1.png";
-    document.getElementById("userInfoPic").src = "./user1.png";
-    document.getElementById("loggedInUserName").textContent = "Thanh Luan";
-    document.getElementById("subMenuLogin").style.display = "none";
-    document.getElementById("subMenuUser").style.display = "block";
-}
-
-// Hàm logout khi người dùng đăng xuất
-function logoutUser() {
-    localStorage.setItem("isLogin", false);
-
-    document.getElementById("userInfoPic").src = "./user2.png";
-    document.getElementById("userPic").src = "./user2.png";
-    document.getElementById("loggedInUserName").textContent = "Guest";
-    document.getElementById("subMenuLogin").style.display = "block";
-    document.getElementById("subMenuUser").style.display = "none";
-}
-
-// Kiểm tra trạng thái đăng nhập khi trang web được tải
-document.addEventListener("DOMContentLoaded", function () {
-    var isLoggedIn = localStorage.getItem("isLoggedIn");
-    if (isLoggedIn === "true") {
-        document.getElementById("userInfoPic").src = "./user1.png";
-        document.getElementById("userPic").src = "./user1.png";
-        document.getElementById("loggedInUserName").textContent = "Thanh Luan";
-        document.getElementById("subMenuLogin").style.display = "none";
-        document.getElementById("subMenuUser").style.display = "block";
-    }
-});
-
-async function handleSignup() {
-    var email = document.getElementById("email").value;
-    // var phone = document.getElementById('phone').value;
-    var password = document.getElementById("password").value;
-
-    try {
-        const response = await axios.post("https://touring.glitch.me/users", {
-            email: email,
-            password: password,
-            role: "Customer",
-            name: "",
-            avatar: "",
-            status: "Active",
+    const tab = document.getElementsByClassName('tab');
+    for (let i = 0; i < tab.length; i++) {
+        const a = tab[i].getElementsByTagName('a')[0];
+        a.addEventListener('click', function (e) {
+            e.preventDefault();
+            this.parentElement.classList.add('active');
+            if (this.parentElement.nextElementSibling) {
+                this.parentElement.nextElementSibling.classList.remove('active');
+            }
+            if (this.parentElement.previousElementSibling) {
+                this.parentElement.previousElementSibling.classList.remove('active');
+            }
+            const target = this.href.split('#')[1];
+            document.getElementById(target).style.display = 'block';
+            const hide = (target == 'login' ? 'signup' : 'login');
+            document.getElementById(hide).style.display = 'none';
         });
-
-        // Lấy ID của người dùng từ phản hồi
-        const userId = response.data.id;
-
-        // Tiếp tục xử lý với ID của người dùng
-        console.log("ID của người dùng:", userId);
-        localStorage.setItem("userId", userId);
-
-        //gọi function 
-        sendEmail(email);
-    } catch (error) {
-        // Xử lý lỗi nếu có
-        console.error("Lỗi khi tạo người dùng:", error);
     }
 }
 
-function sendEmail(email) {
-    emailjs.init('Osy8L38k62YRgUKem'); // Thay 'YOUR_USER_ID' bằng User ID của bạn
+// Hàm xử lý trạng thái người dùng khi trang web được tải
+function handleUserState() {
+    const userPic = document.getElementById("userPic");
+    const subProfile = document.getElementById("subProfile");
+    const subMenuLogin = document.getElementById("subMenuLogin");
+    const subMenuUser = document.getElementById("subMenuUser");
+    const loginLink = document.getElementById("loginLink");
+    const registerLink = document.getElementById("registerLink");
 
-    const serviceID = "service_0ohuk3r"; // Thay 'YOUR_SERVICE_ID' bằng Service ID của dịch vụ của bạn
-    const templateID = "template_pgj7ajo"; // Thay 'YOUR_TEMPLATE_ID' bằng ID của mẫu email của bạn
+    if (isLogin) {
+        const userData = JSON.parse(localStorage.getItem('me')) 
+        const loggedInUserName = document.getElementById("loggedInUserName2");
+        
+        if (userData) {
+            loggedInUserName.innerText = userData.name;
+        }
 
-    var templateParams = {
-        name: "Customer of Travel Agency",
-        email: email
-    };
+        if (subMenuLogin && subMenuUser) {
+            subMenuLogin.style.display = "none";
+            subMenuUser.style.display = "block";
+        }
 
-    emailjs.send(serviceID, templateID, templateParams)
-        .then(function (response) {
-            console.log("Email sent successfully!", response.status, response.text);
-        })
-        .catch(function (error) {
-            console.error("Email failed to send:", error);
-        });
+        // Cập nhật nhãn của nút
+        if (loginLink && registerLink) {
+            loginLink.innerHTML = '<i class="fa fa-user-circle-o"></i>Profile';
+            registerLink.innerHTML = '<i class="fa fa-sign-out"></i>Log Out';
+        }
+    } else {
+        if (subMenuLogin && subMenuUser) {
+            subMenuLogin.style.display = "block";
+            subMenuUser.style.display = "none";
+        }
+
+        // Khôi phục nhãn ban đầu của nút
+        if (loginLink && registerLink) {
+            loginLink.innerHTML = '<i class="fa fa-sign-in"></i>Log In';
+            registerLink.innerHTML = '<i class="fa fa-user-circle-o"></i>Sign Up';
+        }
+    }
+
+    if (userPic) {
+        userPic.onclick = function () {
+            if (subProfile) {
+                subProfile.classList.toggle("open-profile");
+            }
+        }
+    }
 }
 
 
 
-// .then((response) => {
+// Gọi hàm handleUserState để thiết lập trạng thái người dùng khi trang web được tải
+handleUserState();
 
-//     toastr.success("Signup successfully", "Message", {
-//         timeOut: 2000,
-//         closeButton: true,
-//         debug: false,
-//         newestOnTop: true,
-//         progressBar: true,
-//         positionClass: "toast-top-right",
-//         preventDuplicates: true,
-//         onclick: null,
-//         showDuration: "300",
-//         hideDuration: "1000",
-//         extendedTimeOut: "1000",
-//         showEasing: "swing",
-//         hideEasing: "linear",
-//         showMethod: "fadeIn",
-//         hideMethod: "fadeOut",
-//         tapToDismiss: false,
-//     });
-//     setTimeout(() => {
-//         location.href = `${location.origin}header.html`;
-//     }, 200);
-// });
-// }
 
-// handleSignup;
-// handleSignup();
-
-async function logout() {
-    localStorage.setItem("isLogin", false);
-}
