@@ -14,15 +14,15 @@ const destinationId = parseInt(urlParams.get("id"));
             
             // const detail = data.find(item => item.id_destination === parseInt(destinationId, 10));
             const detail = data.find((item)=> item.id_destination === destinationId);
-
+        
 
             if (detail) {
-         
+            
             document.querySelector(".name_destination").textContent = detail.name_destination;
-    
+                console.log(detail.name_destination);
             const mainImageElement = document.querySelector("#product-img");
             mainImageElement.src = detail.mainImage;
-
+            console.log(detail.mainImage);
             
             const smallImgElements = document.querySelectorAll(".small-img");
             detail.sub_images.forEach((image, index) => {
@@ -50,7 +50,10 @@ const destinationId = parseInt(urlParams.get("id"));
             }   
             const bookNowButton = document.querySelector("#book-now-button");
             bookNowButton.addEventListener("click", function () {
-                localStorage.setItem("book",JSON.stringify(detail)) ;
+                var selectElementS = document.getElementById("select");
+                var option = selectElementS.value;
+                localStorage.setItem("duration",JSON.stringify(option)) ;
+                localStorage.setItem("book",JSON.stringify(detail)) ;//????
                 window.location.href = `../../bookingPage/booking.html?id=${destinationId}`;
             });
         })

@@ -122,15 +122,15 @@ async function handleLogin() {
         const user = response.data
         const userExist = response.data.find((usr) => usr.email === email)
         if (userExist && userExist.password === password) {
-        loginModal.style.display = "none";
-        localStorage.setItem('me', JSON.stringify(userExist));
-        const loggedInUserName2 = document.getElementById("loggedInUserName2");
-        loggedInUserName2.innerText = userExist.name;
-        if (!user) {
-
-            console.log('Đăng nhập không thành công: Sai email hoặc mật khẩu.');
-            alert('Nhập sai email hoặc mật khẩu !!!');
-            return;
+        localStorage.setItem("isLogin", true);
+        localStorage.setItem("role", userExist.role);
+        setTimeout(() => {
+            if (userExist.role === "Admin") {
+            location.href = `${location.origin}/ad_dashboard/users.html`;
+            } else {
+            location.href = `${location.origin}/homepage.html`;
+            }
+        }, 1000);
         }
 
         if (user.off) {
