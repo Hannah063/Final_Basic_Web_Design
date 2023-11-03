@@ -252,7 +252,13 @@ tfoot td {
 
 .change--img,
 .change--imgs {
-    max-width: 100px;
+    width: 150px;
+}
+
+.change--img img,
+.change--imgs {
+    width: 100px;
+    height: auto;
 }
 
 #id--details {

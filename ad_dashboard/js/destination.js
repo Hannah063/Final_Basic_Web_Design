@@ -17,7 +17,7 @@ function td_fun({ id, name, description, image, booked }) {
     <th scope="row">${id}</th>
     <td>${name}</td>
     <td>${description}</td>
-    <td>${image}</td>
+    <td class="change--img"><img src="${image}"></img></td>
     <td>${booked}</td>
     <td>
       <button class="color-dark ti-pencil-alt cursor" id="updateBtn" onclick="handleGetDetail(${id})"><i class="fa-solid fa-pen-to-square icons"></i></button>

@@ -17,9 +17,8 @@ function td_fun({ id ,id_destination, name_destination, main_name_destination, s
     <th scope="row" id="id--details">${id}</th>
     <td>${id_destination}</td>
     <td>${name_destination}</td>
-    <td>${main_name_destination}<br>${sub_name_destination}</td>
-    <td class="change--img">${mainImage}</td>
-    <td class="change--imgs">${sub_images}</td>
+    <td>${main_name_destination}</td>
+    <td class="change--img"><img src="${mainImage}"></img></td>
     <td>${descriptions_destination}</td>
     <td>${highlight_destination}</td>
     <td>${adultPrice}</td>
