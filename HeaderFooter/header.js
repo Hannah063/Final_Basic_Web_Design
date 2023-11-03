@@ -164,12 +164,12 @@ async function handleLogin() {
 
         // Đóng modal đăng nhập
         closeLoginModal();
-    }
     })
+    
     .catch(function (error) {
         console.error(error);
-    });
-}
+    }) };
+
 
 
 // Hàm đăng xuất
