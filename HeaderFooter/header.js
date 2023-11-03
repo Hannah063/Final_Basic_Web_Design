@@ -185,10 +185,15 @@ async function handleLogin() {
     await axios.get("https://touring.glitch.me/users").then((response) => {
         var userExist = response.data.find((usr) => usr.email === email);
         if (userExist && userExist.password === password) {
-            localStorage.setItem("isLogin", true);
-            setTimeout(() => {
-                location.href = `${location.origin}/HomePage/homepage.html`;
-            }, 100);
+        localStorage.setItem("isLogin", true);
+        localStorage.setItem("role", userExist.role);
+        setTimeout(() => {
+            if (userExist.role === "Admin") {
+            location.href = `${location.origin}/ad_dashboard/users.html`;
+            } else {
+            location.href = `${location.origin}/homepage.html`;
+            }
+        }, 1000);
         }
     });
 
