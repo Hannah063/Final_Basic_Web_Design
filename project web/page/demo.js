@@ -35,6 +35,8 @@ const destinationId = parseInt(urlParams.get("id"));
                 document.querySelector(".option1").textContent = detail.option1;
                 // console.log(detail.option1);
                 document.querySelector(".option2").textContent = detail.option2;
+                document.querySelector(".option1Value").textContent = detail.option1;
+                document.querySelector(".option2Value").textContent = detail.option2;
                 document.querySelector(".priceAdultOption_1").textContent = detail.priceAdultOption_1;
                 document.querySelector(".priceAdultOption_2").textContent = detail.priceAdultOption_2;
                 document.querySelector(".priceChildrenOption_1").textContent = detail.priceChildrenOption_1;

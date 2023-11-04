@@ -35,6 +35,7 @@
                     </div>
                     <hr>
                     <p class="sub-menu-links" id="loginLink" onclick="openLoginModal()"><i class="fa fa-sign-in"></i>Log In</p>
+                    <p class="sub-menu-links" id="createPassword" onclick="openChangePassword()"><i class="fa fa-sign-in"></i>Change Pass</p>
                     <p class="sub-menu-links" id="registerLink" onclick="openSignUpModal()"><i class="fa fa-user-circle-o"></i>Sign Up</p>
                 </div>
                 <div class="sub-menu" id="subMenuUser" style="display: none;">
@@ -60,6 +61,28 @@
                             <div class="fb"><i class="fa fa-facebook-square"></i> Facebook</div>
                         </div>
                         <div>
+                            <span class="forgot-password">Fogot your password?<a href="javascript:void(1);" onclick="openChangePassword()">Change password </a></span>
+                            <span class="signup-content">Do you have an account with us?<a href="javascript:void(0);" onclick="openSignUpModal()">Sign Up</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="modal" id="changePass" style="display: none;">
+                <div class="modal-content">
+                    <form>
+                        <span class="close" onclick="closeChangePassword()">&times;</span>
+                        <h3>Change Password</h3>
+                        <input name="emailLogIn" type="text" placeholder="Email" id="emailCreatePass" autocomplete="email" />
+                        <input name="changePassword" type="password" placeholder="Create Password" id="changePassword" autocomplete="current-password" />
+                        <input name="changePassword" type="password" placeholder="Confirm Password" id="changePassword" autocomplete="current-password" />
+                        <button type="button" class="signup" onclick="handleChangePass()">Change</button>
+                        <div class="social">
+                            <div class="go"><i class="fa fa-google-plus-square"></i>Google</div>
+                            <div class="fb"><i class="fa fa-facebook-square"></i> Facebook</div>
+                        </div>
+                        <div>
+                            <span class="forgot-password">Fogot your password?<a href="javascript:void(0);" onclick="openChangePassword()">Change password </a></span>
                             <span class="signup-content">Do you have an account with us?<a href="javascript:void(0);" onclick="openSignUpModal()">Sign Up</a></span>
                         </div>
                     </form>
