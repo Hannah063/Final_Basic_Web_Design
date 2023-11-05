@@ -10,7 +10,7 @@ fetch("https://touring.glitch.me/details")
         document.getElementById('total--details').innerHTML = arrayLength;
     });
 
-function td_fun({ id ,id_destination, name_destination, main_name_destination, sub_name_destination, mainImage, sub_images, descriptions_destination,  highlight_destination, option1, option2}) {
+function td_fun({ id ,id_destination, name_destination, main_name_destination, sub_name_destination, mainImage, sub_images, descriptions,  highlight_destination, option1, option2}) {
     let td = document.createElement("tr");
     td.setAttribute("id", `child-${id}`);
     td.innerHTML = `
@@ -18,7 +18,7 @@ function td_fun({ id ,id_destination, name_destination, main_name_destination, s
     <td>${id_destination}</td>
     <td>${name_destination}</td>
     <td class="change--img"><img src="${mainImage}"></img></td>
-    <td>${descriptions_destination}</td>
+    <td>${descriptions}</td>
     <td>${highlight_destination}</td>
     <td>${option1} <br> <br> ${option2}</td>
     
@@ -45,7 +45,7 @@ async function handleGetDetail(id) {
       document.getElementById("sub_name-update").value = response.data.sub_name_destination;
       document.getElementById("mainImage-update").value = response.data.mainImage;
       document.getElementById("sub_images-update").value = response.data.sub_images;
-      document.getElementById("descriptions-update").value = response.data.descriptions_destination;
+      document.getElementById("descriptions-update").value = response.data.descriptions;
       document.getElementById("highlight-update").value = response.data.highlight_destination;
       document.querySelector('input[name="option1-update"]').value = response.data.option1;
       document.querySelector('input[name="option2-update"]').value = response.data.option2;
@@ -86,7 +86,7 @@ async function handleUpdate(event) {
       sub_name_destination: sub_name,
       mainImage: mainImage,
       sub_images: sub_images,
-      descriptions_destination: descriptions,
+      descriptions: descriptions,
       highlight_destination: highlight,
       option1: option1,
       option2: option2,

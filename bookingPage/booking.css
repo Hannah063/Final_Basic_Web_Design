@@ -35,7 +35,6 @@
     /* Effects */
     --login-register-box-shadow: 0px 0px 20px 9px rgba(255, 129, 38, 0.39);
 }
-
 /* HEADER-DESIGN */
 header{
     height: 80vh;
@@ -54,12 +53,10 @@ header{
     display: flex;
     align-items: center;
 }
-
 .header-booking-title{
     width: 100%;
     height: 258px;
 }
-
 .title-booking-page1{
     padding-left: 45px;
     display: flex;
@@ -67,7 +64,6 @@ header{
     color: var(--main-white);
     font: var(--volkhovbold-64-px);
 }
-
 .title-booking-page2{
     padding-left: 45px;
     display: flex;
@@ -75,12 +71,11 @@ header{
     color: var(--main-white);
     font: var(--volkhov-21-pxregular);
 }
-
 .content-booking-page{
     background-image: url(image/content\ background\ form.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 122vh;
+    height: 112vh;
 }
 /* BOOKING----------------------------------------------------- */
 /* CONTENT */
@@ -91,7 +86,6 @@ header{
     height: 85px;
     color: #000000;
 }
-
 .platform-nav ul{
     list-style-type: none;
     display: flex;
@@ -99,14 +93,12 @@ header{
     align-items: center;
     height: 100%;
 }
-
 .platform-nav ul li{
     display: flex;
     padding: 0 25px;
     justify-content: center;
     align-items: center;
 }
-
 #circle-1, #circle-2, #circle-3{
     width: 55px;
     height: 55px;
@@ -118,35 +110,29 @@ header{
     text-align: center;
     font: var(--volkhovmedium-16-px);
 }
-
 #circle-1{
    background-color: var(--button-3);
 }
-
 #circle-2, #circle-3{
     background-color: var(--button-4);
 }
-
 #circle-1 span{
     color: var(--main-white);
 }
-
 .sub-nav-text{
     padding-left: 16px;
 }
-
 .shape-1, .shape-2{
     width: 95px;
 }
 /* FORM BOOKING */
-#form--booking--page{
+#form{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
-
-#form--booking--page  form{
+form{
     width: 748px;
     background: var(--backgroundform);
     height: 670px;
@@ -157,19 +143,16 @@ header{
     align-items: center;
     box-sizing: border-box;
 }
-
 .booking-form, .review-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
-.row-customer-info, .row-info{
+.row-customer-info,.row-info{
     height: 71.72px;
     margin-top: 10px;
 }
-
 .adults-input input, .start-date input, .children-input input, .duration input, .name input, .phone-number input, .email input, .request input,
  .review-adults input, .review-start-date input, .review-children input, .review-duration input, .review-infomation input, .review-request input{
     padding-left: 10px;
@@ -180,28 +163,22 @@ header{
     height: 193.93px;
     margin-bottom: 30px;
 }
-
 #info-tour-title, .review-tour-title{
     color: var(--main-white);
     font: 700 25px "Volkhov", sans-serif;
     height: 26.48px;
 }
-
 .adults, .start-date, .children, .duration, .name, .phone-number{
     width: 323.11px;
     height: 46.01px;
 }
-
 .adults-title, .start-date span, .children-title, .duration span, .name span, .phone-number span, .email span, .request span {
     color: var(--main-white);
     font: var(--volkhovmedium-16-px);
 }
-
-
 .adults-input, .children-input{
     position: relative;
 }
-
 .adults-input input, 
 .start-date input, 
 .children-input input, 
@@ -214,7 +191,7 @@ header{
     height: 46.01px;
     border: none;
     padding-right: 60px;
-  
+
 }
 
 .people-unit{
@@ -225,7 +202,6 @@ header{
     top: calc(50% - 7px);
     left: calc(80%);
 }
-
 .start-date, .duration, .phone-number{
     position: relative;
     left: calc(11% - 24px);
@@ -235,35 +211,29 @@ header{
     height: 320.12px;
     width: 702px;
 }
-
 .customer-info-title{
     color: var(--main-white);
     font: 700 25px "Volkhov", sans-serif;
     width: 391.13px;
     height: 26.483px;
 }
-
 .row .row-email{
     width: 701.308px;
     height: 71.393px;
 }
-
 .email input{
     width: 100%;
     height: 46.014px;
     border-radius: 15px;
     border: none;
 }
-
 .row .row-request{
     width: 701.308px;
     height: 126.966px;
 }
-
 .row-customer-info, .row-email{
     margin-bottom: 10px;
 }
-
 .request textarea{
     width: 100%;
     height: 102px;
@@ -272,7 +242,6 @@ header{
     resize: none;
     padding-left: 15px;
 }
-
 .button-booking, .button-review{
     width: 265.29px;
     height: 60.69px;
@@ -287,13 +256,11 @@ header{
     margin-top: 20px;
     border: none;
 }
-
 /* REVIEW-------------------------------------------- */
 .review-form{
     display: none;
 }
 /* REVIEW TOUR INFOMATION */
-
 .review-tour{
     width: 701.16px;
     height: 219px;
@@ -304,7 +271,6 @@ header{
     height: 256.397px;
     margin-bottom: 45px;
 }
-
 .review-info-tour{
     margin-top: 17px;
     display: flex;
@@ -315,8 +281,6 @@ header{
     border-radius: 15px;
     margin-right: 9px;
 }
-
-
 .review-adults, 
 .review-start-date, 
 .review-children, 
@@ -325,7 +289,6 @@ header{
     height: 71.724px;
     margin-right: 6px;
 }
-
 .review-adults-title, 
 .review-start-date span, 
 .review-children-title, 
@@ -335,7 +298,6 @@ header{
     color: var(--main-white);
     font: var(--volkhovmedium-16-px);
 }
-
 .review-adults input, 
 .review-start-date input, 
 .review-children input, 
@@ -346,12 +308,10 @@ header{
     border: none;
     background-color: white;
 }
-
 .review-adults, 
 .review-children{
     position: relative;
 }
-
 .review-people-unit{
     color: #000000;
     text-align: left;
@@ -360,7 +320,6 @@ header{
     top: calc(56%);
     right: calc(5%);
 }
-
 .row-review-customer{
     margin-bottom: 32px;
 }
@@ -370,7 +329,6 @@ header{
     width: 332px;
     height: 150px;
 }
-
 .review-customer-info-title, 
 .review-customer-request-title,
 .review-price,
@@ -378,7 +336,6 @@ header{
     color: var(--main-white);
     font: var(--volkholregular-25-px);
 }
-
 .review-infomation textarea, 
 .review-request textarea{
     background: #ffffff;
@@ -390,11 +347,9 @@ header{
     resize: none;
     padding-left: 10px;
 }
-
 .review-infomation{
     margin-right: 33px;
 }
-
 #review-price{
     width: 332px;
     height: 46.01px;
@@ -405,12 +360,10 @@ header{
     font-weight: 500;
     margin-left: 4px;
 }
-
 .review-price2{
     position: relative;
     margin-top: 17px;
 }
-
 .price-title{
     color: var(--main-text);
     font: var(--volkhovregular-14-px);
@@ -420,11 +373,9 @@ header{
     top: calc(50% - 7px);
     right: calc(70%);
 }
-
 .review-price2 input{
     background-color: white;
 }
-
 .review-payment1{
     width: 332px;
     height: 46.01px;
@@ -433,7 +384,6 @@ header{
     padding-left: 10px;
     margin-top: 17px;
 }
-
 #complete {
     position: fixed;
     top: 0;
@@ -454,20 +404,16 @@ header{
     text-align: center;
     border-radius: 15px;
   }
-
-
 /* HOVER PAGE*/
 .content-booking-page .button-booking:hover, .content-booking-page .button-review:hover{
     background-color: var(--button-2);
 }
-
 /* Ẩn nút tăng/giảm trên input type number */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
 input[type="number"] {
     -moz-appearance: textfield; /* Firefox */
 }

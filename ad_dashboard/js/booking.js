@@ -16,8 +16,8 @@ function td_fun({ id, id_destination, id_user, booking_fullname, booking_phone_n
     td.setAttribute("id", `child-${id}`);
     td.innerHTML = `
     <th scope="row">${id}</th>
-    <td>${id_destination}</td>
     <td>${id_user}</td>
+    <td>${id_destination}</td>
     <td>${total_adults}</td>
     <td>${total_children}</td>
     <td>${start_date}</td>

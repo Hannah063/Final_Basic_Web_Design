@@ -64,6 +64,7 @@ async function handleUpdate(event) {
     })
     .then((response) => {
       idUserUpdate = "";
+      alert("Update susesfully")
       setTimeout(function () {
         location.reload();
       }, 500);
