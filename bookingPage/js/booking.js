@@ -22,7 +22,9 @@ async function handleGetInfo(id) {
       let duration = JSON.parse(localStorage.getItem("duration"));
       console.log(duration);
 
-      if (duration == "option1") {
+      
+
+if (duration == "option1") {
         option = response.data.option1;
         childPrice = response.data.priceChildrenOption_1,
         console.log(childPrice);

@@ -183,7 +183,6 @@ async function handleLogin() {
     });
 }
 
-
 // Hàm đăng xuất
 function logoutUser() {
   window.localStorage.removeItem("CurrentUser");

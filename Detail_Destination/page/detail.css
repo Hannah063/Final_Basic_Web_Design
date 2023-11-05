@@ -292,19 +292,6 @@ tr th ,tr td{
  text-align: center;
  font-size: 14px;
 }
-
-
-.tbl {
-  border-collapse: collapse;
-  width: 300px;
-}
-
-.tbl th,
-.tbl td {
-  border: none;
-  padding: 10px;
-  text-align: center;
-}
 .chose{
   display: block;
 }
@@ -561,6 +548,9 @@ div.desc {
     .navbar .action-btn {
       display: none;
     }
+    .name_destination{
+      font-size: 30px;
+    }
   
     .navbar .toggle_btn {
       display: block;
@@ -577,8 +567,8 @@ div.desc {
     .mainText p{
       font-size: 18px;
     }
-    .title iconify-icon, .title h3{
-      font-size: 18px;
+    .title iconify-icon{
+      font-size: 30px;
     }
     
     #book-now-button{
@@ -620,11 +610,6 @@ div.desc {
     .chose{
       margin-top: 30px;
     }
-   .tbl{
-    width: 390px;
-   }
-    
-    
   }
   
   
@@ -716,9 +701,6 @@ div.desc {
     }
     .price{
       display: block;
-    }
-    .tbl{
-      width: 100%;
     }
     tr>th, tr>td{
       font-size: 13px;

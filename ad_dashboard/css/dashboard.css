@@ -261,6 +261,12 @@ tfoot td {
     height: auto;
 }
 
+.change--img img,
+.change--imgs {
+    width: 100px;
+    height: auto;
+}
+
 
 
 
