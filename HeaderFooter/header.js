@@ -147,6 +147,17 @@
 // }
 
 var isLogin = JSON.parse(localStorage.getItem("isLogin"));
+document.addEventListener("DOMContentLoaded", function() {
+    var userInfoPic = document.getElementById("userInfoPic");
+    console.log(userInfoPic.src);
+    if (userInfoPic) {
+        userInfoPic.src = "./user2.png";
+        console.log(userInfoPic.src);
+    }
+});
+
+ 
+
 
 // Hàm mở modal Loginá
 function openLoginModal() {
@@ -199,8 +210,8 @@ async function handleLogin() {
 
     localStorage.setItem("isLogin", "true");
 
-    document.getElementById("userPic").src = "./user1.png";
-    document.getElementById("userInfoPic").src = "./user1.png";
+    document.getElementById("userPic").src = "user1.png";
+    document.querySelector("#userInfoPic").src = "user1.png" ;
     document.getElementById("loggedInUserName").textContent = "Thanh Luan";
     document.getElementById("subMenuLogin").style.display = "none";
     document.getElementById("subMenuUser").style.display = "block";
@@ -209,8 +220,7 @@ async function handleLogin() {
 // Hàm logout khi người dùng đăng xuất
 function logoutUser() {
     localStorage.setItem("isLogin", false);
-
-    document.getElementById("userInfoPic").src = "./user2.png";
+    document.querySelector(".sub-menu .user-info #userInfoPic").src = "./user2.png";
     document.getElementById("userPic").src = "./user2.png";
     document.getElementById("loggedInUserName").textContent = "Guest";
     document.getElementById("subMenuLogin").style.display = "block";
@@ -221,8 +231,14 @@ function logoutUser() {
 document.addEventListener("DOMContentLoaded", function () {
     var isLoggedIn = localStorage.getItem("isLoggedIn");
     if (isLoggedIn === "true") {
-        document.getElementById("userInfoPic").src = "./user1.png";
-        document.getElementById("userPic").src = "./user1.png";
+        //console.log(document.querySelector("#userInfoPic").src);
+        
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.querySelector(".sub-menu .user-info #userInfoPic").src = "./user1.png";
+            }, 1000); // Đợi 1 giây trước khi truy cập phần tử
+        });
+        document.getElementById("userPic").src = "user1.png";
         document.getElementById("loggedInUserName").textContent = "Thanh Luan";
         document.getElementById("subMenuLogin").style.display = "none";
         document.getElementById("subMenuUser").style.display = "block";

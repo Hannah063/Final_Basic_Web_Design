@@ -11,6 +11,7 @@
 </head>
 
 <body>
+    <div id="header"></div>
     <div class="sidebar">
         <div class="logo"></div>
         <ul class="menu">
@@ -82,7 +83,7 @@
                     </tbody>
                     <tfoot>
                         <tr>
-                            <td colspan="12">Total: 500.00$</td>
+                            <td colspan="12">Total:  <span id="total--bookings"></span> bookings</td>
                         </tr>
                     </tfoot>
                 </table>
@@ -128,10 +129,11 @@
 
                     <label for="duration-update"><b>Duration</b></label>
                     <select name="duration-update" id="duration-update">
-                        <option value=""></option>
-                        <option value=""></option>
+                        <option value="option1" class="option1Value"></option>
+                        <option value="option2" class="option2Value"></option>
                     </select>
-
+                    <p style="height: 15px;"></p>
+                    
                     <label for="fullname-update"><b>Fullname</b></label>
                     <input name="fullname-update" id="fullname-update" type="text"
                         placeholder="Enter fullname" required />
@@ -173,4 +175,7 @@
 <script src="js/booking.js"></script>
 <script src="js/sum.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="/HeaderFooter/loadHeaderFooter.js"></script>
+<script src="/HeaderFooter/header.js"></script>
+
 </html>

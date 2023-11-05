@@ -17,24 +17,21 @@ const destinationId = parseInt(urlParams.get("id"));
         
 
             if (detail) {
-            
-            document.querySelector(".name_destination").textContent = detail.name_destination;
-                console.log(detail.name_destination);
-            const mainImageElement = document.querySelector("#product-img");
-            mainImageElement.src = detail.mainImage;
-            console.log(detail.mainImage);
-            
-            const smallImgElements = document.querySelectorAll(".small-img");
-            detail.sub_images.forEach((image, index) => {
-                smallImgElements[index].src = image;
-            });
-
+                document.querySelector(".name_destination").textContent = detail.name_destination;
+                const mainImageElement = document.querySelector("#product-img");
+                mainImageElement.src = detail.mainImage;            
+                const smallImgElements = document.querySelectorAll(".small-img");
+                detail.sub_images.forEach((image, index) => {
+                    smallImgElements[index].src = image;
+                });
+                
                 document.querySelector(".main_name_destination").textContent = detail.main_name_destination;
                 document.querySelector(".sub_name_destination").textContent = detail.sub_name_destination;
                 document.querySelector(".highlight_destination").textContent = detail.highlight_destination;
                 document.querySelector(".option1").textContent = detail.option1;
-                // console.log(detail.option1);
                 document.querySelector(".option2").textContent = detail.option2;
+                document.querySelector(".option1Value").textContent = detail.option1;
+                document.querySelector(".option2Value").textContent = detail.option2;
                 document.querySelector(".priceAdultOption_1").textContent = detail.priceAdultOption_1;
                 document.querySelector(".priceAdultOption_2").textContent = detail.priceAdultOption_2;
                 document.querySelector(".priceChildrenOption_1").textContent = detail.priceChildrenOption_1;
