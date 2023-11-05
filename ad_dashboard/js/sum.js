@@ -52,7 +52,9 @@ async function handleDeleteBooking(id) {
       modalDelete.style.display = "none";
       setTimeout(function () {
         location.reload();
+        alert ("deleted successfully!!!");
       }, 500);
+      
     } catch (error) {
       console.log("error");
     }

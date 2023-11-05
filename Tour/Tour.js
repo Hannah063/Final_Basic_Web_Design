@@ -4,18 +4,22 @@ document.addEventListener("DOMContentLoaded", function () {
     .then(data => {
       const destinations = data;
       const destinationElements = document.querySelectorAll(".item-destination");
-
+      console.log("123");
       destinations.forEach((destination, index) => {
         const destinationElement = destinationElements[index];
-
+        console.log("1234");
+        console.log("iii");
         const imgElement = destinationElement.querySelector(".img-destination");
+        console.log(imgElement);
         const nameElement = destinationElement.querySelector(".name-destination");
+        console.log(nameElement);
         const titleElement = destinationElement.querySelector(".title-destination");
         const bookedElement = destinationElement.querySelector(".booked-count");
-
+        console.log("12345");
         imgElement.src = destination.image;
         nameElement.textContent = destination.name;
         titleElement.textContent = destination.description;
+        console.log("123456");
         bookedElement.textContent = destination.booked;
       });
     })
@@ -23,12 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 const destinationLinks = document.querySelectorAll('[data-destination-link]');
+
 destinationLinks.forEach((link) => {
   if (link.getAttribute('data-destination-link') === 'true') {
     link.addEventListener('click', function (event) {
       event.preventDefault();
       const destinationId = this.closest('.item-destination').getAttribute('data-destination-id');
-      window.location.href = '../project web/page/demo.html?id=' + destinationId;
+      window.location.href = 'detail.html?id=' + destinationId;
       console.log(destinationId);
     });
   }

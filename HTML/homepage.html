@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Volkhov:ital,wght@0,400;0,700;1,700&family=Yesteryear&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/HomePage/homepage.css">
+    <title>Travel Agency - Home Page</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="header"></div>
+
+        <!-- header  -->
+        <header class="flex">
+            <div class="small-container">
+                <div class="header-title">
+                    <h1>Taking you to the best places</h1>
+
+
+                </div>
+
+                <div class="header-form">
+                    <h3>Choose your Travel location:</h3>
+                    <form class="flex">
+                        <input type="text" class="form-control" placeholder="Destination Name">
+                        <input type="date" class="form-control" placeholder="Date">
+                        <input type="number" class="form-control" placeholder="Price($)">
+                        <input type="submit" class="search" value="Search">
+                    </form>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- fearures section -->
+        <section class="featured">
+            <div class="featured-title">
+                FEATURED PLACES
+            </div>
+
+
+            <div class="featured-row">
+                <div class="col-3">
+                    
+                    <img class="img-featured"
+                    src="../HomePage/img/beautiful-girl-standing-boat-looking-mountains-ratchaprapha-dam-khao-sok-national-park-surat-thani-province-thailand.jpg" >
+                       
+                    <div class="desc-location">
+                        <i class="fa fa-map-marker" ></i>
+                        <p>Ha Long Bay, Quang Ninh</p>
+                        <p class="desc-location-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus non malesuada lorem. </p>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <img class="img-featured"
+                        src="../HomePage/img/travel-lanterns-historic-architecture-city.jpg">
+
+                    <div class="desc-location">
+                        <i class="fa fa-map-marker" ></i>
+                        <p>Hoi An, Quang Nam</p>
+                        <p class="desc-location-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus non malesuada lorem. </p>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <img class="img-featured"
+                        src="../HomePage/img/anh8.jpg">
+
+                    <div class="desc-location">
+                        <i class="fa fa-map-marker" ></i>
+                        <p>Ha Long Bay, Quang Ninh</p>
+                        <p class="desc-location-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus non malesuada lorem. </p>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <img class="img-featured"
+                        src="../HomePage/img/landscape-with-sunset-yixing.jpg">
+
+                    <div class="desc-location">
+                        <i class="fa fa-map-marker" ></i>
+                        <p>Ha Long Bay, Quang Ninh</p>
+                        <p class="desc-location-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus non malesuada lorem. </p>
+                    </div>
+                </div>
+                
+                <div class="col-3">
+                    <img class="img-featured"
+                        src="../HomePage/img/anh7.jpg">
+
+                    <div class="desc-location">
+                        <i class="fa fa-map-marker" ></i>
+                        <p>Ha Long Bay, Quang Ninh</p>
+                        <p class="desc-location-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus non malesuada lorem. </p>
+                    </div>
+                </div>
+
+                <div class="col-3">
+                    <img class="img-featured"
+                        src="../HomePage/img/anh6.jpg">
+
+                    <div class="desc-location">
+                        <i class="fa fa-map-marker" ></i>
+                        <p>Ha Long Bay, Quang Ninh</p>
+                        <p class="desc-location-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus non malesuada lorem. </p>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+        </section>
+
+        <section class="our-services">
+            <div class="overlay"></div>
+            <div class="our-services-title">
+                OUR SERVICES
+            </div>
+
+            <div class="our-services-row">
+                <div class="services-col-3">
+                    <img class="services-col-3-icon" src="../HomePage/img/hotel_1946788.png" alt="">
+                    <p class="services-col-3-title">Luxury Hotel</p>
+                    <p class="services-col-3-content">Booking a luxury villa can be an exciting experience for larger
+                        parties looking for privacy and space.
+                        From choosing the perfect villa to understanding the local laws and regulations.</p>
+                    <button class="btn-readmore">Read more</button>
+                </div>
+                <div class="services-col-3">
+                    <img class="services-col-3-icon" src="../HomePage/img/guide_4908410.png" alt="">
+                    <p class="services-col-3-title">Travel Guide</p>
+                    <p class="services-col-3-content">Booking a luxury villa can be an exciting experience for larger
+                        parties looking for privacy and space.
+                        From choosing the perfect villa to understanding the local laws and regulations.</p>
+                    <button class="btn-readmore">Read more</button>
+                </div>
+                <div class="services-col-3">
+                    <img class="services-col-3-icon" src="../HomePage/img/price-tag_3462067.png" alt="">
+                    <p class="services-col-3-title">Suitable Price</p>
+                    <p class="services-col-3-content">Booking a luxury villa can be an exciting experience for larger
+                        parties looking for privacy and space.
+                        From choosing the perfect villa to understanding the local laws and regulations.</p>
+                    <button class="btn-readmore">Read more</button>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="offer">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="../HomePage/img/Illustration.svg" class="offer-img">
+                    </div>
+
+                    <div class="col-2">
+
+                        <h1>Our Romantic Tropical Destinations</h1>
+                        <small>
+                            Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium
+                            internos. Non quis eius quo eligendi corrupti et fugiat nulla
+                            qui soluta recusandae in maxime quasi aut ducimus illum aut optio quibusdam!
+                        </small> <br>
+                        <button class="btn-buynow">VIEW PACKAGE &#8594</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="testimonial">
+            <div class="testimonial-content">
+                <h1>Our Clients Say About Us</h1>
+                <img src="../HomePage/img/testmonial-1.png">
+                <div>
+                   
+                    <p class="testimonial-cmt">Vel officiis dolor ea illo aut eligendi ullam non laudantium magnam et
+                        recusandae molestiae sit iure unde aut voluptate quaerat. Id sunt provident quo possimus
+                        impedit vel doloremque obcaecati qui ullam consectetur et ipsum omnis.
+                        Vel officiis dolor ea illo aut eligendi ullam non laudantium magnam et recusandae molestiae sit
+                        iure unde aut voluptate quaerat. Id sunt provident quo possimus
+                        .</p>
+
+                    <p><b>Christine Beckam - Designer</b></p>
+                </div>
+
+            </div>
+        </section>
+
+        
+        
+        
+        <div id="footer"></div>
+    
+       
+    </div>
+    <script src="/HeaderFooter/loadHeaderFooter.js"></script>
+<script src="/HeaderFooter/header.js"></script>
+
+</body>
+
+</html>

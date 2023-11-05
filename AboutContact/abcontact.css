@@ -12,221 +12,18 @@ body {
 }
 
 
-.header-navbar{
-    background-image: url(./sunrise.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    
-}
 
-.navbar{
-    width: 100%;
-    min-height: 10vh;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 5%;
-}
-
-.header-navbar .navbar .links li {
-    list-style: none;
-}
-
-.header-navbar .navbar .links li a{
-    text-decoration: none;
-    color: black;
-}
-.header-navbar .navbar .links li a:hover{
-    color: orangered;
-}
-
-
-.user-pic{
-    cursor: pointer;
-    width:50px;
-    height: 50px;
-    border-radius: 50%;
-    padding:2px;
-    background-color: #fff;
-}
-
-.sub-menu-wrap{
-    position: absolute;
-    top:100%;
-    right:-4%;
-    width:320px;
-    max-height:0px;
-    overflow: hidden;
-    transition: max-height 0.5s;
-    
-}
-
-
-.sub-menu-wrap.open-profile{
-    max-height: 400px;
-}
-
-.sub-menu{
-    background-color: #E7F4F6;
-    padding: 10px;
-    margin: 10px 50px;
-    border-radius: 10px;
-}
-
-.user-info {
-    display: flex;
-    align-items: center;
-    
-}
-
-.user-info h3{
-    font-weight: 500;
-}
-
-.user-info img{
-    cursor: pointer;
-    width:50px;
-    height: 50px;
-    border-radius: 50%;
-    padding:2px;
-    background-color: #fff;
-}
-
-
-.sub-menu hr{
-    border: 0;
-    height: 1px;
-    width: 100%;
-    background-color: #ccc;
-    margin: 15px 0 10px;
-}
-
-.sub-menu-links{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-    margin:18px 0;
-
-}
-
-.sub-menu-links p{
-    width: 100%;
-}
-
-.sub-menu-links .fa{
-    
-    background-color: #e5e5e5;
-    border-radius: 50%;
-    padding:8px 10px;
-    margin-right: 15px;
-}
-
-
-
-
-.sub-menu-links span{
-    font-size: 22px;
-    transition: transform 0.5s;
-
-
-}
-
-.sub-menu-links:hover span{
-    transform: translateX(5px);
-}
-
-
-.sub-menu-links:hover p{
-    font-weight: 600;
-}
-
-.sub-menu-links:hover{
-    color: orangered;
-}
-
-
-.navbar .links{
-    display: flex;
-    gap:2rem;
-}
-.navbar .toggle_btn{
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none;
-
-}
-
-.dropdown_menu{
-   
-    display: none;
-    position: absolute;
-    right: 0rem;;
-    top:70px;
-    width: 180px;
-    background-color: rgba(255,255,255,0.1);
-    backdrop-filter: blur(15px);
-    overflow: hidden;
-    border-radius: 10px;
-    height: 0;
-    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.dropdown_menu.open{
-    height: 206px;
-}
-
-.dropdown_menu li{
-    padding: 0.6rem 0.2rem;
-    display:flex ;
-    align-items: center;
-    justify-content: center;
-   
-}
-
-.dropdown_menu li a{
-    text-decoration: none;
-   color: black;
-   font-size: 16px;
-}
-
-.dropdown_menu li a:hover{
-    color:orangered;
-}
-
-
-
-/* responsive menu */
-@media only screen and (max-width:992px) {
-    .navbar .links, 
-    .navbar .action-btn{
-        display: none;
-    }
-
-    .navbar .toggle_btn{
-        display: block;
-
-    }
-
-    .dropdown_menu{
-        display:block;
-    }
-}
-
-@media only screen and (max-width:576px) {
-    .dropdown_menu{
-        left:2rem;
-        width: unset;
-    }
-}
-
-
-
+/* responsive menu*/
 
 /* about us */
+.about-us >h2{
+    text-align: center;
+    font-size: 42px;
+    width:100%;
+    color:#181E4B;
+    letter-spacing: 1px;
+    background-color: #e7f4f6;
+}
 
 .about-us-content-row1 {
     display: flex;
@@ -432,14 +229,8 @@ body {
 }
 
 
-
-
-.contact-us .contact-address{
-    display: flex;
-    gap:12px;
-    justify-content: center;
-    align-items: center;
-    margin:5px 0 14px 0;
+#contact-form label{
+    font-size: 20px;
 }
 
 
@@ -458,7 +249,6 @@ body {
     margin-bottom: 20px;
     
 }
-
 .input-container .name-input,
 .input-container .email-input,
 .input-container .phone-input {
@@ -469,7 +259,7 @@ body {
 
 input[type="text"],
 input[type="email"],
-input[type="tel"],
+input[type="phone"],
 textarea {
     width: 100%;
     padding: 10px;
@@ -509,8 +299,8 @@ input[type="text"]:focus + .label-input,
 input[type="text"]:valid + .label-input,
 input[type="email"]:focus + .label-input,
 input[type="email"]:valid + .label-input,
-input[type="tel"]:focus + .label-input,
-input[type="tel"]:valid + .label-input,
+input[type="phone"]:focus + .label-input,
+input[type="phone"]:valid + .label-input,
 textarea:focus + label,
 textarea:valid + label {
     top: -20px;
@@ -521,13 +311,18 @@ input[type="text"]:focus + .label-input + .underline,
 input[type="text"]:valid + .label-input + .underline,
 input[type="email"]:focus + .label-input + .underline,
 input[type="email"]:valid + .label-input + .underline,
-input[type="tel"]:focus + .label-input + .underline,
-input[type="tel"]:valid + .label-input + .underline,
+input[type="phone"]:focus + .label-input + .underline,
+input[type="phone"]:valid + .label-input + .underline,
 textarea:focus + label + .underline,
 textarea:valid + label + .underline {
     transform: scaleX(1);
 }
 
+#message-label{
+    align-self: flex-start;
+    font-size: 18px;
+    margin-left: 10px;
+}
 
 @media screen and (max-width: 480px) {
     .input-container .name-input,
@@ -539,17 +334,9 @@ textarea:valid + label + .underline {
     }
 }
 
-.input-container2 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Để canh label bên trái */
-}
 
-#message-label{
-    align-self: flex-start;
-    font-size: 18px;
-    margin-left: 10px;
-}
+
+
 
   
 #btn-send{
@@ -583,8 +370,7 @@ textarea:valid + label + .underline {
         flex: 1 1 calc(50% - 20px);
     }
     
-    .contact-phone-email,
-    .contact-us .contact-address {
+    .contact-phone-email {
         flex-direction: row;
         gap: 20px;
         align-items: center;

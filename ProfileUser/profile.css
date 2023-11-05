@@ -55,11 +55,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    position: absolute;
-    right: -180px;
-    bottom: -40px;
-    
+    transition: background-color 0.3s ease;    
 }
 
 #editButton:hover {
@@ -68,7 +64,7 @@ body {
 
 
 /* CSS cho modal */
-.modal {
+.profile--modal {
     display: none;
     position: fixed;
     z-index: 1;
@@ -80,8 +76,8 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-content {
-    background-color: #fff;
+.profile--content-modal {
+    background-color: #5a5a5a;
     margin: 10% auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -90,7 +86,7 @@ body {
 }
 
 /* Đóng modal */
-.close {
+.profile--close {
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -98,25 +94,26 @@ body {
     cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
-    color: #000;
+.profile--close:hover,
+.profile--close:focus {
+    color: #ff0000;
     text-decoration: none;
 }
 
 
 .form-row {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 15px;
-}
-
-.form-column {
-    flex: 1;
-    margin-right: 20px;
-}
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .form-column {
+    flex: 30%;
+    padding: 0 10px;
+  }
 
 label {
+    color:white;
     font-weight: bold;
 }
 
@@ -127,7 +124,6 @@ input[type="password"] {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
 
 .password-input {
     position: relative;
@@ -164,11 +160,19 @@ button[type="button"]:hover {
 }
 
 
+/* Định dạng các hàng xen kẽ */
+tr:nth-child(even) {
+    background-color: #60adff; /* Màu xanh da trời */
+    color: white; /* Màu chữ trắng */
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #FFFFFF; /* Màu trắng */
+    color: #007BFF; /* Màu chữ xanh da trời */
+  }
+  
 
-
-/* table show data  */
-table {
-    width: 80%; /* Đặt chiều rộng tối đa là 90% */
-    max-width: 80%; /* Đặt chiều rộng tối đa là 90% */
-    border: 1px solid gray;
-}
+  th {
+    background-color: #007BFF;
+    color: white;
+  }

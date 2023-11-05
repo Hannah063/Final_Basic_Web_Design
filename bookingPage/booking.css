@@ -80,7 +80,7 @@ header{
     background-image: url(image/content\ background\ form.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 112vh;
+    height: 122vh;
 }
 /* BOOKING----------------------------------------------------- */
 /* CONTENT */
@@ -139,14 +139,14 @@ header{
     width: 95px;
 }
 /* FORM BOOKING */
-#form{
+#form--booking--page{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-form{
+#form--booking--page  form{
     width: 748px;
     background: var(--backgroundform);
     height: 670px;
@@ -165,7 +165,7 @@ form{
     align-items: center;
 }
 
-.row-customer-info,.row-info{
+.row-customer-info, .row-info{
     height: 71.72px;
     margin-top: 10px;
 }
