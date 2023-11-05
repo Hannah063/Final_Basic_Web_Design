@@ -140,38 +140,26 @@ async function handleLogin() {
   await axios
     .get("https://touring.glitch.me/users")
     .then(function (response) {
-      const user = response.data;
+      
       const userExist = response.data.find((usr) => usr.email === email);
+      const user = userExist;
+      console.log (userExist);
       if (userExist && userExist.password === password) {
         localStorage.setItem("isLogin", true);
         localStorage.setItem("role", userExist.role);
         setTimeout(() => {
           if (userExist.role === "Admin") {
-            location.href = `${location.origin}/ad_dashboard/users.html`;
+            console.log(`${location.origin}/HTML/ad_users.html`);
+            location.href = `${location.origin}/HTML/ad_users.html`;
           } else {
-            location.href = `${location.origin}/homepage.html`;
+            location.href = `${location.origin}homepage.html`;
           }
         }, 1000);
       } else {
-        // Đoạn này phải thêm một cái quên mk
-        alert("Thay đổi mật khẩu?");
-        chagePassword();
+        handleChangePass();
       }
 
-      // if (user.off) {
-      //     console.log('Đăng nhập không thành công: Tài khoản bị khoá.');
-      //     alert('Tài khoản này đang bị khoá. Không thể đăng nhập.');
-      //     return;
-      // }
-
-      // Gửi yêu cầu DELETE để xóa thông tin đăng nhập
-      // axios.delete(`https://touring.glitch.me/users/${user.id}`)
-      // .then(function (response) {
-      //     // Xóa thành công, không hiển thị thông báo
-      // })
-      // .catch(function (error) {
-      //     console.error(error);
-      // });
+     
 
       // Lưu thông tin người dùng vào currentUser
       currentUser = user;
@@ -194,12 +182,10 @@ async function handleLogin() {
       console.error(error);
     });
 }
-function chagePassword() {}
 
 // Hàm đăng xuất
 function logoutUser() {
   window.localStorage.removeItem("CurrentUser");
-  window.localStorage.removeItem("me");
   location.reload();
 }
 
@@ -207,7 +193,7 @@ function logoutUser() {
 function toggleProfile() {
   const subProfile = document.getElementById("subProfile");
   subProfile.classList.toggle("open-profile");
-  const userData = JSON.parse(localStorage.getItem("me"));
+  const userData = JSON.parse(localStorage.getItem("CurrentUser"));
   document.getElementById("loggedInUserName2").innerHTML = userData.name;
 }
 
@@ -222,7 +208,6 @@ function checkTaiKhoan() {
 function setupEventTaiKhoan() {
   const taikhoan = document.getElementsByClassName("taikhoan")[0];
   const list = taikhoan.getElementsByTagName("input");
-
   ["blur", "focus"].forEach(function (evt) {
     for (let i = 0; i < list.length; i++) {
       list[i].addEventListener(evt, function (e) {
@@ -269,10 +254,12 @@ function handleUserState() {
   const subMenuLogin = document.getElementById("subMenuLogin");
   const subMenuUser = document.getElementById("subMenuUser");
   const loginLink = document.getElementById("loginLink");
+ 
+  
   const registerLink = document.getElementById("registerLink");
 
   if (isLogin) {
-    const userData = JSON.parse(localStorage.getItem("me"));
+    const userData = JSON.parse(localStorage.getItem("CurrentUser"));
     const loggedInUserName = document.getElementById("loggedInUserName2");
 
     if (userData) {
@@ -320,7 +307,7 @@ function handleChangePass() {
       const users = response.data;
       const email = document.getElementById("emailCreatePass").value;
       const userExist = users.find((user) => user.email === email);
-      
+
       if (userExist) {
         const newPass = document.getElementById("changePassword").value;
         userExist.password = newPass;
@@ -338,8 +325,3 @@ function handleChangePass() {
       }
     });
   }
-
-
-
-  
-  

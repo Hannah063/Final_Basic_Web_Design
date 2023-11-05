@@ -28,10 +28,13 @@ destinationLinks.forEach((link) => {
     link.addEventListener('click', function (event) {
       event.preventDefault();
       const destinationId = this.closest('.item-destination').getAttribute('data-destination-id');
-      window.location.href = '../project web/page/demo.html?id=' + destinationId;
+      window.location.href = 'detail.html?id=' + destinationId;
+      console.log(destinationId);
     });
   }
 });
+
+
 
 
 document.addEventListener("DOMContentLoaded", function () {

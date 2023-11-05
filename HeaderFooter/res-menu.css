@@ -14,7 +14,7 @@ body {
 .header-navbar {
     background-color: #E7F4F6;
     position: relative;
-
+ 
 }
 
 .navbar {
@@ -25,6 +25,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
+   
 }
 
 
@@ -56,11 +57,6 @@ body {
 .header-navbar .navbar .links li:hover::after {
     width: 100%;
 }
-
-
-
-
-
 .user-pic {
     cursor: pointer;
     width: 50px;
@@ -92,6 +88,8 @@ body {
     padding: 10px;
     margin: 10px 50px;
     border-radius: 10px;
+  
+    z-index: 999;
 }
 
 .user-info {
@@ -330,7 +328,7 @@ body {
 
 }
 
-.row {
+.row--footer {
     display: flex;
     /* align-items: center; */
     flex-wrap: wrap;

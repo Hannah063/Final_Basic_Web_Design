@@ -1,13 +1,13 @@
 
 function loadHeaderFooter() {
-    fetch('/HeaderFooter/header.html')
+    fetch('/HTML/header.html')
         .then(response => response.text())
         .then(data => {
             const header = document.getElementById('header');
             header.innerHTML = data;
         });
 
-    fetch('/HeaderFooter/footer.html')
+    fetch('/HTML/footer.html')
         .then(response => response.text())
         .then(data => {
             const footer = document.getElementById('footer');
