@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="/ad_dashboard/css/dashboard.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </head>
@@ -15,34 +15,27 @@
     <div class="logo"></div>
     <ul class="menu">
       <li>
-        <a href="users.html">
+        <a href="ad_users.html">
           <i class="fas fa-users-rectangle"></i>
           <span>Users</span>
         </a>
       </li>
       <li class="active">
-        <a href="users.html">
+        <a href="ad_details.html">
           <i class="fas fa-rectangle-list"></i>
           <span>Details</span>
         </a>
       </li>
       <li>
-        <a href="destination.html">
+        <a href="ad_destination.html">
           <i class="fas fa-map-location-dot"></i>
           <span>Destinations</span>
         </a>
       </li>
       <li>
-        <a href="booking.html">
+        <a href="ad_booking.html">
           <i class="fas fa-ticket"></i>
           <span>Booking</span>
-        </a>
-      </li>
-    
-      <li class="logout">
-        <a href="#">
-            <i class="fas fa-sign-out-alt"></i>
-            <span>Logout</span>
         </a>
       </li>
     </ul>
@@ -67,13 +60,10 @@
               <th>ID</th>
               <th>ID destination</th>
               <th>Name destination</th>
-              <th>Main&Sub Name destination</th>
               <th>Main image</th>
-              <th>Sub images</th>
               <th>Description</th>
               <th>Hightlight</th>
-              <th>Adult Price</th>
-              <th>Child Price</th>
+              <th>Combo</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -131,11 +121,23 @@
           <label for="highlight"><b>Highlight</b></label>
           <input name="highlight" id="highlight" type="text" placeholder="Enter highlight" required />
 
-          <label for="adultPrice"><b>Adult price</b></label>
-          <input name="adultPrice" id="adultPrice" type="text" placeholder="Enter adultPrice" required />
+          <label for="option1"><b>Option 1</b></label>
+          <input name="option1" id="option1" type="text" placeholder="Enter option 1" required />
 
-          <label for="childPrice"><b>Child price</b></label>
-          <input name="childPrice" id="childPrice" type="text" placeholder="Enter childPrice" required />
+          <label for="option2"><b>Option 2</b></label>
+          <input name="option2" id="option2" type="text" placeholder="Enter option 2" required />
+
+          <label for="adultPrice1"><b>Adult price 1</b></label>
+          <input name="adultPrice1" id="adultPrice1" type="text" placeholder="Enter adultPrice 1" required />
+
+          <label for="childPrice1"><b>Child price 1</b></label>
+          <input name="childPrice1" id="childPrice1" type="text" placeholder="Enter childPrice 1" required />
+
+          <label for="adultPrice2"><b>Adult price 2</b></label>
+          <input name="adultPrice2" id="adultPrice2" type="text" placeholder="Enter adultPrice 2" required />
+
+          <label for="childPrice2"><b>Child price 2</b></label>
+          <input name="childPrice2" id="childPrice2" type="text" placeholder="Enter childPrice 2" required />
           
           <div class="clearfix">
             <button onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">
@@ -182,11 +184,23 @@
           <label for="highlight-update"><b>Highlight</b></label>
           <input name="highlight-update" id="highlight-update" type="text" placeholder="Enter highlight" required />
 
-          <label for="adultPrice-update"><b>Adult price</b></label>
-          <input name="adultPrice-update" id="adultPrice-update" type="text" placeholder="Enter adultPrice" required />
+          <label for="option1-update"><b>Option 1</b></label>
+          <input name="option1-update" id="option1-update" type="text" placeholder="Enter option 1" required />
 
-          <label for="childPrice-update"><b>Child price</b></label>
-          <input name="childPrice-update" id="childPrice-update" type="text" placeholder="Enter childPrice" required />
+          <label for="option2-update"><b>Option 2</b></label>
+          <input name="option2-update" id="option2-update" type="text" placeholder="Enter option 2" required />
+
+          <label for="adultPrice1-update"><b>Adult price 1</b></label>
+          <input name="adultPrice1-update" id="adultPrice1-update" type="text" placeholder="Enter adultPrice 1" required />
+
+          <label for="childPrice1-update"><b>Child price 1</b></label>
+          <input name="childPrice1-update" id="childPrice1-update" type="text" placeholder="Enter childPrice 1" required />
+
+          <label for="adultPrice2-update"><b>Adult price 2</b></label>
+          <input name="adultPrice2-update" id="adultPrice2-update" type="text" placeholder="Enter adultPrice 2" required />
+
+          <label for="childPrice2-update"><b>Child price 2</b></label>
+          <input name="childPrice2-update" id="childPrice2-update" type="text" placeholder="Enter childPrice 2" required />
           <div class="clearfix">
             <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">
               Cancel
@@ -200,8 +214,8 @@
     </div>
   </div>
 </body>
-<script src="js/details.js"></script>
-<script src="js/sum.js"></script>
+<script src="/ad_dashboard/js/details.js"></script>
+<script src="/ad_dashboard/js/sum.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 </html>
