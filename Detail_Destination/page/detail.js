@@ -14,10 +14,8 @@ const destinationId = parseInt(urlParams.get("id"));
             
             // const detail = data.find(item => item.id_destination === parseInt(destinationId, 10));
             const detail = data.find((item)=> item.id_destination === destinationId);
-<<<<<<< HEAD:Detail_Destination/page/detail.js
-=======
+Detail_Destination/page/detail.js
         
->>>>>>> 596f90d288386d59914b307c51e34626f6dd93bc:project web/page/demo.js
 
             if (detail) {
             
@@ -45,7 +43,7 @@ const destinationId = parseInt(urlParams.get("id"));
                 document.querySelector(".priceChildrenOption_2").textContent = detail.priceChildrenOption_2;
                 const descriptionElements = document.querySelectorAll(".descriptions_destination");
                 descriptionElements.forEach((element, index) => {
-                    element.textContent = detail.descriptions_destination[index];
+                    element.textContent = detail.descriptions[index];
                 });
 
             } else {
