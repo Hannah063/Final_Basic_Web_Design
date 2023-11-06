@@ -15,9 +15,6 @@ const destinationId = parseInt(urlParams.get("id"));
             // const detail = data.find(item => item.id_destination === parseInt(destinationId, 10));
             const detail = data.find((item)=> item.id_destination === destinationId);
 
-
-
-
             if (detail) {
                 document.querySelector(".name_destination").textContent = detail.name_destination;
                 const mainImageElement = document.querySelector("#product-img");
