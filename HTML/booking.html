@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="/bookingPage/booking.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Volkhov:ital,wght@0,400;0,700;1,700&family=Yesteryear&display=swap"
         rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
 </head>
-
 <body>
     <header>
-        <!-- nav -->
+        <div id="header"></div>
         <div class="overlay-header">
             <div class="header-booking-title">
                 <p class="title-booking-page1">Our destination is not a land, <br>but a new way of looking.</p>
@@ -77,13 +75,11 @@
                             </div>
                             <div class="duration col-6">
                                 <span>Duration</span>
-                                <input type="number" placeholder="0" id="duration-input">
-                                <select name="duration-input" id="duration-input">
-                                    <!-- DỮ LIỆU ĐỘNG -->
-                                </select>
+                                <input type="text" id="duration-input" disabled>
                             </div>
                         </div>
                     </div>
+
                     <div class="customer-info">
                         <div class="customer-info-title">Please enter your infomation</div>
                         <div class="row row-customer-info">
@@ -111,13 +107,12 @@
                     </div>
                     <input type="button" class="button-booking" value="BOOKING" onclick="checkout_review()"></input>
                 </div>
-
                 <div class="review-form" id="review-form">
                     <div class="review-tour">
                         <span id="review-tour-title" class="review-tour-title"></span>
                         <div class="review-info-tour">
                             <div class="review-image " id="review-image">
-                                <img src="image/example-image.jpg" alt="">
+                                <img src="" alt="" id="review-imageMain">
                             </div>
                             <div class="review-info">
                                 <div class="row row-review-info1">
@@ -143,10 +138,12 @@
                                     </div>
                                     <div class="review-duration">
                                         <span>Duration</span>
-                                        <input type="number" placeholder="0" id="review-duration-input"  disabled>
+                                        <input type="text" id="review-duration-input"  disabled>
                                     </div>
                                 </div>
                             </div>
+
+
                         </div>
                     </div>
                     <div class="review-customer-info">
@@ -204,10 +201,10 @@
             </div>
         </div>
     </div>
-    <footer>
-        
-    </footer>
+ <div id="footer"></div>
 </body>
 <script src="/bookingPage/js/booking.js"></script>
 <script src="/bookingPage/booking.css"></script>
+<script src="/HeaderFooter/loadHeaderFooter.js"></script>
+<script src="/HeaderFooter/header.js"></script> 
 </html>

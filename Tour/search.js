@@ -21,6 +21,7 @@ function searchDestinations() {
       } else {
         // Ẩn thẻ tour nếu tìm kiếm không khớp
         destinationElement.style.display = 'none';
+        
       }
     });
   }
