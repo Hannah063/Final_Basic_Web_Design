@@ -251,7 +251,8 @@ body {
 }
 .input-container .name-input,
 .input-container .email-input,
-.input-container .phone-input {
+.input-container .phone-input,
+.input-container .message-input {
     flex: 1;
     position: relative;
     margin-right: 50px;
@@ -259,9 +260,9 @@ body {
 
 input[type="text"],
 input[type="email"],
-input[type="phone"],
+input[type="tel"],
 textarea {
-    width: 100%;
+    width:100%;
     padding: 10px;
     border: none;
     border-bottom: 2px solid #ccc;
@@ -274,7 +275,7 @@ textarea {
     font-size: 18px;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0%;
     pointer-events: none;
     padding: 10px;
     transition: top 0.3s ease, font-size 0.3s ease;
@@ -285,7 +286,6 @@ textarea {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
     height: 2px;
     /* background-color: #ccc; */
     transform: scaleX(0);
@@ -299,8 +299,8 @@ input[type="text"]:focus + .label-input,
 input[type="text"]:valid + .label-input,
 input[type="email"]:focus + .label-input,
 input[type="email"]:valid + .label-input,
-input[type="phone"]:focus + .label-input,
-input[type="phone"]:valid + .label-input,
+input[type="tel"]:focus + .label-input,
+input[type="tel"]:valid + .label-input,
 textarea:focus + label,
 textarea:valid + label {
     top: -20px;
@@ -311,8 +311,8 @@ input[type="text"]:focus + .label-input + .underline,
 input[type="text"]:valid + .label-input + .underline,
 input[type="email"]:focus + .label-input + .underline,
 input[type="email"]:valid + .label-input + .underline,
-input[type="phone"]:focus + .label-input + .underline,
-input[type="phone"]:valid + .label-input + .underline,
+input[type="tel"]:focus + .label-input + .underline,
+input[type="tel"]:valid + .label-input + .underline,
 textarea:focus + label + .underline,
 textarea:valid + label + .underline {
     transform: scaleX(1);
