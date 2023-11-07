@@ -1,6 +1,8 @@
 // Lấy thông tin người dùng hiện tại từ localStorage
 var currentUser = JSON.parse(localStorage.getItem("CurrentUser"));
-
+if (Boolean(localStorage.getItem("isLogin"))) {
+  handleUserState();
+}
 // Kiểm tra nếu currentUser không rỗng (tức là người dùng đã đăng nhập), thì đặt isLogin thành true. Ngược lại, isLogin là false.
 var isLogin = !!currentUser;
 
@@ -135,7 +137,6 @@ function handleSignup() {
 async function handleLogin() {
   const email = document.getElementById("emailLogIn").value;
   const password = document.getElementById("passwordLogIn").value;
-  var loginModal = document.getElementById("loginModal");
 
   await axios
     .get("https://touring.glitch.me/users")
@@ -143,41 +144,21 @@ async function handleLogin() {
       
       const userExist = response.data.find((usr) => usr.email === email);
       const user = userExist;
-      console.log (userExist);
       if (userExist && userExist.password === password) {
         localStorage.setItem("isLogin", true);
         localStorage.setItem("role", userExist.role);
-        setTimeout(() => {
-          if (userExist.role === "Admin") {
-            console.log(`${location.origin}/HTML/ad_users.html`);
-            location.href = `${location.origin}/HTML/ad_users.html`;
-          } else {
-            location.href = `${location.origin}homepage.html`;
-          }
-        }, 1000);
+
+      setCurrentUser(user);
+      closeLoginModal();
       } else {
-        handleChangePass();
+        alert("Tài khoản hoặc mật khẩu không chính xác !");
       }
 
+      if (Boolean(localStorage.getItem("isLogin"))) {
+        handleUserState();
+      }
      
-
-      // Lưu thông tin người dùng vào currentUser
-      currentUser = user;
-      // console.log('Thông tin người dùng sau đăng nhập:', currentUser);
-
-      // Lưu thông tin người dùng vào localStorage
-      setCurrentUser(user);
-      // console.log('Thông tin người dùng đã lưu vào Local Storage:', localStorage.getItem('CurrentUser'));
-
-      // Cập nhật tên người dùng đã đăng nhập
-
-      // Cập nhật giao diện người dùng sau khi đăng nhập
-      handleUserState();
-
-      // Đóng modal đăng nhập
-      closeLoginModal();
     })
-
     .catch(function (error) {
       console.error(error);
     });
@@ -185,16 +166,17 @@ async function handleLogin() {
 
 // Hàm đăng xuất
 function logoutUser() {
-  window.localStorage.removeItem("CurrentUser");
+  window.localStorage.clear();
   location.reload();
 }
 
 // Hàm hiển thị form tài khoản
 function toggleProfile() {
+  if (Boolean(localStorage.getItem("isLogin"))) {
+    handleUserState();
+  }
   const subProfile = document.getElementById("subProfile");
   subProfile.classList.toggle("open-profile");
-  const userData = JSON.parse(localStorage.getItem("CurrentUser"));
-  document.getElementById("loggedInUserName2").innerHTML = userData.name;
 }
 
 // Hàm kiểm tra tài khoản
@@ -249,37 +231,25 @@ function setupEventTaiKhoan() {
 
 // Hàm xử lý trạng thái người dùng khi trang web được tải
 function handleUserState() {
+  if (Boolean(localStorage.getItem("isLogin"))) {
   const userPic = document.getElementById("userPic");
   const subProfile = document.getElementById("subProfile");
   const subMenuLogin = document.getElementById("subMenuLogin");
   const subMenuUser = document.getElementById("subMenuUser");
   const loginLink = document.getElementById("loginLink");
- 
-  
   const registerLink = document.getElementById("registerLink");
-
-  if (isLogin) {
+    subMenuLogin.style.display = "none";
+    subMenuUser.style.display = "block";
     const userData = JSON.parse(localStorage.getItem("CurrentUser"));
     const loggedInUserName = document.getElementById("loggedInUserName2");
 
     if (userData) {
-      loggedInUserName.innerText = userData.name;
+      loggedInUserName.innerHTML = userData.name;
     }
-
-    if (subMenuLogin && subMenuUser) {
-      subMenuLogin.style.display = "none";
-      subMenuUser.style.display = "block";
-    }
-
     // Cập nhật nhãn của nút
     if (loginLink && registerLink) {
       loginLink.innerHTML = '<i class="fa fa-user-circle-o"></i>Profile';
       registerLink.innerHTML = '<i class="fa fa-sign-out"></i>Log Out';
-    }
-  } else {
-    if (subMenuLogin && subMenuUser) {
-      subMenuLogin.style.display = "block";
-      subMenuUser.style.display = "none";
     }
 
     // Khôi phục nhãn ban đầu của nút
@@ -287,41 +257,123 @@ function handleUserState() {
       loginLink.innerHTML = '<i class="fa fa-sign-in"></i>Log In';
       registerLink.innerHTML = '<i class="fa fa-user-circle-o"></i>Sign Up';
     }
-  }
 
   if (userPic) {
     userPic.onclick = function () {
       if (subProfile) {
         subProfile.classList.toggle("open-profile");
       }
-    };
   }
+}
+}
+
+}
+function shuffleString(string) {
+  let array = string.split('');
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array.join('');
+}
+
+function generatePassword(length) {
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  const specialCharacters = '!@#$%^&*()_+~`|}{[]:;?><,./-=';
+
+  let password = '';
+
+  // Tạo 9 ký tự chữ cái ngẫu nhiên
+  for (let i = 0; i < 9; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    password += characters[randomIndex];
+  }
+
+  // Thêm 1 ký tự đặc biệt ngẫu nhiên
+  const randomSpecialCharIndex = Math.floor(Math.random() * specialCharacters.length);
+  password += specialCharacters[randomSpecialCharIndex];
+
+  // Trộn ngẫu nhiên các ký tự trong mật khẩu
+  password = shuffleString(password);
+
+  return password;
 }
 
 // Gọi hàm handleUserState để thiết lập trạng thái người dùng khi trang web được tải
-handleUserState();
+// handleUserState();
+
+async function handleConfirmChangePassword() {
+  const code = document.getElementById("codeConfirmChangePassword").value;
+  await axios.get("https://touring.glitch.me/users").then(async function (response) {
+    const email = document.getElementById("emailCur").value;
+    const userExist = response.data.find((user) => user.email === email);
+    if (userExist && Number(userExist.code) === Number(code)) {
+      var templateParams = {
+        email: userExist.email,
+        password: await generatePassword(10),
+      };
+      emailjs
+        .send("default_service", "template_gazt72q", templateParams)
+        .then(
+         async function () {
+          await axios
+                .patch(
+                  `https://touring.glitch.me/users/${userExist.id}`,
+                  { password: templateParams.password }
+                ).then(function (response) {
+                  var modalEnterCode = document.getElementById("confirmChangePassword")
+                  modalEnterCode.style.display = "none"
+                  alert("Mật khẩu mới đã được gửi về email của bạn!");
+                })
+
+          },
+          function (error) {
+            console.log("FAILED...", error);
+          }
+        );
+    }
+
+  })
+}
 
 //Hàm quên mật khẩu
-function handleChangePass() {
-    axios.get("https://touring.glitch.me/users").then(function (response) {
-      const users = response.data;
+async function handleChangePass() {
+    await axios.get("https://touring.glitch.me/users").then(function (response) {
       const email = document.getElementById("emailCreatePass").value;
-      const userExist = users.find((user) => user.email === email);
+      const userExist = response.data.find((user) => user.email === email);
 
       if (userExist) {
-        const newPass = document.getElementById("changePassword").value;
-        userExist.password = newPass;
-        console.log(userExist.password);
-        axios
-          .put(`https://touring.glitch.me/users/${userExist.id}`, userExist)
-          .then(function (response) {
-            alert("Mật khẩu đã được cập nhật thành công");
-          })
-          .catch(function (error) {
-            alert("Lỗi khi cập nhật mật khẩu:", error);
-          });
+        var templateParams = {
+          email: userExist.email,
+          code: (Math.random() * 100000) | 0,
+        };
+        emailjs
+          .send("service_4mv8mgj", "template_69jvbsa", templateParams)
+          .then(
+           async function () {
+              await axios
+                .patch(
+                  `https://touring.glitch.me/users/${userExist.id}`,
+                  { code: templateParams.code }
+                )
+                .then((res) => {
+                  var modalEnterMail = document.getElementById("changePass")
+                  modalEnterMail.style.display = "none"
+                  var modalEnterCode = document.getElementById("confirmChangePassword")
+                  modalEnterCode.style.display = "block"
+                  const emailCur = document.getElementById("emailCur");
+                  emailCur.value = userExist.email
+               
+                });
+            },
+            function (error) {
+              console.log("FAILED...", error);
+            }
+          );
       } else {
         alert("Không tìm thấy người dùng với email này");
       }
     });
   }
+
+  
