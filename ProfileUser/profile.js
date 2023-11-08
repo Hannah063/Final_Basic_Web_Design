@@ -26,6 +26,10 @@ if (localStorage.getItem("isLogin")) {
 }
 
 
+
+
+
+
     let isEditMode = false;
     const oldPasswordField = document.getElementById("oldPassword");
     const newPasswordField = document.getElementById("newPassword");

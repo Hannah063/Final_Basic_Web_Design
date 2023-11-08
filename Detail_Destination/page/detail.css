@@ -379,17 +379,7 @@ div.desc {
   .card-body a {
     font-size: 18px;
   }
-  .num {
-    text-align: center;
-  }
-  .num button {
-    font-size: 20px;
-    margin-left: 5px;
-  }
-  .num > button > a {
-    color: orange;
-    text-decoration: none;
-  }
+  
   .cmt {
     margin-top: 20px;
     background-color: rgba(217, 217, 217, 1);

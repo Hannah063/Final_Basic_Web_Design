@@ -50,7 +50,7 @@
 
 
             <div class="featured-row">
-                <div class="col-3">
+                <div class="col-3" data-id="1" >
                     
                     <img class="img-featured"
                     src="../HomePage/img/beautiful-girl-standing-boat-looking-mountains-ratchaprapha-dam-khao-sok-national-park-surat-thani-province-thailand.jpg" >
@@ -63,7 +63,7 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3" data-id="4">
                     <img class="img-featured"
                         src="../HomePage/img/travel-lanterns-historic-architecture-city.jpg">
 
@@ -75,49 +75,49 @@
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3" data-id="7">
                     <img class="img-featured"
                         src="../HomePage/img/anh8.jpg">
 
                     <div class="desc-location">
                         <i class="fa fa-map-marker" ></i>
-                        <p>Ha Long Bay, Quang Ninh</p>
+                        <p>Sapa, Lao Cai</p>
                         <p class="desc-location-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Phasellus non malesuada lorem. </p>
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3" data-id="9">
                     <img class="img-featured"
                         src="../HomePage/img/landscape-with-sunset-yixing.jpg">
 
                     <div class="desc-location">
                         <i class="fa fa-map-marker" ></i>
-                        <p>Ha Long Bay, Quang Ninh</p>
+                        <p>Tam Coc, Ninh Binh</p>
                         <p class="desc-location-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Phasellus non malesuada lorem. </p>
                     </div>
                 </div>
                 
-                <div class="col-3">
+                <div class="col-3" data-id="15">
                     <img class="img-featured"
                         src="../HomePage/img/anh7.jpg">
 
                     <div class="desc-location">
                         <i class="fa fa-map-marker" ></i>
-                        <p>Ha Long Bay, Quang Ninh</p>
+                        <p>Hai Van, Hue</p>
                         <p class="desc-location-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Phasellus non malesuada lorem. </p>
                     </div>
                 </div>
 
-                <div class="col-3">
+                <div class="col-3"  data-id="10">
                     <img class="img-featured"
                         src="../HomePage/img/anh6.jpg">
 
                     <div class="desc-location">
                         <i class="fa fa-map-marker" ></i>
-                        <p>Ha Long Bay, Quang Ninh</p>
+                        <p>Mang Den, Kon Tum</p>
                         <p class="desc-location-detail">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Phasellus non malesuada lorem. </p>
                     </div>
@@ -138,29 +138,29 @@
             </div>
 
             <div class="our-services-row">
-                <div class="services-col-3">
-                    <img class="services-col-3-icon" src="../HomePage/img/hotel_1946788.png" alt="">
-                    <p class="services-col-3-title">Luxury Hotel</p>
+                <div class="services-col-3" >
+                    <img class="services-col-3-icon" src="/image/luggage.png" alt="">
+                    <p class="services-col-3-title">Travel-Friendly solution</p>
                     <p class="services-col-3-content">Booking a luxury villa can be an exciting experience for larger
                         parties looking for privacy and space.
                         From choosing the perfect villa to understanding the local laws and regulations.</p>
-                    <button class="btn-readmore">Read more</button>
+                    
                 </div>
-                <div class="services-col-3">
-                    <img class="services-col-3-icon" src="../HomePage/img/guide_4908410.png" alt="">
-                    <p class="services-col-3-title">Travel Guide</p>
+                <div class="services-col-3" >
+                    <img class="services-col-3-icon" src="/image/payment.png" alt="">
+                    <p class="services-col-3-title">Safe payment method</p>
                     <p class="services-col-3-content">Booking a luxury villa can be an exciting experience for larger
                         parties looking for privacy and space.
                         From choosing the perfect villa to understanding the local laws and regulations.</p>
-                    <button class="btn-readmore">Read more</button>
+                    
                 </div>
                 <div class="services-col-3">
-                    <img class="services-col-3-icon" src="../HomePage/img/price-tag_3462067.png" alt="">
+                    <img  width="25%" src="../HomePage/img/price-tag_3462067.png" alt="">
                     <p class="services-col-3-title">Suitable Price</p>
                     <p class="services-col-3-content">Booking a luxury villa can be an exciting experience for larger
                         parties looking for privacy and space.
                         From choosing the perfect villa to understanding the local laws and regulations.</p>
-                    <button class="btn-readmore">Read more</button>
+                    
                 </div>
 
             </div>
@@ -184,7 +184,7 @@
                             internos. Non quis eius quo eligendi corrupti et fugiat nulla
                             qui soluta recusandae in maxime quasi aut ducimus illum aut optio quibusdam!
                         </small> <br>
-                        <button class="btn-buynow">VIEW PACKAGE &#8594</button>
+                   
                     </div>
 
                 </div>
@@ -221,6 +221,34 @@
     </div>
     <script src="/HeaderFooter/loadHeaderFooter.js"></script>
     <script src="/HeaderFooter/header.js"></script> 
+
+
+
+
+
+    <script>
+        // Lấy tất cả các phần tử có class "col-3"
+        const locations = document.querySelectorAll('.col-3');
+    
+        // Gán sự kiện click cho mỗi phần tử
+        locations.forEach(location => {
+            location.addEventListener('click', () => {
+                // Lấy giá trị của thuộc tính data-id
+                const id = location.getAttribute('data-id');
+                
+                // Điều hướng đến trang chi tiết với ID tương ứng
+                window.location.href = `detail.html?id=${id}`;
+            });
+        });
+
+
+  </script>
+
+
+
+
+
+
 
 </body>
 

@@ -149,7 +149,6 @@ async function handleLogin() {
         localStorage.setItem("role", userExist.role);
         setTimeout(() => {
           if (userExist.role === "Admin") {
-            console.log(`${location.origin}/HTML/ad_users.html`);
             location.href = `${location.origin}/HTML/ad_users.html`;
           } else {
             location.href = `${location.origin}homepage.html`;

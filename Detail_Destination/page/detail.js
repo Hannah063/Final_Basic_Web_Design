@@ -50,7 +50,7 @@ const destinationId = parseInt(urlParams.get("id"));
                 var option = selectElementS.value;
                 localStorage.setItem("duration",JSON.stringify(option)) ;
                 localStorage.setItem("book",JSON.stringify(detail)) ;//????
-                window.location.href = `../../HTML/booking.html?id=${destinationId}`;
+                window.location.href = `HTML/booking.html?id=${destinationId}`;
             });
         })
         .catch(error => console.error("Lỗi khi tải dữ liệu: " + error));

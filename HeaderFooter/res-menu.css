@@ -69,8 +69,8 @@ body {
 .sub-menu-wrap {
     position: absolute;
     top: 100%;
-    right: -4%;
-    width: 320px;
+     right:0px;
+    width: 310px;
     max-height: 0px;
     overflow: hidden;
     transition: max-height 0.5s;
@@ -315,6 +315,11 @@ body {
         top: 15px;
         right: 10px;
     }
+
+    .footer-col-2 iframe {
+        width:300px;
+        height:190px;
+    }
 }
 
 
@@ -372,27 +377,10 @@ body {
     padding-right: 10px;
 }
 
-.footer-col-2 img {
-    width: 180px;
-    margin-bottom: 20px;
 
-}
 
-.footer-col-2 input {
-    width: 90%;
-    outline: none;
-    padding: 15px 10px;
-    margin: 5px 0;
-    border-radius: 10px;
-    border: none;
-    font-size: 18px;
-}
 
-.footer-col-2 input[type="submit"] {
-    background-color: #226FB7;
-    color: #fff;
-    font-weight: 500;
-}
+
 
 .footer-col-3,
 .footer-col-4 {

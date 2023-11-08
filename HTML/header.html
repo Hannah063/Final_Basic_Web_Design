@@ -27,7 +27,7 @@
                 <li><a href="Tour.html">Tours</a></li>
                 <li><a href="abcontact.html">About us</a></li>
                 <li><a href="abcontact.html#contact-us">Contact us</a></li>
-                <li><a href="profile.html">History Booking </a></li>
+                <li><a id="history-link" href="profile.html">History Booking </a></li>
             </ul>
 
             <img src="/HeaderFooter/defaultUserImage.png" alt="User Image" class="user-pic" id="userPic" onclick="toggleProfile()">
@@ -143,6 +143,35 @@
 
 
 <script src="/HeaderFooter/header.js"></script>
+
+
+
+<script>
+    // Lấy liên kết "History Booking" và gán sự kiện click
+    const historyLink = document.getElementById('history-link');
+    historyLink.addEventListener('click', (event) => {
+        event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+
+        // Kiểm tra trạng thái đăng nhập
+        if (checkLoginStatus()) {
+            // Điều hướng đến trang profile của người dùng
+            window.location.href = historyLink.href;
+        } else {
+            // Xử lý khi chưa đăng nhập (ví dụ: điều hướng đến trang đăng nhập)
+            window.location.href = '/login.html';
+        }
+    });
+
+    // Hàm kiểm tra trạng thái đăng nhập (ví dụ)
+    function checkLoginStatus() {
+        // Thực hiện kiểm tra trạng thái đăng nhập (ví dụ: kiểm tra phiên làm việc, cookie, hoặc biến đăng nhập)
+        // Trả về true nếu đã đăng nhập, ngược lại trả về false
+        // Có thể thay đổi quy tắc kiểm tra tùy theo yêu cầu của bạn
+        return true; // Hoặc false tùy thuộc vào trạng thái đăng nhập
+    }
+</script>
+
+
 
 </body>
 </html>
