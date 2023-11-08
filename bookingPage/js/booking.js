@@ -1,6 +1,7 @@
 // Ẩn overlay khi người dùng nhấp chuột vào nó
 document.getElementById("complete").addEventListener("click", function () {
   this.style.display = "none";
+  window.location.href = "../HTML/Tour.html";
 });
 function getDestinationIdFromURL() {
   const urlParams = new URLSearchParams(window.location.search);
