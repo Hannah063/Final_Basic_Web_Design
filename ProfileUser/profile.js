@@ -144,8 +144,9 @@ editButton.addEventListener("click", openEditModal);
 
 
 
+const userID = JSON.parse(localStorage.getItem("CurrentUser")).id;
 
-fetch("https://touring.glitch.me/bookings")
+fetch(`https://touring.glitch.me/bookings`)
     .then((response) => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -153,30 +154,35 @@ fetch("https://touring.glitch.me/bookings")
         return response.json();
     })
     .then((data) => {
-        const tableData = data.map((item) => {
+        // Lọc dữ liệu theo userID
+        const filteredData = data.filter((item) => item.id_user === userID);
+        console.log(userID);
+        // Tạo dữ liệu bảng từ dữ liệu đã lọc
+        const tableData = filteredData.map((item) => {
             return `
                 <tr>
-                        <td>${item.total_adults}</td>
-                        <td>${item.total_children}</td>
-                        <td>${item.start_date}</td>
-                        <td>${item.duration}</td>
-                        <td>${item.total_price}</td>
-
-                        <td>${item.booking_fullname}</td>
-                        <td>${item.booking_email}</td>
-                        <td>${item.booking_phone_number}</td>
-                        <td>${item.request}</td>
+                    <td>${item.total_adults}</td>
+                    <td>${item.total_children}</td>
+                    <td>${item.start_date}</td>
+                    <td>${item.duration}</td>
+                    <td>${item.total_price}</td>
+                    <td>${item.booking_fullname}</td>
+                    <td>${item.booking_email}</td>
+                    <td>${item.booking_phone_number}</td>
+                    <td>${item.request}</td>
                 </tr>
-             `;
+            `;
         });
 
-
+        // Hiển thị dữ liệu trong bảng
         const tbody = document.getElementById("tbody");
         tbody.innerHTML = tableData.join('');
+        console.log("huyen1");
     })
     .catch((error) => {
         console.error('There was a problem with the fetch operation:', error);
     });
+
 
 
 
