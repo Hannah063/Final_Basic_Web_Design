@@ -9,7 +9,8 @@ function getDestinationIdFromURL() {
 }
 handleGetInfo(getDestinationIdFromURL());
 let id_des = getDestinationIdFromURL();
-let id_u = JSON.stringify(localStorage.getItem('user_id'));
+let id_u = JSON.parse(localStorage.getItem('CurrentUser')).id;
+console.log(id_u);
 let childPrice;
 let adultPrice;
 let option;

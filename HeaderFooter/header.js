@@ -112,7 +112,7 @@ async function handleSignup() {
       password: password,
       status: "Active",
       avatar: "",
-      role: "",
+      role: "Customer",
     });
 
     const user = response.data;
@@ -161,7 +161,9 @@ async function handleLogin() {
       if (Boolean(localStorage.getItem("isLogin"))) {
         handleUserState();
       }
-     
+      if (userExist.role == "Admin") {
+        location.href = `${location.origin}/HTML/ad_users.html`;
+      }
     })
     .catch(function (error) {
       console.error(error);
