@@ -1,26 +1,12 @@
 // Kiểm tra nếu người dùng đã đăng nhập
-if (localStorage.getItem("isLogin")) {
-    const loggedInUserID = localStorage.getItem("isLogin");
- 
-    // Sử dụng loggedInUserID để tìm người dùng và hiển thị thông tin của họ
-    fetch("https://touring.glitch.me/users")
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            const user = data.find((usr) => usr.id === loggedInUserID);
-            if (user) {
-                // Hiển thị thông tin của người dùng và cho phép chỉnh sửa
-                document.getElementById("fullName").textContent = user.name;
-                document.getElementById("email").textContent = user.email;
-                document.getElementById("phone").textContent = user.phone;
-                document.getElementById("password").value = user.password;
-                document.getElementById("avatarImage").src=user.avata;
-            }
-        })
-        .catch(function (error) {
-            console.error("Error when load data form JSON:  " + error);
-        });
+if (Boolean(localStorage.getItem("isLogin"))) {
+    const userData = JSON.parse(localStorage.getItem("CurrentUser"));
+    document.getElementById("fullNameProfile").textContent = userData.name;
+    document.getElementById("fullName").textContent = userData.name;
+    document.getElementById("email").textContent = userData.email;
+    document.getElementById("phone").textContent = userData.phone;
+    document.getElementById("password").value = userData.password;
+    document.getElementById("avatarImage").src=userData.avata;
 } else {
     alert("You should to log in to edit profile.")
 }
@@ -123,10 +109,6 @@ async function saveChanges() {
 
 
 
-
-
-
-
 function togglePasswordVisibility(fieldId) {
     const passwordField = document.getElementById(fieldId);
     const showPasswordIcon = document.getElementById(`show${fieldId}`);
@@ -162,10 +144,9 @@ editButton.addEventListener("click", openEditModal);
 
 
 
+const userID = JSON.parse(localStorage.getItem("CurrentUser")).id;
 
-
-
-fetch("https://touring.glitch.me/bookings")
+fetch(`https://touring.glitch.me/bookings`)
     .then((response) => {
         if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -173,30 +154,35 @@ fetch("https://touring.glitch.me/bookings")
         return response.json();
     })
     .then((data) => {
-        const tableData = data.map((item) => {
+        // Lọc dữ liệu theo userID
+        const filteredData = data.filter((item) => item.id_user === userID);
+        console.log(userID);
+        // Tạo dữ liệu bảng từ dữ liệu đã lọc
+        const tableData = filteredData.map((item) => {
             return `
                 <tr>
-                        <td>${item.total_adults}</td>
-                        <td>${item.total_children}</td>
-                        <td>${item.start_date}</td>
-                        <td>${item.duration}</td>
-                        <td>${item.total_price}</td>
-
-                        <td>${item.booking_fullname}</td>
-                        <td>${item.booking_email}</td>
-                        <td>${item.booking_phone_number}</td>
-                        <td>${item.request}</td>
+                    <td>${item.total_adults}</td>
+                    <td>${item.total_children}</td>
+                    <td>${item.start_date}</td>
+                    <td>${item.duration}</td>
+                    <td>${item.total_price}</td>
+                    <td>${item.booking_fullname}</td>
+                    <td>${item.booking_email}</td>
+                    <td>${item.booking_phone_number}</td>
+                    <td>${item.request}</td>
                 </tr>
-             `;
+            `;
         });
 
-
+        // Hiển thị dữ liệu trong bảng
         const tbody = document.getElementById("tbody");
         tbody.innerHTML = tableData.join('');
+        console.log("huyen1");
     })
     .catch((error) => {
         console.error('There was a problem with the fetch operation:', error);
     });
+
 
 
 

@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Volkhov:ital,wght@0,400;0,700;1,700&family=Yesteryear&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
@@ -18,13 +22,10 @@
       emailjs.init("XHO1Su3fKhdhCQDvE");
     </script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
     <title>Travel Agency-Header</title>
     <link rel="stylesheet" href="/HeaderFooter/res-menu.css" />
     <link rel="stylesheet" href="/HeaderFooter/header.css" />
+    <!-- <script src="/HeaderFooter/header.js"></script> -->
   </head>
   <body>
     <section class="header-navbar">
@@ -33,15 +34,16 @@
           <img src="/HeaderFooter/logo (1).png" alt="Logo Image" />
         </div>
         <ul class="links">
-          <li><a href="../homepage.html">Home</a></li>
-          <li><a href="../HTML/Tour.html">Tours</a></li>
-          <li><a href="../HTML/abcontact.html">About us</a></li>
-          <li><a href="../HTML/abcontact.html#contact-us">Contact us</a></li>
-          <li><a href="../HTML/profile.html">History Booking </a></li>
+          <li><a href="/HomePage/homepage.html">Home</a></li>
+          <li><a href="/Tour/Tour.html">Tours</a></li>
+          <li><a href="/AboutContact/abcontact.html">About us</a></li>
+          <li>
+            <a href="/AboutContact/abcontact.html#contact-us">Contact us</a>
+          </li>
+          <li><a href="/ProfileUser/profile.html">History Booking</a></li>
         </ul>
-
         <img
-          src="/HeaderFooter/defaultUserImage.png"
+          src="/HeaderFooter/user2.png"
           alt="User Image"
           class="user-pic"
           id="userPic"
@@ -51,7 +53,7 @@
           <div class="sub-menu" id="subMenuLogin">
             <div class="user-info">
               <img
-                src="/HeaderFooter/defaultUserImage.png"
+                src="/HeaderFooter/user2.png"
                 alt="Default avatar"
                 style="margin-right: 6px"
                 id="userInfoPic"
@@ -80,14 +82,17 @@
           <div class="sub-menu" id="subMenuUser" style="display: none">
             <div class="user-info">
               <img
-                src="/HeaderFooter/defaultUserImage.png"
+                src="/HeaderFooter/user2.png"
                 style="margin-right: 6px"
                 id="userInfoPicLoggedIn"
               />
               <h3 id="loggedInUserName2"></h3>
             </div>
             <hr />
-            <a href="../HTML/profile.html" target="_blank" class="sub-menu-links"
+            <a
+              href="/ProfileUser/profile.html"
+              target="_blank"
+              class="sub-menu-links"
               ><i class="fa fa-pencil-square-o"></i>Edit Profile</a
             >
             <a
@@ -193,30 +198,6 @@
             </form>
           </div>
         </div>
-        <div class="modal" id="confirmChangePassword" style="display: none">
-          <div class="modal-content">
-            <form>
-              <span class="close" onclick="closeConfirmChangePassword()"
-                >&times;</span
-              >
-              <h3>Confirm Code Change Password</h3>
-              <input name="emailCur" type="hidden" id="emailCur" />
-              <input
-                name="codeConfirmChangePassword"
-                type="text"
-                placeholder="Enter Code"
-                id="codeConfirmChangePassword"
-              />
-              <button
-                type="button"
-                class="signup"
-                onclick="handleConfirmChangePassword()"
-              >
-                Confirm
-              </button>
-            </form>
-          </div>
-        </div>
         <div class="modal" id="signupModal" style="display: none">
           <div class="modal-content">
             <form>
@@ -267,11 +248,13 @@
         </div>
       </div>
       <div class="dropdown_menu">
-        <li><a href="homepage.html">Home</a></li>
-        <li><a href="Tour.html">Tours</a></li>
-        <li><a href="abcontact.html">About us</a></li>
-        <li><a href="abcontact.html#contact-us">Contact us</a></li>
-        <li><a href="profile.html">History Booking </a></li>
+        <li><a href="/HomePage/homepage.html">Home</a></li>
+        <li><a href="/Tour/Tour.html">Tours</a></li>
+        <li><a href="/AboutContact/abcontact.html">About us</a></li>
+        <li>
+          <a href="/AboutContact/abcontact.html#contact-us">Contact us</a>
+        </li>
+        <li><a href="/ProfileUser/profile.html">History Booking</a></li>
       </div>
     </section>
     <script>
@@ -284,18 +267,6 @@
         toggleBtnIcon.classList = isOpen ? "fa fa-times" : "fa fa-bars";
       };
     </script>
-
-
-
-<script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
-<script type="text/javascript">
-  emailjs.init('Osy8L38k62YRgUKem')
-</script>
-</body>
-</html>
-    <script src="/HeaderFooter/header.js"></script>
     <script src="./assets/js/jquery.min.js"></script>
   </body>
 </html>
