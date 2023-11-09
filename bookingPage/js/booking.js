@@ -1,25 +1,28 @@
 // Ẩn overlay khi người dùng nhấp chuột vào nó
-document.getElementById('complete').addEventListener('click', function() {
-  this.style.display = 'none';
+document.getElementById("complete").addEventListener("click", function () {
+  this.style.display = "none";
+  window.location.href = "../HTML/Tour.html";
 });
 function getDestinationIdFromURL() {
   const urlParams = new URLSearchParams(window.location.search);
-  return parseInt(urlParams.get('id'));
+  return parseInt(urlParams.get("id"));
 }
 handleGetInfo(getDestinationIdFromURL());
 let id_des = getDestinationIdFromURL();
-let id_u = 1;
+let id_u = JSON.parse(localStorage.getItem('CurrentUser')).id;
+console.log(id_u);
 let childPrice;
 let adultPrice;
 let option;
 let picture;
-//let days;
+let name_tour;
 
 async function handleGetInfo(id) {
   await axios
-  .get(`https://touring.glitch.me/details/${id}`)
+    .get(`https://touring.glitch.me/details/${id}`)
     .then((response) => {
       document.getElementById("info-tour-title").innerHTML = response.data.name_destination;
+      name_tour = response.data.name_destination;
       document.getElementById("review-tour-title").innerHTML = response.data.name_destination;
       picture = response.data.mainImage;
       let duration = JSON.parse(localStorage.getItem("duration"));
@@ -27,21 +30,19 @@ async function handleGetInfo(id) {
 
       if (duration == "option1") {
         option = response.data.option1;
-        childPrice = response.data.priceChildrenOption_1,
-        console.log(childPrice);
-        adultPrice = response.data.priceAdultOption_1
-        console.log(adultPrice);
+        childPrice = response.data.priceChildrenOption_1;
+        adultPrice = response.data.priceAdultOption_1;
       } else {
         option = response.data.option2;
-        childPrice = response.data.priceChildrenOption_2,
-        console.log(childPrice);
-        adultPrice = response.data.priceAdultOption_2
-        console.log(adultPrice);
+        childPrice = response.data.priceChildrenOption_2;
+        adultPrice = response.data.priceAdultOption_2;
       }
       document.getElementById("duration-input").value = option;
+      document.querySelector('input[id="fullname-input"]').value = JSON.parse(localStorage.getItem('CurrentUser')).name;
+      document.querySelector('input[id="tel-input"]').value = JSON.parse(localStorage.getItem('CurrentUser')).phone;
+      document.querySelector('input[id="email-input"]').value = JSON.parse(localStorage.getItem('CurrentUser')).email;
     })
-    .catch(error => {
-      
+    .catch((error) => {
       // Xử lý lỗi khi yêu cầu thất bại
       console.log("Error");
     });
@@ -70,31 +71,31 @@ function checkout_review() {
   phone = document.querySelector('input[id="tel-input"]').value;
   email = document.querySelector('input[id="email-input"]').value;
 
-  request = document.querySelector('textarea#request-input').value;
+  request = document.querySelector("textarea#request-input").value;
   var selectElementS = document.getElementById("payment");
   payment = selectElementS.value;
-  
+
   //tạo giá tiền
-  price = (adultPrice*adults)+(childPrice*children);
+  price = adultPrice * adults + childPrice * children;
   console.log(price);
 
-  let review = document.getElementById('review-form');
-  let booking = document.getElementById('booking-form');
-  let backgroundColor_nav1 = document.getElementById('circle-1');
-  let backgroundColor_nav2 = document.getElementById('circle-2');
-  let color_nav1 = document.getElementById('so1');
+  let review = document.getElementById("review-form");
+  let booking = document.getElementById("booking-form");
+  let backgroundColor_nav1 = document.getElementById("circle-1");
+  let backgroundColor_nav2 = document.getElementById("circle-2");
+  let color_nav1 = document.getElementById("so1");
   if (payment == "CASH") {
     statuss = "Unpaid";
   } else {
     statuss = "Paid";
   }
   setTimeout(() => {
-    review.style.display = 'flex';
-    backgroundColor_nav2.style.backgroundColor = 'var(--button-3)';
-    backgroundColor_nav2.style.color = 'var(--main-white)';
-    booking.style.display = 'none';
-    backgroundColor_nav1.style.backgroundColor = 'var(--button-4)';
-    color_nav1.style.color = 'var(--main-text)';
+    review.style.display = "flex";
+    backgroundColor_nav2.style.backgroundColor = "var(--button-3)";
+    backgroundColor_nav2.style.color = "var(--main-white)";
+    booking.style.display = "none";
+    backgroundColor_nav1.style.backgroundColor = "var(--button-4)";
+    color_nav1.style.color = "var(--main-text)";
   }, 1000);
   handleGetDetail();
 }
@@ -106,20 +107,23 @@ async function handleGetDetail() {
   document.querySelector('input[id="review-start-date-input"]').value = start;
   document.querySelector('input[id="review-children-input"]').value = children;
   document.querySelector('input[id="review-duration-input"]').value = duration;
-  document.querySelector('textarea#review-customer-info').value = fullname + "\n" + phone + "\n" + email;
-  document.querySelector('textarea#review-customer-request').value = request;
+  document.querySelector("textarea#review-customer-info").value =
+    fullname + "\n" + phone + "\n" + email;
+  document.querySelector("textarea#review-customer-request").value = request;
   document.querySelector('input[id="review-price"]').value = price;
   document.querySelector('img[id="review-imageMain"]').src = picture;
 }
 
 async function handleGetBooked(id) {
   try {
-    const response = await axios.get(`https://touring.glitch.me/destinations/${id}`);
+    const response = await axios.get(
+      `https://touring.glitch.me/destinations/${id}`
+    );
     const currentBooked = response.data.booked;
     const updatedBooked = currentBooked + 1;
 
     await axios.patch(`https://touring.glitch.me/destinations/${id}`, {
-      booked: updatedBooked
+      booked: updatedBooked,
     });
 
     console.log("OK booked");
@@ -129,7 +133,7 @@ async function handleGetBooked(id) {
   }
 }
 
-// POST INFOMATION 
+// POST INFOMATION
 async function handleSubmit(event) {
   event.preventDefault();
   await axios
@@ -146,12 +150,39 @@ async function handleSubmit(event) {
       duration: duration,
       request: request,
       payment: payment,
-      status: statuss
+      status: statuss,
     })
     .then((response) => {
       handleGetBooked(id_des);
       var modal = document.getElementById("complete");
       modal.style.display = "flex";
+      sendEmailB(email);
     });
-  
+}
+
+function sendEmailB(email) {
+
+  emailjs.init("Osy8L38k62YRgUKem"); // Thay 'YOUR_USER_ID' bằng User ID của bạn
+  const serviceID = "service_0ohuk3r"; // Thay 'YOUR_SERVICE_ID' bằng Service ID của dịch vụ của bạn
+  const templateID = "template_ue95ozh"; // Thay 'YOUR_TEMPLATE_ID' bằng ID của mẫu email của bạn
+  var templateParams = {
+    from_name: "Travel Agency",
+    to_name: fullname, 
+    email: email,
+    tour_name: name_tour,
+    duration: duration,
+    adults: adults,
+    children: children,
+    phone: phone,
+    request: request,
+    price: price
+  };
+  emailjs
+    .send(serviceID, templateID, templateParams)
+    .then(function (response) {
+      console.log("Email sent successfully!", response.status, response.text);
+    })
+    .catch(function (error) {
+      console.error("Email failed to send:", error);
+    });
 }

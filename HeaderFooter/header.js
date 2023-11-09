@@ -98,39 +98,44 @@ async function updateListUser(newUser, newData) {
 }
 
 // Hàm đăng ký
-function handleSignup() {
+async function handleSignup() {
   const username = document.getElementById("newUser").value;
   const email = document.getElementById("email").value;
   const phone = document.getElementById("phone").value;
   const password = document.getElementById("pass").value;
 
-  axios
-    .post("https://touring.glitch.me/users", {
+  try {
+    const response = await axios.post("https://touring.glitch.me/users", {
       name: username,
       email: email,
       phone: phone,
       password: password,
       status: "Active",
       avatar: "",
-      role: "",
-    })
-    .then(function (response) {
-      const user = response.data;
-      setCurrentUser(user);
-
-      // Cập nhật tên người dùng đã đăng ký
-      const loggedInUserName = document.getElementById("loggedInUserName2");
-      loggedInUserName.innerText = user.name;
-
-      alert("Đăng ký thành công, Bạn sẽ được tự động đăng nhập!");
-      location.reload();
-    })
-    .catch(function (error) {
-      alert(
-        "Tên đăng nhập đã có người sử dụng hoặc có lỗi trong quá trình đăng ký."
-      );
-      console.error(error);
+      role: "Customer",
     });
+
+    const user = response.data;
+    setCurrentUser(user);
+
+    // Cập nhật tên người dùng đã đăng ký
+    const loggedInUserName = document.getElementById("loggedInUserName2");
+    loggedInUserName.innerText = user.name;
+
+    // Gọi hàm sendEmail
+    sendEmail(email);
+
+    console.log("Gửi email thành công");
+    alert("Đăng ký thành công, Bạn sẽ được tự động đăng nhập!");
+    location.reload();
+  } catch (error) {
+    if (error.response && error.response.status === 409) {
+      alert("Tên đăng nhập đã có người sử dụng.");
+    } else {
+      alert("Có lỗi trong quá trình đăng ký.");
+    }
+    console.error(error);
+  }
 }
 
 // Hàm đăng nhập
@@ -141,7 +146,6 @@ async function handleLogin() {
   await axios
     .get("https://touring.glitch.me/users")
     .then(function (response) {
-      
       const userExist = response.data.find((usr) => usr.email === email);
       const user = userExist;
       if (userExist && userExist.password === password) {
@@ -163,7 +167,9 @@ async function handleLogin() {
       if (Boolean(localStorage.getItem("isLogin"))) {
         handleUserState();
       }
-     
+      if (userExist.role == "Admin") {
+        location.href = `${location.origin}/HTML/ad_users.html`;
+      }
     })
     .catch(function (error) {
       console.error(error);

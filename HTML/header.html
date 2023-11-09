@@ -1,3 +1,14 @@
+
+thoi mà
+tên đc r
+nhìu nhóm cx làm à
+mà
+Mô
+nhóm Bảo, Hữu Hùng
+cũng làm
+đổi tên thì đổi cái name tài khoản thôi
+chứ thgain thì chắc ko á
+tui đảy lên drive để khỏi mất mà nặng quá ko lên nổi
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,122 +39,16 @@
   </head>
   <body>
     <section class="header-navbar">
-<<<<<<< HEAD
-        <div class="navbar">
-            <div class="logo">
-                <img src="/HeaderFooter/logo (1).png" alt="Logo Image">
-            </div>
-            <ul class="links">
-                <li><a href="homepage.html">Home</a></li>
-                <li><a href="Tour.html">Tours</a></li>
-                <li><a href="abcontact.html">About us</a></li>
-                <li><a href="abcontact.html#contact-us">Contact us</a></li>
-                <li><a id="history-link" href="profile.html">History Booking </a></li>
-            </ul>
-
-            <img src="/HeaderFooter/defaultUserImage.png" alt="User Image" class="user-pic" id="userPic" onclick="toggleProfile()">
-            <div class="sub-menu-wrap" id="subProfile">
-                <div class="sub-menu" id="subMenuLogin">
-                    <div class="user-info">
-                        <img src="/HeaderFooter/defaultUserImage.png" alt="Default avatar" style="margin-right: 6px;" id="userInfoPic">
-                        <h3 id="loggedInUserName">Guest</h3>
-                    </div>
-                    <hr>
-                    <p class="sub-menu-links" id="loginLink" onclick="openLoginModal()"><i class="fa fa-sign-in"></i>Log In</p>
-                    <p class="sub-menu-links" id="createPassword" onclick="openChangePassword()"><i class="fa fa-sign-in"></i>Change Pass</p>
-                    <p class="sub-menu-links" id="registerLink" onclick="openSignUpModal()"><i class="fa fa-user-circle-o"></i>Sign Up</p>
-                </div>
-                <div class="sub-menu" id="subMenuUser" style="display: none;">
-                      
-  
-                    <div class="user-info">
-                        <img src="/HeaderFooter/defaultUserImage.png" style="margin-right
-                        : 6px;" id="userInfoPicLoggedIn">
-                        <h3 id="loggedInUserName2"></h3>
-                    </div>
-                    <hr>
-                    <a href="profile.html" target="_blank" class="sub-menu-links"><i class="fa fa-pencil-square-o"></i>Edit Profile</a>
-                    <a href="#" class="sub-menu-links" id="logoutLink" onclick="logoutUser()"><i class="fa fa-sign-out"></i>Log out</a>
-                </div>
-            </div>
-            <div class="modal" id="loginModal" style="display: none;">
-                <div class="modal-content">
-                    <form>
-                        <span class="close" onclick="closeLoginModal()">&times;</span>
-                        <h3>Log In</h3>
-                        <input name="emailLogIn" type="text" placeholder="Email" id="emailLogIn" autocomplete="email" />
-                        <input name="passwordLogIn" type="password" placeholder="Password" id="passwordLogIn" autocomplete="current-password" />
-                        <button type="button" class="login" onclick="handleLogin()">Log In</button>
-                        <div class="social">
-                            <div class="go"><i class="fa fa-google-plus-square"></i>Google</div>
-                            <div class="fb"><i class="fa fa-facebook-square"></i> Facebook</div>
-                        </div>
-                        <div>
-                            <span class="forgot-password">Fogot your password?<a href="javascript:void(1);" onclick="openChangePassword()">Change password </a></span>
-                            <span class="signup-content">Do you have an account with us?<a href="javascript:void(0);" onclick="openSignUpModal()">Sign Up</a></span>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <div class="modal" id="changePass" style="display: none;">
-                <div class="modal-content">
-                    <form>
-                        <span class="close" onclick="closeChangePassword()">&times;</span>
-                        <h3>Change Password</h3>
-                        <input name="emailLogIn" type="text" placeholder="Email" id="emailCreatePass" autocomplete="email" />
-                        <input name="changePassword" type="password" placeholder="Create Password" id="changePassword" autocomplete="current-password" />
-                        <input name="changePassword" type="password" placeholder="Confirm Password" id="changePassword" autocomplete="current-password" />
-                        <button type="button" class="signup" onclick="handleChangePass()">Change</button>
-                        <div class="social">
-                            <div class="go"><i class="fa fa-google-plus-square"></i>Google</div>
-                            <div class="fb"><i class="fa fa-facebook-square"></i> Facebook</div>
-                        </div>
-                        <div>
-                            <span class="forgot-password">Fogot your password?<a href="javascript:void(0);" onclick="openChangePassword()">Change password </a></span>
-                            <span class="signup-content">Do you have an account with us?<a href="javascript:void(0);" onclick="openSignUpModal()">Sign Up</a></span>
-                        </div>
-                    </form>
-    
-    
-  
-                </div>
-            </div>
-            <div class="modal" id="signupModal" style="display: none;">
-                <div class="modal-content">
-                    <form>
-                        <span class="close" onclick="closeSignUpModal()">&times;</span>
-                        <h3>Sign Up</h3>
-                        <input name="newUser" type="text" placeholder="Name" id="newUser" />
-                        <input name="email" type="text" placeholder="Email" id="email" />
-                        <input name="phone" type="text" placeholder="Phone" id="phone" />
-                        <input name="newPass" type="password" placeholder="Password" id="pass" />
-                        <button type="button" class="signup" onclick="handleSignup()">Sign Up</button>
-                        <div class="social">
-                            <div class="go"><i class="fa fa-google-plus-square"></i>Google</div>
-                            <div class="fb"><i class="fa fa-facebook-square"></i>Facebook</div>
-                        </div>
-                        <div>
-                            <span class="signup-content">Do you have an account with us?<a href="javascript:void(0);" onclick="openLoginModal()">Login</a></span>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="toggle_btn">
-                <i style="position: absolute; left:20px; top:24px; color: black;" class="fa fa-bars"></i>
-            </div>
-=======
       <div class="navbar">
         <div class="logo">
           <img src="/HeaderFooter/logo (1).png" alt="Logo Image" />
->>>>>>> 86730375cc65598e0df0777742a0e3b609931f70
         </div>
         <ul class="links">
-          <li><a href="homepage.html">Home</a></li>
-          <li><a href="Tour.html">Tours</a></li>
-          <li><a href="abcontact.html">About us</a></li>
-          <li><a href="abcontact.html#contact-us">Contact us</a></li>
-          <li><a href="profile.html">History Booking </a></li>
+          <li><a href="../homepage.html">Home</a></li>
+          <li><a href="../HTML/Tour.html">Tours</a></li>
+          <li><a href="../HTML/abcontact.html">About us</a></li>
+          <li><a href="../HTML/abcontact.html#contact-us">Contact us</a></li>
+          <li><a href="../HTML/profile.html">History Booking </a></li>
         </ul>
 
         <img
@@ -186,14 +91,14 @@
           <div class="sub-menu" id="subMenuUser" style="display: none">
             <div class="user-info">
               <img
-                src="/HeaderFooter/defaultUserImage.png"
+src="/HeaderFooter/defaultUserImage.png"
                 style="margin-right: 6px"
                 id="userInfoPicLoggedIn"
               />
               <h3 id="loggedInUserName2"></h3>
             </div>
             <hr />
-            <a href="profile.html" target="_blank" class="sub-menu-links"
+            <a href="../HTML/profile.html" target="_blank" class="sub-menu-links"
               ><i class="fa fa-pencil-square-o"></i>Edit Profile</a
             >
             <a
@@ -267,35 +172,11 @@
                 id="emailCreatePass"
                 autocomplete="email"
               />
-              <!-- <input name="changePassword" type="password" placeholder="Create Password" id="changePassword" autocomplete="current-password" />
-                        <input name="changePassword" type="password" placeholder="Confirm Password" id="changePassword" autocomplete="current-password" /> -->
+             
               <button type="button" class="signup" onclick="handleChangePass()">
                 Change
               </button>
-              <!-- <div class="social">
-                <div class="go">
-                  <i class="fa fa-google-plus-square"></i>Google
-                </div>
-                <div class="fb">
-                  <i class="fa fa-facebook-square"></i> Facebook
-                </div>
-              </div> -->
-              <!-- <div>
-                <span class="forgot-password"
-                  >Fogot your password?<a
-                    href="javascript:void(0);"
-                    onclick="openChangePassword()"
-                    >Change password
-                  </a></span
-                >
-                <span class="signup-content"
-                  >Do you have an account with us?<a
-                    href="javascript:void(0);"
-                    onclick="openSignUpModal()"
-                    >Sign Up</a
-                  ></span
-                >
-              </div> -->
+             
             </form>
           </div>
         </div>
@@ -347,7 +228,7 @@
               </button>
               <div class="social">
                 <div class="go">
-                  <i class="fa fa-google-plus-square"></i>Google
+<i class="fa fa-google-plus-square"></i>Google
                 </div>
                 <div class="fb">
                   <i class="fa fa-facebook-square"></i>Facebook
@@ -391,44 +272,17 @@
       };
     </script>
 
-<<<<<<< HEAD
-
-<script src="/HeaderFooter/header.js"></script>
 
 
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-<script>
-    // Lấy liên kết "History Booking" và gán sự kiện click
-    const historyLink = document.getElementById('history-link');
-    historyLink.addEventListener('click', (event) => {
-        event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
-
-        // Kiểm tra trạng thái đăng nhập
-        if (checkLoginStatus()) {
-            // Điều hướng đến trang profile của người dùng
-            window.location.href = historyLink.href;
-        } else {
-            // Xử lý khi chưa đăng nhập (ví dụ: điều hướng đến trang đăng nhập)
-            window.location.href = '/login.html';
-        }
-    });
-
-    // Hàm kiểm tra trạng thái đăng nhập (ví dụ)
-    function checkLoginStatus() {
-        // Thực hiện kiểm tra trạng thái đăng nhập (ví dụ: kiểm tra phiên làm việc, cookie, hoặc biến đăng nhập)
-        // Trả về true nếu đã đăng nhập, ngược lại trả về false
-        // Có thể thay đổi quy tắc kiểm tra tùy theo yêu cầu của bạn
-        return true; // Hoặc false tùy thuộc vào trạng thái đăng nhập
-    }
+<script type="text/javascript">
+  emailjs.init('Osy8L38k62YRgUKem')
 </script>
-
-
-
 </body>
 </html>
-=======
     <script src="/HeaderFooter/header.js"></script>
     <script src="./assets/js/jquery.min.js"></script>
   </body>
 </html>
->>>>>>> 86730375cc65598e0df0777742a0e3b609931f70

@@ -18,8 +18,7 @@ function td_fun({ id, id_destination, id_user, booking_fullname, booking_phone_n
     <th scope="row">${id}</th>
     <td>${id_user}</td>
     <td>${id_destination}</td>
-    <td>${total_adults}</td>
-    <td>${total_children}</td>
+    <td>${total_adults + total_children}</td>
     <td>${start_date}</td>
     <td>${duration}</td>
     <td>${booking_fullname}<br>${booking_phone_number}<br>${booking_email}</td>

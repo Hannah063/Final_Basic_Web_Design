@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Volkhov:ital,wght@0,400;0,700;1,700&family=Yesteryear&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Travel Agency-Header</title>
+    <link rel="stylesheet" href="/HeaderFooter/res-menu.css">
+    <link rel="stylesheet" href="/HeaderFooter/header.css">
+    <script src="/HeaderFooter/header.js"></script>
+</head>
+<body>
+    <section class="header-navbar">
+        <div class="navbar">
+            <div class="logo">
+                <img src="/HeaderFooter/logo (1).png" alt="Logo Image">
+            </div>
+            <ul class="links">
+                <li><a href="/HomePage/homepage.html">Home</a></li>
+                <li><a href="/Tour/Tour.html">Tours</a></li>
+                <li><a href="/AboutContact/abcontact.html">About us</a></li>
+                <li><a href="/AboutContact/abcontact.html#contact-us">Contact us</a></li>
+                <li><a href="/ProfileUser/profile.html">History Booking</a></li>
+            </ul>
+            <img src="/HeaderFooter/user2.png" alt="User Image" class="user-pic" id="userPic" onclick="toggleProfile()">
+            <div class="sub-menu-wrap" id="subProfile">
+                <div class="sub-menu" id="subMenuLogin">
+                    <div class="user-info">
+                        <img src="/HeaderFooter/user2.png" alt="Default avatar" style="margin-right: 6px;" id="userInfoPic">
+                        <h3 id="loggedInUserName">Guest</h3>
+                    </div>
+                    <hr>
+                    <p class="sub-menu-links" id="loginLink" onclick="openLoginModal()"><i class="fa fa-sign-in"></i>Log In</p>
+                    <p class="sub-menu-links" id="createPassword" onclick="openChangePassword()"><i class="fa fa-sign-in"></i>Change Pass</p>
+                    <p class="sub-menu-links" id="registerLink" onclick="openSignUpModal()"><i class="fa fa-user-circle-o"></i>Sign Up</p>
+                </div>
+                <div class="sub-menu" id="subMenuUser" style="display: none;">
+                    <div class="user-info">
+                        <img src="/HeaderFooter/user2.png" style="margin-right: 6px;" id="userInfoPicLoggedIn">
+                        <h3 id="loggedInUserName2"></h3>
+                    </div>
+                    <hr>
+                    <a href="/ProfileUser/profile.html" target="_blank" class="sub-menu-links"><i class="fa fa-pencil-square-o"></i>Edit Profile</a>
+                    <a href="#" class="sub-menu-links" id="logoutLink" onclick="logoutUser()"><i class="fa fa-sign-out"></i>Log out</a>
+                </div>
+            </div>
+            <div class="modal" id="loginModal" style="display: none;">
+                <div class="modal-content">
+                    <form>
+                        <span class="close" onclick="closeLoginModal()">&times;</span>
+                        <h3>Log In</h3>
+                        <input name="emailLogIn" type="text" placeholder="Email" id="emailLogIn" autocomplete="email" />
+                        <input name="passwordLogIn" type="password" placeholder="Password" id="passwordLogIn" autocomplete="current-password" />
+                        <button type="button" class="login" onclick="handleLogin()">Log In</button>
+                        <div class="social">
+                            <div class="go"><i class="fa fa-google-plus-square"></i>Google</div>
+                            <div class="fb"><i class="fa fa-facebook-square"></i> Facebook</div>
+                        </div>
+                        <div>
+                            <span class="forgot-password">Fogot your password?<a href="javascript:void(1);" onclick="openChangePassword()">Change password </a></span>
+                            <span class="signup-content">Do you have an account with us?<a href="javascript:void(0);" onclick="openSignUpModal()">Sign Up</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="modal" id="changePass" style="display: none;">
+                <div class="modal-content">
+                    <form>
+                        <span class="close" onclick="closeChangePassword()">&times;</span>
+                        <h3>Change Password</h3>
+                        <input name="emailLogIn" type="text" placeholder="Email" id="emailCreatePass" autocomplete="email" />
+                        <input name="changePassword" type="password" placeholder="Create Password" id="changePassword" autocomplete="current-password" />
+                        <input name="changePassword" type="password" placeholder="Confirm Password" id="changePassword" autocomplete="current-password" />
+                        <button type="button" class="signup" onclick="handleChangePass()">Change</button>
+                        <div class="social">
+                            <div class="go"><i class="fa fa-google-plus-square"></i>Google</div>
+                            <div class="fb"><i class="fa fa-facebook-square"></i> Facebook</div>
+                        </div>
+                        <div>
+                            <span class="forgot-password">Fogot your password?<a href="javascript:void(0);" onclick="openChangePassword()">Change password </a></span>
+                            <span class="signup-content">Do you have an account with us?<a href="javascript:void(0);" onclick="openSignUpModal()">Sign Up</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal" id="signupModal" style="display: none;">
+                <div class="modal-content">
+                    <form>
+                        <span class="close" onclick="closeSignUpModal()">&times;</span>
+                        <h3>Sign Up</h3>
+                        <input name="newUser" type="text" placeholder="Name" id="newUser" />
+                        <input name="email" type="text" placeholder="Email" id="email" />
+                        <input name="phone" type="text" placeholder="Phone" id="phone" />
+                        <input name="newPass" type="password" placeholder="Password" id="pass" />
+                        <button type="button" class="signup" onclick="handleSignup()">Sign Up</button>
+                        <div class="social">
+                            <div class="go"><i class="fa fa-google-plus-square"></i>Google</div>
+                            <div class="fb"><i class="fa fa-facebook-square"></i>Facebook</div>
+                        </div>
+                        <div>
+                            <span class="signup-content">Do you have an account with us?<a href="javascript:void(0);" onclick="openLoginModal()">Login</a></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="toggle_btn">
+                <i style="position: absolute; left:20px; top:24px; color: black;" class="fa fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="/HomePage/homepage.html">Home</a></li>
+            <li><a href="/Tour/Tour.html">Tours</a></li>
+            <li><a href="/AboutContact/abcontact.html">About us</a></li>
+            <li><a href="/AboutContact/abcontact.html#contact-us">Contact us</a></li>
+            <li><a href="/ProfileUser/profile.html">History Booking</a></li>
+        </div>
+    </section>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn');
+        const toggleBtnIcon = document.querySelector('.toggle_btn i');
+        const dropDownMenu = document.querySelector('.dropdown_menu');
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open');
+            const isOpen = dropDownMenu.classList.contains('open');
+            toggleBtnIcon.classList = isOpen ? 'fa fa-times' : 'fa fa-bars';
+        }
+    </script>
+</body>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('Osy8L38k62YRgUKem')
+</script>
+</html>
