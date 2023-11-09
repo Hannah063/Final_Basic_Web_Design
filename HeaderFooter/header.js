@@ -154,6 +154,7 @@ async function handleLogin() {
 
       setCurrentUser(user);
       closeLoginModal();
+<<<<<<< HEAD
       
 
 
@@ -161,6 +162,9 @@ async function handleLogin() {
 
 
 } else {
+=======
+      } else {
+>>>>>>> 6128c5f5c386f457062f4f160c16be0785df4c1c
         alert("Tài khoản hoặc mật khẩu không chính xác !");
       }
 
