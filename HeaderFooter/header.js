@@ -154,17 +154,7 @@ async function handleLogin() {
 
       setCurrentUser(user);
       closeLoginModal();
-<<<<<<< HEAD
-      
-
-
-
-
-
-} else {
-=======
       } else {
->>>>>>> 6128c5f5c386f457062f4f160c16be0785df4c1c
         alert("Tài khoản hoặc mật khẩu không chính xác !");
       }
 
@@ -391,5 +381,21 @@ async function handleChangePass() {
       }
     });
   }
+
+  function sendEmail(email) {
+    emailjs.init("Osy8L38k62YRgUKem"); // Thay 'YOUR_USER_ID' bằng User ID của bạn
+    const serviceID = "service_0ohuk3r"; // Thay 'YOUR_SERVICE_ID' bằng Service ID của dịch vụ của bạn
+    const templateID = "template_pgj7ajo"; // Thay 'YOUR_TEMPLATE_ID' bằng ID của mẫu email của bạn
+    var templateParams = {
+      name: "Customer of Travel Agency",
+      email: email,
+    };
+    emailjs
+      .send(serviceID, templateID, templateParams)
+      .then(function (response) {
+        console.log("Email sent successfully!", response.status, response.text);
+      })
+      .catch(function (error) {
+        console.error("Email failed to send:", error);})}
 
   
