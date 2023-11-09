@@ -1,6 +1,6 @@
 const backButton = document.querySelector(".backtoHome");
 backButton.addEventListener("click", () => {
-  window.location.href = "../homepage.html";
+  window.location.href = "../index.html";
 });
 
 // Modal element
