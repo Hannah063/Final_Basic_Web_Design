@@ -13,22 +13,21 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="/AboutContact/abcontact.css">
 
-    <script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <title>About-Contact</title>
 </head>
 
 <body>
-    <div class="container" >
+    <div class="container">
         <div id="header"></div>
-        
+
         <section class="about-us">
-           <h2>About Us</h2>
+            <h2>About Us</h2>
             <div class="about-us-content-row1">
-                
+
                 <div class="about-us-content-row1-content">
-                   
+
                     <h2>We Provide You Best Europe Sightseeing Tours</h2>
                     <p>Et labore harum non nobis ipsum eum molestias mollitia et corporis praesentium a laudantium
                         internos. Non quis eius quo eligendi corrupti et fugiat
@@ -108,33 +107,26 @@
             </div>
 
             <div class="contact-address">
-                
-                <p> <i class="fa fa-map-marker" aria-hidden="true"></i>  132 Dartmouth Street Boston, Massachusetts </p>
+
+                <p> <i class="fa fa-map-marker" aria-hidden="true"></i> 132 Dartmouth Street Boston, Massachusetts </p>
             </div>
-            <form id="contact-form">
+                <form id="contact-form">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name">
 
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
 
-                
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" name="phone" id="phone">
 
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="4"></textarea>
+                    <input type="submit" value="Send Email" id="btn-send">
+                </form>
 
-
-            <form id="contact-form">
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name">
-
-                <label for="phone">PhoneNumber</label>
-                <input type="phone" name="phone" id="phone">
-
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email">
-
-                <label for="message">Message</label>
-                <textarea type="text"  name="message" id="message"  rows="4"></textarea>
-                <input type="submit" value="Send Email" id="btn-send">
-            </form>
-    
         </section>
-<div id="footer"></div>
+        <div id="footer"></div>
 
 
     </div>
@@ -177,7 +169,7 @@
                     emailjs.sendForm("service_klm0uxr", "template_pjtlkei", this).then(
                         function () {
                             console.log("SUCCESSFUL!");
-                            alert("SUCCESSFUL!")
+                            alert("SUCCESSFUL!");
                             document.getElementById("name").value = "";
                             document.getElementById("phone").value = "";
                             document.getElementById("email").value = "";
@@ -191,7 +183,7 @@
         };
     </script>
     <script src="/HeaderFooter/loadHeaderFooter.js"></script>
-<script src="/HeaderFooter/header.js"></script>
+    <script src="/HeaderFooter/header.js"></script>
 </body>
 
 </html>

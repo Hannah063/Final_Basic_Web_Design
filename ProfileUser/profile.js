@@ -1,26 +1,12 @@
 // Kiểm tra nếu người dùng đã đăng nhập
-if (localStorage.getItem("isLogin")) {
-    const loggedInUserID = localStorage.getItem("isLogin");
- 
-    // Sử dụng loggedInUserID để tìm người dùng và hiển thị thông tin của họ
-    fetch("https://touring.glitch.me/users")
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            const user = data.find((usr) => usr.id === loggedInUserID);
-            if (user) {
-                // Hiển thị thông tin của người dùng và cho phép chỉnh sửa
-                document.getElementById("fullName").textContent = user.name;
-                document.getElementById("email").textContent = user.email;
-                document.getElementById("phone").textContent = user.phone;
-                document.getElementById("password").value = user.password;
-                document.getElementById("avatarImage").src=user.avata;
-            }
-        })
-        .catch(function (error) {
-            console.error("Error when load data form JSON:  " + error);
-        });
+if (Boolean(localStorage.getItem("isLogin"))) {
+    const userData = JSON.parse(localStorage.getItem("CurrentUser"));
+    document.getElementById("fullNameProfile").textContent = userData.name;
+    document.getElementById("fullName").textContent = userData.name;
+    document.getElementById("email").textContent = userData.email;
+    document.getElementById("phone").textContent = userData.phone;
+    document.getElementById("password").value = userData.password;
+    document.getElementById("avatarImage").src=userData.avata;
 } else {
     alert("You should to log in to edit profile.")
 }
@@ -127,10 +113,6 @@ async function saveChanges() {
 
 
 
-
-
-
-
 function togglePasswordVisibility(fieldId) {
     const passwordField = document.getElementById(fieldId);
     const showPasswordIcon = document.getElementById(`show${fieldId}`);
@@ -162,8 +144,6 @@ function PasswordVisibility() {
 
 const editButton = document.getElementById("editButton");
 editButton.addEventListener("click", openEditModal);
-
-
 
 
 
