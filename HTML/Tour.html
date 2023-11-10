@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Volkhov:ital,wght@0,400;0,700;1,700&family=Yesteryear&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Travel Agency-Tours</title>
+    <link rel="stylesheet" href="../Tour/Tour.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="header"></div>
+        <header class="flex"
+            style=" height:350px ; background-image: url('https://img.freepik.com/free-photo/view-heart-shape-made-leaves-vegetation_23-2150825109.jpg?t=st=1699187869~exp=1699191469~hmac=c591eaf08e055a70713bcd33f305a4a9cf7ac8d591e2774b9985bf94fb51fa67&w=1380');">
+            <div class="small-container">
+                <div class="header-title">
+                    <h1>Tours</h1>
+                </div>
+                <div class="header-form">
+                    <h3>Choose your Travel location:</h3>
+                    <form>
+                        <input type="text" class="form-control" placeholder="Destination Name" id="searchInput">
+                        <button type="submit" onclick="searchDestinations()"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+            </div>
+        </header>
+
+        <!-- <div id="searchResults" style="background-color: rgb(96, 94, 91);">
+             Kết quả tìm kiếm sẽ được hiển thị ở đây -->
+    </div>
+
+    <div class="destination">
+        <br>
+        <h1 class="title01">POPULAR DESTINATIONS</h1>
+        <br>
+        <div class="row-destination">
+            <div class="item-destination" data-destination-id="1">
+                <img class="img-destination" src="" width="100%">
+                <div>
+                    <h3 class="name-destination"></h3>
+                    <p class="title-destination"></p>
+                    <div class="booked">
+                        <i class="fa fa-bookmark" aria-hidden="true"> Booked <span class="booked-count"></span></i>
+                    </div>
+                    <div class="read-more">
+                        <a href="#" data-destination-link="true">Tour Details</a>
+                        <i class='fas fa-long-arrow-alt-right'></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="item-destination" data-destination-id="2">
+                <img class="img-destination" src="" width="100%">
+                <div>
+                    <h3 class="name-destination"></h3>
+                    <p class="title-destination"></p>
+                    <div class="booked">
+                        <i class="fa fa-bookmark" aria-hidden="true"> Booked <span class="booked-count"></span></i>
+                    </div>
+                    <div class="read-more">
+                        <a href="#" data-destination-link="true">Tour Details</a>
+                        <i class='fas fa-long-arrow-alt-right'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-destination" data-destination-id="3">
+                <img class="img-destination" src="" width="100%">
+                <div>
+                    <h3 class="name-destination"></h3>
+                    <p class="title-destination"></p>
+                    <div class="booked">
+                        <i class="fa fa-bookmark" aria-hidden="true"> Booked <span class="booked-count"></span></i>
+                    </div>
+                    <div class="read-more">
+                        <a href="#" data-destination-link="true">Tour Details</a>
+                        <i class='fas fa-long-arrow-alt-right'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-destination" data-destination-id="4">
+                <img class="img-destination" src="" width="100%">
+                <div>
+                    <h3 class="name-destination"></h3>
+                    <p class="title-destination"></p>
+                    <div class="booked">
+                        <i class="fa fa-bookmark" aria-hidden="true"> Booked <span class="booked-count"></span></i>
+                    </div>
+                    <div class="read-more">
+                        <a href="#" data-destination-link="true">Tour Details</a>
+                        <i class='fas fa-long-arrow-alt-right'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-destination" data-destination-id="5">
+                <img class="img-destination" src="" width="100%">
+                <div>
+                    <h3 class="name-destination"></h3>
+                    <p class="title-destination"></p>
+                    <div class="booked">
+                        <i class="fa fa-bookmark" aria-hidden="true"> Booked <span class="booked-count"></span></i>
+                    </div>
+                    <div class="read-more">
+                        <a href="#" data-destination-link="true">Tour Details</a>
+                        <i class='fas fa-long-arrow-alt-right'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-destination" data-destination-id="6">
+                <img class="img-destination" src="" width="100%">
+                <div>
+                    <h3 class="name-destination"></h3>
+                    <p class="title-destination"></p>
+                    <div class="booked">
+                        <i class="fa fa-bookmark" aria-hidden="true"> Booked <span class="booked-count"></span></i>
+                    </div>
+                    <div class="read-more">
+                        <a href="#" data-destination-link="true">Tour Details</a>
+                        <i class='fas fa-long-arrow-alt-right'></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-destination" data-destination-id="7">
+                <img class="img-destination" src="" width="100%">
+                <div>
+                    <h3 class="name-destination"></h3>
+                    <p class="title-destination"></p>
+                    <div class="booked">
+                        <i class="fa fa-bookmark" aria-hidden="true"> Booked <span class="booked-count"></span></i>
+                    </div>
+                    <div class="read-more">
+                        <a href="#" data-destination-link="true">Tour Details</a>
+                        <i class='fas fa-long-arrow-alt-right'></i>
+                    </div>
+                </div>
+            </div>
+            <div class="item-destination" data-destination-id="8">
+                <img class="img-destination" src="" width="100%">
+                <div>
+                    <h3 class="name-destination"></h3>
+                    <p class="title-destination"></p>
+                    <div class="booked">
+                        <i class="fa fa-bookmark" aria-hidden="true"> Booked <span class="booked-count"></span></i>
+                    </div>
+                    <div class="read-more">
+                        <a href="#" data-destination-link="true">Tour Details</a>
+                        <i class='fas fa-long-arrow-alt-right'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="destination-page" data-page="1">
+            <!-- Trang 1 -->
+            <!-- Đặt dữ liệu của trang 1 ở đây -->
+        </div>
+
+        <div class="destination-page" data-page="2" style="display: none;">
+            <!-- Trang 2 -->
+            <!-- Đặt dữ liệu của trang 2 ở đây -->
+        </div>
+
+        <div class="destination-page" data-page="3" style="display: none;">
+            <!-- Trang 3 -->
+            <!-- Đặt dữ liệu của trang 3 ở đây -->
+        </div>
+
+        <!-- Thêm nhiều trang dữ liệu khác tương tự -->
+
+    </div>
+
+    <div class="page-btn">
+        <ul class="list-inline list-unstyled">
+            <li class="prev"><a href="#"><i class="fa fa-angle-left"></i></a></li>
+            <li class="page-number" data-page="1"><a href="#">1</a></li>
+            <li class="page-number" data-page="2"><a href="#">2</a></li>
+            <li class="page-number" data-page="3"><a href="#">3</a></li>
+            <!-- Thêm nhiều nút số trang khác tương tự -->
+            <li class="next"><a href="#"><i class="fa fa-angle-right"></i></a></li>
+        </ul>
+    </div>
+
+
+    <div id="footer"></div>
+
+    </div>
+
+    <script src="../Tour/Tour.js"></script>
+    <script src="../Tour/search.js"></script>
+
+    <script src="/HeaderFooter/loadHeaderFooter.js"></script>
+<script src="/Tour/Tour.js"></script>
+<script src="/HeaderFooter/header.js"></script>
+
+    <!--     <script src="./search.js"></script> -->
+</body>
+
+</html>

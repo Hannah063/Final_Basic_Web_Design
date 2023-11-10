@@ -1,0 +1,178 @@
+body {
+    margin-top: 20px;
+    background-color: lightgray;
+}
+
+.main {
+    padding: 10px;
+    font-family: 'Volkhov', sans-serif;
+}
+
+.topbar {
+    background-color: teal;
+    overflow: hidden;
+}
+
+.topbar a {
+    float: right;
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px 26px;
+    font-size: 22px;
+}
+
+.sidebar {
+    background-color: #333;
+    color: white;
+    height: 100%;
+}
+
+.sidebar a {
+    margin-left: 10px;
+    display: block;
+    color: white;
+    padding-bottom: 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.content {
+    background-color: whitesmoke;
+}
+
+
+#editButton {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;    
+}
+
+#editButton:hover {
+    background-color: #0056b3;
+}
+
+
+/* CSS cho modal */
+.profile--modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.profile--content-modal {
+    background-color: #5a5a5a;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    width: 60%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Đóng modal */
+.profile--close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.profile--close:hover,
+.profile--close:focus {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  
+  .form-column {
+    flex: 30%;
+    padding: 0 10px;
+  }
+
+label {
+    color:white;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.password-input {
+    position: relative;
+}
+
+.password-input input[type="password"] {
+    padding-right: 30px;
+}
+
+.password-input i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+}
+
+.password-input i:hover {
+    color: #000;
+}
+
+button[type="button"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* Định dạng các hàng xen kẽ */
+tr:nth-child(even) {
+    background-color: #60adff; /* Màu xanh da trời */
+    color: white; /* Màu chữ trắng */
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #FFFFFF; /* Màu trắng */
+    color: #007BFF; /* Màu chữ xanh da trời */
+  }
+  
+
+  th {
+    background-color: #007BFF;
+    color: white;
+  }

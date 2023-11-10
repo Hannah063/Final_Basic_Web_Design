@@ -1,0 +1,529 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Volkhov', serif;
+    padding: 0 24px 24px 24px;
+}
+
+
+
+
+
+
+/* header */
+
+
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.text {
+    font-weight: 400;
+    opacity: 0.9;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+header {
+    min-height: 50vh;
+    padding-top: 7rem;
+    background-image: url(./img/anh9.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header-title h1 {
+    font-size: 42px;
+    font-weight: 550;
+    animation: bounce-in-top 1.1s both;
+}
+
+@keyframes bounce-in-top {
+    0% {
+        transform: translateY(-500px);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    38% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+
+    55% {
+        transform: translateY(-65px);
+        animation-timing-function: ease-in;
+
+    }
+
+    72% {
+        transform: translateY(0px);
+        animation-timing-function: ease-in;
+    }
+
+    81% {
+        transform: translateY(-28px);
+        animation-timing-function: ease-in;
+    }
+
+    90% {
+        transform: translateY(0);
+        animation-timing-function: ease-out;
+    }
+
+    95% {
+        transform: translateY(-8px);
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        transform: translateY(0px);
+        animation-timing-function: ease-out;
+    }
+
+}
+
+
+
+.header-form {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 20px;
+
+}
+
+.header-form h3 {
+    font-size: 25px;
+}
+
+.header-form form {
+    flex-direction: column;
+    margin-top: 1.8rem;
+}
+
+
+.header-form form .form-control {
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.header-form input[type="date"] {
+    text-transform: uppercase;
+    outline: none;
+    border-radius: 8px;;
+}
+
+.header-form input[type="text"] {
+    outline: none;
+    border-radius: 8px;;
+}
+
+.header-form input[type="number"] {
+    outline: none;
+    border-radius: 8px;;
+}
+
+.header-form input:not([type="submit"])::placeholder {
+    color: #fff;
+}
+
+
+.search{
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 540;
+    border-radius: 8px;;
+    border: none;
+    background-color: #4CAF50;
+    color:#fff;
+}
+
+.form-control {
+    width: 100%;
+    margin: 0.6rem 0;
+    max-width: 500px;
+    border: 1px solid #fff;
+    border-radius: 0.2rem;
+    padding: 0.7rem;
+    font-size: 1rem;
+    font-family: 'Poppin', sans-serif;
+    color: #fff;
+    background-color: transparent;
+}
+
+
+
+.btn {
+    padding: 0.7rem 2.4rem;
+    border-radius: 0.2rem;
+    font-weight: 600;
+    background-color: rgb(0, 184, 172);
+    color: #fff;
+    border: 1px solid rgb(0, 184, 172);
+}
+
+.btn:hover {
+    opacity: 0.9;
+
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+
+}
+
+
+.header-form .btn {
+    margin-top: 0.8rem;
+}
+
+
+/* featured---places */
+.featured{
+    
+    background-color: #E7F4F6;
+}
+.featured-title {
+
+    text-align: center;
+    padding: 80px 0 10px 0;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    font-size: 24px;
+    font-weight: 530;
+
+}
+
+.featured-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-3 {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+
+.col-3 img {
+    width: 100%;
+    display: block;
+}
+
+.desc-location {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 10px;
+    bottom: 10px;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    transition: transform 2s;
+    &:hover{
+        bottom: 40px;
+    }
+}
+
+.desc-location .fa-map-marker {
+   margin-right: 10px;
+}
+
+.img-featured{
+    border-radius: 12px;
+}
+
+.desc-location-detail {
+
+    position: absolute;
+    left: 1rem;
+    bottom: -2rem;
+    overflow: hidden;
+    color: #fff;
+    display: none;
+    transition: transform 2s;
+}
+
+.col-3:hover .desc-location {
+    transform: translateY(-40px);
+}
+
+.col-3:hover .desc-location-detail {
+    transform: translateY(40px);
+
+}
+
+.col-3:hover .desc-location-detail {
+    display: inline;
+}
+
+
+/* OUR SERVICES */
+.our-services {
+    background-image: url(./img/portrait-beautiful-young-asian-woman-relaxing-around-beach-with-white-clouds-blue-sky-travel-vacation.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 0 0 50px 0; 
+
+}
+
+.overlay {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+}
+
+
+.our-services-title {
+    text-align: center;
+    padding: 70px 0 10px 0;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+    font-size: 24px;
+    z-index: 3;
+    position: relative;
+    font-weight: 530;
+    
+
+}
+
+.our-services-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.services-col-3 {
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    
+    
+}
+
+.services-col-3 {
+    position: relative;
+    z-index: 2; 
+}
+
+.services-col-3-icon{
+    width: 30%;
+     
+}
+
+.services-col-3-title{
+    font-size: 26px;
+    padding: 20px 0;
+    font-weight: 550;
+    color:#fff;
+    
+}
+.services-col-3-content{
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom:20px ;
+    color:#fff;
+}
+.btn-readmore{
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: 540;
+    border-radius: 12px;;
+    border: none;
+    background-color: #226FB7;
+    color:#fff;
+}
+
+/* offer */
+.offer {
+    background:#F6F5F5;
+    padding: 30px 0;
+}
+
+.small-container {
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.col-2 .offer-img {
+    padding: 50px;
+    width: 85%;
+}
+
+.col-2 img {
+    max-width: 100%;
+    padding: 50px 0px;
+}
+
+.col-2 h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0px;
+}
+
+
+.btn-buynow {
+    display: inline-block;
+    background-color: #f46c50;
+    color: #fff;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    padding: 20px 30px;
+    margin: 30px 0px;
+    transition: background 0.5s;
+}
+
+.btn-buynow:hover{
+    background:#fa502d;
+}
+
+
+
+/* testimonial */
+.testimonial{
+    background-color: #E7F4F6;
+    padding:40px 0 30px 0;
+   
+}
+.testimonial .testimonial-content{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial .testimonial-content h1{
+    font-size: 48px;
+    line-height: 60px;
+    position: relative;
+}
+
+.testimonial .testimonial-content img{
+    display: inline;
+    border-radius: 50%;
+    width:110px;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(135deg, rgba(255, 51, 15, 0.767), rgb(253, 162, 25) 50%, transparent 50%);
+    background-size: 250%;
+    background-position: 100% 100%;
+    transition: background 0.5s;
+    position: relative;
+    top:32px;
+}
+
+.testimonial .testimonial-content img:hover {
+    background-position: 0% 0%;
+}
+
+.testimonial .testimonial-content .testimonial-cmt{
+    width: 90%;
+    font-size: 14px;
+    line-height: 2;
+    text-align: center;
+    
+}
+
+.testimonial-content div{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 15px;
+    padding:28px 0;
+}
+
+/* responsive menu---header */
+/* = or < 768px  */
+
+
+@media only screen and (max-width:768px) {
+
+    .header-title h1 {
+        font-size: 3rem;
+        font-weight: 500;
+    }
+
+    
+}
+
+@media only screen and (max-width:576px) {
+   
+
+    .header-title h1 {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+   
+}
+
+
+@media only screen and (min-width:768px) {
+    .header-title h1 {
+        font-size: 3.5rem;
+    }
+
+    .header-form form {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .header-form .form-control,
+    .header-form .btn {
+        margin: 0 0.5rem;
+    }
+
+
+
+}
+

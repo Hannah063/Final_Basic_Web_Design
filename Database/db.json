@@ -1,0 +1,749 @@
+{
+  "users": [
+    {
+      "name": "Hồ Thị Huyền",
+      "email": "huyen.hothi25@student.passerellesnumeriques.org",
+      "phone": "0643424353",
+      "password": "huyen",
+      
+      "status": "Active",
+      "avatar": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/Huyen.jpg?v=1698999236470",
+      "role": "Admin",
+      "id": 1
+    },
+    
+    {
+      "name": "Trần Luân",
+      "email": "luan.tran25@student.passerellesnumeriques.org",
+      "phone": "0643424353",
+      "password": "luan",
+      
+      "status": "Active",
+      "avatar": "",
+      "role": "Customer",
+      "id": 2
+    },
+    
+    {
+      "name": "Y Âm",
+      "email": "am.y25@student.passerellesnumeriques.org",
+      "phone": "0643424353",
+      "password": "234",
+      
+      "status": "Active",
+      "avatar": "",
+      "role": "Customer",
+      "id": 3
+    },
+    
+    {
+      "name": "Hồ Ngân",
+      "email": "ngan.ho25@student.passerellesnumeriques.org",
+      "phone": "0643424353",
+      "password":"ngan",
+      
+      "status": "Inactive",
+      "avatar": "",
+      "role": "Customer",
+      "id": 4
+    }
+  ],
+  
+  
+  "destinations": [
+    {
+      "id": 1,
+      "name": "Ha Long Bay",
+      "description": "Halong Bay is a UNESCO World Heritage Site and popular travel destination in Quang Ninh province.",
+      "image": "data:image/jpeg;base64,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",
+      "booked": 0
+    },
+    {
+      "id": 2,
+      "name": "Ban Gioc - Cao Bang",
+      "description": "Ban Gioc Waterfall is one of the famous waterfalls not only in our country but also known ...",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.pv76lopGAwzOhDR116NcAAHaE8&pid=Api&P=0&h=180",
+      "booked": 23
+    },
+    {
+      "id": 3,
+      "name": "Phu Quy beach - Binh Thuan",
+      "description": "Phu Quy Island is a new tourist destination in Binh Thuan, so the information related to ...",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.SwyU0GAN14KpgpYt19qaYgHaE6&pid=Api&P=0&h=180",
+      "booked": 0
+    },
+    {
+      "id": 4,
+      "name": "Accient Town Hoi An",
+      "description": "This beautiful scene is not in a strange place but in the land of Central Highlands, the home of the ...",
+      "image": "https://lp-cms-production.imgix.net/2023-02/shutterstockRF_361749332.jpg?sharp=10&vib=20&w=1200&w=600&h=400",
+      "booked": 0
+    },
+    {
+      "id": 5,
+      "name": "G'Lun Waterfall",
+      "description": "Let's immerse yourself in the cool space of countless magical stalactites and stalagmites ...",
+      "image": "https://taxitour.com.vn/wp-content/uploads/2021/04/thac-dray-sap.jpg",
+      "booked": 0
+    },
+    {
+      "id": 6,
+      "name": "Thien Duong Cave",
+      "description": "The One Pillar Pagoda formally belongs to an architecture complex called Dien Huu Tu which means ...",
+      "image": "https://vietnamdiscovery.com/wp-content/uploads/2020/11/Paradise-Cave-Discovery.jpg",
+      "booked": 0
+    },
+    {
+      "id": 7,
+      "name": "Fansipan Legend - Sapa",
+      "description": "Fansipan Legend is located in the southwest of Sa Pa town, is a complex of cultural ...",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.wgJOVCovcc7k4lU2j0w4BwAAAA&pid=Api&P=0&h=180",
+      "booked": 0
+    },
+    {
+      "id": 8,
+      "name": "Ganh Da Dia - Phu Yen",
+      "description": "Ganh Da Dia is a natural landscape in An Ninh Dong commune, Tuy An district, Phu Yen ...",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.Zc4e3h5Dvsldzsn7BEOPZwHaFQ&pid=Api&P=0&h=180",
+      "booked": 0
+    },
+    {
+      "id": 9,
+      "name": "Tam Coc - Ninh Binh",
+      "description": "The place witnessed an important milestone in the nation's history with the capital ...",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.oFLi6BkymquDoUCw1iBL9gHaE8&pid=Api&P=0&h=180",
+      "booked": 0
+    },
+    {
+      "id": 10,
+      "name": "Mang Den - Kon Tum",
+      "description": "The space close to nature and the beauty and wildness, pure as a newly blooming forest ...",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.NzQwXKPTH2xOJ2_QX4fgAQHaEH&pid=Api&P=0&h=180",
+      "booked": 0
+    },
+    {
+      "id": 11,
+      "name": "Truc Lam Bach Ma Zen Monastery",
+      "description": "Truc Lam Bach Ma zen monastery is a complex of landscape located in the moutainous area ...",
+      "image": "https://tse4.mm.bing.net/th?id=OIP.mLjdlppi2AlN006bzr4_UgHaEK&pid=Api&P=0&h=180",
+      "booked": 0
+    },
+    {
+      "id": 12,
+      "name": "Marble Mountains - Da Nang",
+      "description": "The cluster of hills is a well-known pilgrimage site with beautiful peaks, vast networks of ...",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.wm6J3uggKt1T1wWMNO0MmwHaE8&pid=Api&P=0&h=180",
+      "booked": 0
+    },
+    {
+      "id": 13,
+      "name": "Ta Nang - Phan Dung",
+      "description": "Diverse vegetation, majestic scenery, and moderate difficulty make this trail suitable for ...",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.syUbWboZAfz2x3-oA0ZA_gHaE8&pid=Api&P=0&h=180",
+      "booked": 0
+    },
+    {
+      "id": 14,
+      "name": "Ghenh Bang - Da Nang",
+      "description": "Ghenh Bang Da Nang has wild beauty and is still unknown to many tourists.",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.17YGzRgrOWm2unpPVTGSkgHaE7&pid=Api&P=0&h=180",
+      "booked": 0
+    },
+    {
+      "id": 15,
+      "name": "Hai Van Pass - Thua Thien Hue",
+      "description": "Hai Van Pass is not only a major important role in the history of Vietnam but also as one of the ...",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.tQuCNhG6vOL8J_uHVWWGRAHaE7&pid=Api&P=0&h=180",
+      "booked": 0
+    },
+    {
+      "id": 16,
+      "name": "Cat Cat village - Sapa",
+      "description": "The Northwest of Vietnam has long been famous for its impressive and glamorous beauty that can ...",
+      "image": "https://tse3.mm.bing.net/th?id=OIP.t1kKuD64fPrvGYv3ApDKrgHaE8&pid=Api&P=0&h=180",
+      "booked": 0
+    },
+    {
+      "id": 17,
+      "name": "Wind fan field - Bac Lieu",
+      "description": "Visiting Bac Lieu wind power field, visitors admire the beauty of giant wind turbines, ...",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.z-Lvm00Gi28f9OOjF0fIjwHaE8&pid=Api&P=0&h=180",
+      "booked": 0
+    },
+    {
+      "id": 18,
+      "name": "Hoa Lu ancient capital - Ninh Binh",
+      "description": "Hoa Lu Ancient Capital is the capital of an ancient Vietnamese Kingdom called Dai Co Viet in the ...",
+      "image": "https://tse2.mm.bing.net/th?id=OIP.ShVA5biUmFm4wz7AoDUXfQHaEL&pid=Api&P=0&h=180",
+      "booked": 0
+    },
+    {
+      "id": 19,
+      "name": "Ghenh Bang-Hoang Sa",
+      "description": "Ghenh Bang's gleaming white sand beaches have earned it the nickname 'Pearl Island', but the island's ...",
+      "image": "https://tse4.mm.bing.net/th?id=OIP.1FiSpVQbUieAZIinvRy2aQHaE8&pid=Api&P=0&h=180",
+      "booked": 0
+    },
+    {
+      "id": 20,
+      "name": "Doi cat Nam Cuong-Ninh Thuan",
+      "description": "Desert area with sea & mountain vistas popular for sunset viewing, plus bike trails & campgrounds.",
+      "image": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fmedia.mia.vn%2Fuploads%2Fblog-du-lich%2Fdoi-cat-nam-cuong-thien-duong-song-ao-cua-gioi-tre-ninh-thuan-1658266610.jpg&tbnid=nAQOWXv3vzFXmM&vet=12ahUKEwiWyIjHlaeCAxVZ_mEKHSuhA5oQMygBegQIARBS..i&imgrefurl=https%3A%2F%2Fmia.vn%2Fcam-nang-du-lich%2Fdoi-cat-nam-cuong-thien-duong-song-ao-cua-gioi-tre-ninh-thuan-7638&docid=0eKg5ayc-v4mZM&w=1080&h=815&q=Doi%20cat%20Nam%20Cuong-Ninh%20Thuan&ved=2ahUKEwiWyIjHlaeCAxVZ_mEKHSuhA5oQMygBegQIARBS",
+      "booked": 0
+    }
+  ],
+  "details": [
+    {
+      "id": 1,
+      "id_destination": 1,
+      "name_destination": "Ha Long Bay",
+      "main_name_destination": "Panoramic scene",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/halong1.jpg?v=1698992334085",
+      "sub_images": [
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/halong1.jpg?v=1698992334085",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/halong2.jpg?v=1698993266475",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/halong3.jpg?v=1698993286132",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/halong4.jpg?v=1698993305946"
+      ],
+      "descriptions_destination": "Ha Long Bay in northeast Vietnam, is known for its emerald waters and thousands of towering limestone islands topped by rainforests,Ha Long Bay is suitable for enjoying a vacation with family, friends or colleagues. You will discover the majestic and mysterious scenes of Vietnam ,Activity: rock climbing and hiking, particularly in mountainous Cat Ba National Park,Vehicle: Kayak",
+      "highlight_destination": "Top places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
+      "option1": "3 day 2 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 500,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 300,
+      "priceChildrenOption_2": 500
+    },
+    {
+      "id": 2,
+      "id_destination": 2,
+      "name_destination": "Ban Gioc - Cao Bang",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/bangiocCaobang.jpg?v=1698992619918",
+      "sub_images": [
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/bangiocCaobang.jpg?v=1698992619918",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/bangioc2.jpg?v=1698992602269",
+        "https://cdn.glitch.me/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/bangioc3.jpg?v=1698992617745",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/bangioc4.jpg?v=1698992635045"
+      ],
+      "descriptions_destination": [
+        "Visitors can explore the ancient ruins, temples, and monuments spread across the vast archaeological site.",
+        "The site is known for its spiritual and historical significance."
+      ],
+      "highlight_destination": "Top places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
+      "option1": "2 day 1 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 350,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 200,
+      "priceChildrenOption_2": 500
+    },
+    {
+      "id": 3,
+      "id_destination": 3,
+      "name_destination": "Phu Quy beach - Binh Thuan",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/bienBinhThuan1.jpg?v=1698992625709",
+      "sub_images": [
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/bienBinhThuan1.jpg?v=1698992625709",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/bienBinhThuan2.jpg?v=1698992637232",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/bienBinhThuan3.jpg?v=1698992648599",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/bienBinhThuan4.jpg?v=1698992652413"
+      ],
+      "descriptions_destination": [
+        "Phu Quy, also known as Thu Islet, Khoai Xu Islet, is a small island located about 120 km southeast of Phan Thiet, Binh Thuan. In addition to the main island, around Phu Quy island there are Hon Da Cao, Hon Do, Hon Tranh and Hon Hai. Phu Quy Island's area is just over 18km2 but has enough beautiful scenery, landscapes, experiences... for visitors to explore for a few days.",
+        "As the most remote island district of Binh Thuan province, Phu Quy island has a wild and beautiful scenery but tourism has not really developed. Currently, the only means to get to the island is by boat from Phan Thiet city, a distance of more than 110 km."
+      ],
+      "highlight_destination": "Top places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
+      "option1": "5 day 4 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 900,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 650,
+      "priceChildrenOption_2": 450
+    },
+    {
+      "id": 4,
+      "id_destination": 4,
+      "name_destination": "Accient Town Hoi An",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/hoiAn1.jpg?v=1698993325511",
+      "sub_images": [
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/hoiAn1.jpg?v=1698993325511",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/hoiAn2.jpg?v=1698993347747",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/hoiAn3.jpg?v=1698993357149",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/hoiAn4.jpg?v=1698993368262"
+      ],
+      "descriptions_destination": [
+        "Ha Long Bay in northeast Vietnam, is known for its emerald waters and thousands of towering limestone islands topped by rainforests",
+        "Ha Long Bay is suitable for enjoying a vacation with family, friends or colleagues. You will discover the majestic and mysterious scenes of Vietnam ",
+        "Activity: rock climbing and hiking, particularly in mountainous Cat Ba National Park",
+        "Vehicle: Kayak"
+      ],
+      "highlight_destination": "Top places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
+      "option1": "3 day 2 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 500,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 300,
+      "priceChildrenOption_2": 500
+    },
+    {
+      "id": 5,
+      "id_destination": 5,
+      "name_destination": "G'Lun Waterfall",
+      "main_name_destination": "Panoramic scene",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/thacDakNong1.jpg?v=1698993979564",
+      "sub_images": [
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/thacDakNong1.jpg?v=1698993979564",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/thacDakNong2.jpg?v=1698994008749",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/thacDakNong3.jpg?v=1698994016835",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/thacDakNong4.jpg?v=1698994030561"
+      ],
+      "descriptions_destination": [
+        "Ha Long Bay in northeast Vietnam, is known for its emerald waters and thousands of towering limestone islands topped by rainforests",
+        "Ha Long Bay is suitable for enjoying a vacation with family, friends or colleagues. You will discover the majestic and mysterious scenes of Vietnam ",
+        "Activity: rock climbing and hiking, particularly in mountainous Cat Ba National Park",
+        "Vehicle: Kayak"
+      ],
+      "highlight_destination": "Top places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
+      "option1": "5 day 4 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 900,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 650,
+      "priceChildrenOption_2": 450
+    },
+    {
+      "id": 6,
+      "id_destination": 6,
+      "name_destination": "Thien Duong Cave",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/dongThienDuong_QuangBinh.jpg?v=1698993111361",
+      "sub_images": [
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/dongThienDuong_QuangBinh.jpg?v=1698993111361",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/dongThienDuong2_QuangBinh.jpg?v=1698993128434",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/dongThienDuong3_QuangBinh.jpg?v=1698993150743",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/dongThienDuong4_QuangBinh.jpg?v=1698993161291"
+      ],
+      "descriptions_destination": [
+        "In Thien Duong cave, there are many magical stalactites and stalagmites. Most of the ground in this cave is soft and quite flat, so it is convenient for sightseeing and exploration. The temperature inside Thien Duong cave is always about 16 °C different from outside."
+      ],
+      "highlight_destination": "Top places: Highly rated by recent guests Surrounding: There are hotels, restaurants and cafes around.",
+      "option1": "5 day 4 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 900,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 650,
+      "priceChildrenOption_2": 450
+    },
+    {
+      "id": 7,
+      "id_destination": 7,
+      "name_destination": "Fansipan Legend - Sapa",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/fansipan1_LaoCai.jpg?v=1698993170645",
+      "sub_images": [
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/fansipan1_LaoCai.jpg?v=1698993170645",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/fansipan2_LaoCai.jpg?v=1698993185532",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/fansipan3_LaoCai.jpg?v=1698993194972",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/fansipan4_LaoCai.jpg?v=1698993203472"
+      ],
+      "descriptions": [
+        "A breathtaking experience awaits at the top of Mt. Fansipan, the highest peak in Vietnam. It used to take travellers two days of hard trekking to reach the summit. Now, you can reach the ‘Roof of Indochina’ in just 15 minutes. Jaw-dropping views of swirling clouds and forested slopes from the top of Fansipan make this adventure a must-do on any Sapa itinerary. "
+      ],
+      "highlight_destination": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "option1": "3 day 2 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 500,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 300,
+      "priceChildrenOption_2": 500
+    },
+    {
+      "id": 8,
+      "id_destination": 8,
+      "name_destination": "Ganh Da Dia - Phu Yen",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "../Database/img/Ganh Da Dia - Phu Yen1.jpg",
+      "sub_images": [
+        "../Database/img/Ganh Da Dia - Phu Yen1.jpg",
+        "../Database/img/Ganh Da Dia - Phu Yen2.jpg",
+        "../Database/img/Ganh Da Dia - Phu Yen3.jpg",
+        "../Database/img/Ganh Da Dia - Phu Yen4.jpg"
+      ],
+      "descriptions": [
+        "This wicked coastline overlooks passing ships, with basalt rapids formed from volcanic lava."
+      ],
+      "highlight_destination": "When you come to Phu Quy Beach, you can take tours on the shore, near the island, especially there are tours to see corals.",
+      "option1": "2 day 1 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 350,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 200,
+      "priceChildrenOption_2": 500
+    },
+    {
+      "id": 9,
+      "id_destination": 9,
+      "name_destination": "Tam Coc-Ninh Binh",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/tamcoc1_NinhBinh.jpg?v=1698993852946",
+      "sub_images": [
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/tamcoc1_NinhBinh.jpg?v=1698993852946",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/tamcoc2_NinhBinh.jpg?v=1698993933808",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/tamcoc3_NinhBinh.jpg?v=1698993946083",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/tamcoc4_NinhBinh.jpg?v=1698993965122"
+      ],
+      "descriptions": [
+        "Tam Coc Bich Dong is a cave complex and a key national tourist area of Vietnam. This place is also known by beautiful names such as Ha Long Bay on land or Nam Thien De Nhi Dong. The entire area is surrounded by a system of limestone caves and many valuable historical relics."
+      ],
+      "highlight_destination": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "option1": "3 day 2 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 500,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 300,
+      "priceChildrenOption_2": 500
+    },
+    {
+      "id": 10,
+      "id_destination": 10,
+      "name_destination": "Mang Den- Kon Tum ",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/mangden1_KonTum.jpg?v=1698993397244",
+      "sub_images": [
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/mangden1_KonTum.jpg?v=1698993397244",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/mangden2_KonTum.jpg?v=1698993404762",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/mangden3_KonTum.jpg?v=1698993414209",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/mangden4_KonTum.jpg?v=1698993423915"
+      ],
+      "descriptions": [
+        "Completely different from imagining the sunny and windy land of Kon Tum, Mang Den tourism is likened to a fairyland with a diverse ecosystem and fresh atmosphere that is not inferior to tourist destinations such as Da Lat, Sa Pa. With pure, somewhat simple and rustic beauty, this is a land that promises to bring many outstanding discovery experiences to visitors when visiting."
+      ],
+      "highlight_destination": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "option1": "5 day 4 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 900,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 650,
+      "priceChildrenOption_2": 450
+    },
+    {
+      "id": 11,
+      "id_destination": 11,
+      "name_destination": "Thien vien Truc Lam Bach Ma Hue ",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/bachMa.jpg?v=1698992561046",
+      "sub_images": [
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/bachMa.jpg?v=1698992561046",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/bachMa2.jpg?v=1698992564844",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/bachMa3.jpg?v=1698992569350",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/bachMa4.jpg?v=1698995184251"
+      ],
+      "descriptions": [
+        "The trees are lush all year round, especially during the leaf-changing season. The waves crashing with white foam make the scene even more poetic. Along with that are two steep cliffs and gates welcoming visitors. visitors. Coming to Ghenh Bang, you will be able to immerse yourself in the wonderful natural scenery and experience many interesting activities."
+      ],
+      "highlight_destination": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "option1": "2 day 1 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 350,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 200,
+      "priceChildrenOption_2": 500
+    },
+    {
+      "id": 12,
+      "id_destination": 12,
+      "name_destination": "Marble Mountains - Da Nang",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/nguhanhson1.jpg?v=1698993474797",
+      "sub_images": [
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/nguhanhson1.jpg?v=1698993474797",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/nguhanhson2.jpg?v=1698993523057",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/nguhanhson3.jpg?v=1698993691450",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/nguhanhson4.jpg?v=1698993726686"
+      ],
+      "descriptions": [
+        "The structures and temples blend harmoniously with nature: grape vines drip from above, frangipani trees and poincianas bloom on stone paths, and the ornate pagoda roofs of The pagodas sparkle under the tropical sun. It's a scene that easily captures the imagination."
+      ],
+      "highlight_destination": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "option1": "3 day 2 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 500,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 300,
+      "priceChildrenOption_2": 500
+    },
+    {
+      "id": 13,
+      "id_destination": 13,
+      "name_destination": "Ta Nang - Phan Dung",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/naTang1.jpg?v=1698993433307",
+      "sub_images": [
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/naTang1.jpg?v=1698993433307",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/naTang2.jpg?v=1698993446619",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/naTang3.jpg?v=1698993454683",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/naTang4.jpg?v=1698993461866"
+      ],
+      "descriptions": [
+        "Ta Nang - Phan Dung is a famous trek, voted as one of the most beautiful treks in Vietnam. Ta Nang belongs to Duc Trong district, Lam Dong. Phan Dung belongs to Tuy Phong district, Binh Thuan.The total trek is 30km long, going from Ta Nang through the forest to Phan Dung, up to a 1,168m high milestone between 3 provinces of Lam Dong, Ninh Thuan, Binh Thuan. Vegetation also gradually changes with altitude, the air changes from cool to slightly hot according to the sun and wind of Binh Thuan, but you will be cooled by the cool stream."
+      ],
+      "highlight_destination": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "option1": "5 day 4 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 900,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 650,
+      "priceChildrenOption_2": 450
+    },
+    {
+      "id": 14,
+      "id_destination": 14,
+      "name_destination": "Ghenh Bang - Da Nang",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/ghenhBang1.jpg?v=1698993211420",
+      "sub_images": [
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/ghenhBang1.jpg?v=1698993211420",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/ghenhbang2.jpg?v=1698993222819",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/ghenhbang3.jpg?v=1698993235082",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/ghenhBang4.jpg?v=1698993243797"
+      ],
+      "descriptions": [
+        "The trees are lush all year round, especially during the leaf-changing season. The waves crashing with white foam make the scene even more poetic. Along with that are two steep cliffs and gates welcoming visitors. visitors. Coming to Ghenh Bang, you will be able to immerse yourself in the wonderful natural scenery and experience many interesting activities."
+      ],
+      "highlight_destination": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "option1": "3 day 2 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 500,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 300,
+      "priceChildrenOption_2": 500
+    },
+    {
+      "id": 15,
+      "id_destination": 15,
+      "name_destination": "Hai Van Pass - Thua Thien Hue",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/deoHaiVan1.jpg?v=1698992845896",
+      "sub_images": [
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/deoHaiVan1.jpg?v=1698992845896",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/deoHaiVan2.jpg?v=1698992858603",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/deoHaiVan3.jpg?v=1698992867042",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/deoHaiVan4.jpg?v=1698992873404"
+      ],
+      "descriptions": [
+        "Hai Van Quan is to tourists because of its majestic and beautiful natural scenery. From the gate, you will see the rolling mountains, winding mountain passes, blue coastline and soaring sky. At Hai Van Quan, visitors will get super impressive check-in photos at the North - South Thien Ly road"
+      ],
+      "highlight_destination": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "option1": "3 day 2 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 500,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 300,
+      "priceChildrenOption_2": 500
+    },
+    {
+      "id": 16,
+      "id_destination": 16,
+      "name_destination": "Cat Cat village - Sapa",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/banCatBa_LaoCai1.jpg?v=1698992577859",
+      "sub_images": [
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/banCatBa_LaoCai1.jpg?v=1698992577859",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/banCatBa_LaoCai2.jpg?v=1698992587122",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/banCatBa_LaoCai3.jpg?v=1698992592198",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/banCatBa_LaoCai4.jpg?v=1698992596044"
+      ],
+      "descriptions": [
+        "Cat Cat village has long attracted tourism enthusiasts because even though it is only a small village, this place is covered with the green of mountains and forests, terraced fields mixed with the rustic and simple features of the houses. Small is built from wood. Thereby, giving visitors a sense of simplicity in contrast to the hustle and bustle of the city."
+      ],
+      "highlight_destination": "When you come to Phu Quy Beach, you can take tours on the shore, near the island, especially there are tours to see corals.",
+      "option1": "2 day 1 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 3,
+      "priceAdultOption_2": 2,
+      "priceChildrenOption_1": 200,
+      "priceChildrenOption_2": 300
+    },
+    {
+      "id": 17,
+      "id_destination": 17,
+      "name_destination": "Wind fan field - Bac Lieu",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/canhdonggio1_BacLieu.jpg?v=1698992663091",
+      "sub_images": [
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/canhdonggio1_BacLieu.jpg?v=1698992663091",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/canhdonggio2_BacLieu.jpg?v=1698992669846",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/canhdonggio3_BacLieu.jpg?v=1698992678344",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/canhdonggio4_BacLieu.jpg?v=1698992759414"
+      ],
+      "descriptions": [
+        "Looking up from below to see the turbines standing tall in front of the sea, few people know that this place used to be long stretches of cork and mangrove forests. Below the road are layers of rocks arranged alternately, forming a stone fence to prevent sea erosion, causing soil erosion. Amidst the wind and ocean waves roaring day and night without rest, we can clearly feel the smallness of humans in front of nature. But nature had to surrender to human intelligence, when wind - the specialty of Bac Lieu, was transformed into energy to serve life."
+      ],
+      "highlight": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "option1": "5 day 4 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 900,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 650,
+      "priceChildrenOption_2": 450
+    },
+    {
+      "id": 18,
+      "id_destination": 18,
+      "name_destination": "Co do Hoa Lu-Ninh Binh",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/coHoaLu1.jpg?v=1698992771891",
+      "sub_images": [
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/coHoaLu1.jpg?v=1698992771891",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/coHoaLu2.jpg?v=1698992779647",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/coHoaLu3.jpg?v=1698992789638",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/coHoaLu4.jpg?v=1698992841412"
+      ],
+      "descriptions": [
+        "Phu Quy, also known as Thu Islet, Khoai Xu Islet, is a small island located about 120 km southeast of Phan Thiet, Binh Thuan. In addition to the main island, around Phu Quy island there are Hon Da Cao, Hon Do, Hon Tranh and Hon Hai. Phu Quy Island's area is just over 18km2 but has enough beautiful scenery, landscapes, experiences... for visitors to explore for a few days.",
+        "As the most remote island district of Binh Thuan province, Phu Quy island has a wild and beautiful scenery but tourism has not really developed. Currently, the only means to get to the island is by boat from Phan Thiet city, a distance of more than 110 km."
+      ],
+      "highlight": "When you come to Phu Quy Beach, you can take tours on the shore, near the island, especially there are tours to see corals.",
+      "option1": "2 day 1 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 350,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 200,
+      "priceChildrenOption_2": 500
+    },
+    {
+      "id": 19,
+      "id_destination": 19,
+      "name_destination": "Ghenh Bang-Hoang Sa",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/ghenhBang1.jpg?v=1698993211420",
+      "sub_images": [
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/ghenhBang1.jpg?v=1698993211420",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/ghenhbang2.jpg?v=1698993222819",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/ghenhbang3.jpg?v=1698993235082",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/ghenhBang4.jpg?v=1698993243797"
+      ],
+      "descriptions": [
+        "The trees are lush all year round, especially during the leaf-changing season. The waves crashing with white foam make the scene even more poetic. Along with that are two steep cliffs and gates welcoming visitors. visitors. Coming to Ghenh Bang, you will be able to immerse yourself in the wonderful natural scenery and experience many interesting activities."
+      ],
+      "highlight": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "option1": "3 day 2 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 500,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 300,
+      "priceChildrenOption_2": 500
+    },
+    {
+      "id": 20,
+      "id_destination": 20,
+      "name_destination": "Doi cat Nam Cuong-Ninh Thuan",
+      "main_name_destination": "Panoramic scene  ",
+      "sub_name_destination": "Beaches, caves and boating surroundings",
+      "mainImage": "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/doicatNamCuong1_NinhThuan.jpg?v=1698993068422",
+      "sub_images": [
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/doicatNamCuong1_NinhThuan.jpg?v=1698993068422",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/doicatNamCuong2_NinhThuan.jpg?v=1698993076026",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/doicatNamCuong3_NinhThuan.jpg?v=1698993088030",
+        "https://cdn.glitch.global/073167b7-2daa-4a6c-84ed-5aa844e9c6bf/doicatNamCuong4_NinhThuan.jpg?v=1698993103611"
+      ],
+      "descriptions": [
+        "Nam Cuong Sand Dunes is a system of sand dunes and sand fields with steep slopes and unique sand patterns. The sand here is white, smooth and soft, but it is not sea sand, but stone sand poured down from mountain streams. The picture of white sand dunes in bright yellow sunlight creates impressive frames. Nam Cuong Sand Dunes is also an ideal destination for fun and entertainment activities. Visitors can enjoy playing in the sand, sandboarding on the slopes, or participating in activities such as sand biking, sand climbing, sandboarding, and even parasailing."
+      ],
+      "highlight": "Hunt for clouds and catch a beautiful sunrise at Hai Van terrace",
+      "option1": "5 day 4 night",
+      "option2": "4 day 3 night",
+      "priceAdultOption_1": 900,
+      "priceAdultOption_2": 700,
+      "priceChildrenOption_1": 650,
+      "priceChildrenOption_2": 450
+    }
+  ],
+  "bookings": [
+    {
+      "id": 1,
+      "id_destination": 7,
+      "id_user": 2,
+      "booking_fullname": "Fiorenze Mingotti",
+      "booking_phone_number": "1792934161",
+      "booking_email": "fmingotti1@unesco.org",
+      "total_adults": 2,
+      "total_children": 9,
+      "total_price": "$847",
+      "start_date": "2023-09-30",
+      "duration": 3,
+      "request": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.",
+      "payment": "COD",
+      "status": "Unpaid"
+    },
+    {
+      "id": 2,
+      "id_destination": 7,
+      "id_user": 2,
+      "booking_fullname": "Fiorenze Mingotti",
+      "booking_phone_number": "1792934161",
+      "booking_email": "fmingotti1@unesco.org",
+      "total_adults": 2,
+      "total_children": 9,
+      "total_price": "$847",
+      "start_date": "2023-10-01",
+      "duration": 3,
+      "request": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas.",
+      "payment": "MOMO",
+      "status": "Paid"
+    },
+    {
+      "id_destination": 2,
+      "id_user": 1,
+      "booking_fullname": "ho thi huyen",
+      "booking_phone_number": "0987654321",
+      "booking_email": "hyu212@gmail.com",
+      "total_adults": "2",
+      "total_children": "1",
+      "total_price": 1250,
+      "start_date": "2023-10-23",
+      "request": "ưer",
+      "payment": "CASH",
+      "status": "Unpaid",
+      "id": 3
+    },
+    {
+      "id_destination": 1,
+      "id_user": 1,
+      "booking_fullname": "ho thi huyen",
+      "booking_phone_number": "0987654321",
+      "booking_email": "hyu212@gmail.com",
+      "total_adults": "2",
+      "total_children": "1",
+      "total_price": 1300,
+      "start_date": "2023-11-17",
+      "duration": "3 day 2 night",
+      "request": "iutyrtyskdfhwiuehruhskdl",
+      "payment": "CASH",
+      "status": "Unpaid",
+      "id": 4
+    }
+  ]
+}
