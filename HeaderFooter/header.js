@@ -319,7 +319,7 @@ async function handleConfirmChangePassword() {
         password: await generatePassword(10),
       };
       emailjs
-        .send("default_service", "template_gazt72q", templateParams)
+        .send("service_43t24id", "template_9zvkf7u", templateParams)
         .then(
          async function () {
           await axios
@@ -354,7 +354,7 @@ async function handleChangePass() {
           code: (Math.random() * 100000) | 0,
         };
         emailjs
-          .send("service_4mv8mgj", "template_69jvbsa", templateParams)
+          .send("service_43t24id", "template_xma425k", templateParams)
           .then(
            async function () {
               await axios
